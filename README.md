@@ -242,15 +242,4 @@ The application is fully responsive and optimized for:
 
 This project is developed for the Board of Investment of Sri Lanka. All rights reserved.
 
----
-
-## 🙏 Acknowledgments
-
-- **BOI Leadership Team** for vision and guidance
-- **React Community** for excellent documentation
-- **Framer Motion** for powerful animation tools
-- **Lucide Icons** for beautiful iconography
-- **Sri Lankan Investment Community** for feedback and support
-
----
 
