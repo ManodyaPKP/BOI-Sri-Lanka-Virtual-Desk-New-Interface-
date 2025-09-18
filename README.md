@@ -1,0 +1,355 @@
+# 🇱🇰 Board of Investment Sri Lanka - Virtual Help Desk
+
+<div align="center">
+
+![BOI Logo](https://investsrilanka.com/wp-content/uploads/2023/08/BOILOGO-2.png)
+
+**A Modern, Interactive Investment Portal for Sri Lanka**
+
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23.12-ff69b4?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![Lucide React](https://img.shields.io/badge/Lucide_React-0.544.0-orange?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
+
+[🚀 Live Demo](#) • [📖 Documentation](#features) • [🤝 Contributing](#contributing) • [📞 Contact](#contact)
+
+</div>
+
+---
+
+## 🌟 Project Overview
+
+The **BOI Sri Lanka Virtual Help Desk** is a comprehensive web application designed to assist investors in navigating investment opportunities in Sri Lanka. Built with modern React technology and featuring stunning animations, this platform serves as a one-stop solution for potential investors seeking information about Sri Lanka's investment landscape.
+
+### 🎯 Mission Statement
+> "To make Sri Lanka the most preferred destination for sustainable investment in Asia"
+
+---
+
+## 📊 Key Statistics
+
+<div align="center">
+
+| Metric | Value | Description |
+|--------|-------|-------------|
+| 🏢 **Companies** | 1,600+ | BOI registered enterprises |
+| 📈 **National Exports** | 64% | Contribution to national exports |
+| 🏭 **Industrial Exports** | 83% | Share of national industrial exports |
+| 👕 **Textile Exports** | 96% | National garment & textile exports |
+| 👥 **Employment** | 485,000 | Direct cumulative employment |
+
+</div>
+
+---
+
+## ✨ Features
+
+### 🖥️ **Interactive Virtual Help Desk**
+- Dynamic background slideshow with Sri Lankan imagery
+- QR code integration for quick access to digital resources
+- Real-time information display
+
+### 🏛️ **Comprehensive Information Sections**
+- **Who We Are**: BOI history, leadership, and achievements
+- **Why Sri Lanka**: Investment advantages and opportunities
+- **Investment Guidelines**: Step-by-step investment process
+- **Office Maps**: Interactive location information
+- **Investment Sectors**: Detailed sector-specific information
+- **Services**: Complete service portfolio with animations
+- **Contact Information**: Multiple contact channels
+
+### 🎨 **Modern UI/UX Design**
+- Gradient backgrounds with animated elements
+- Smooth transitions and hover effects
+- Responsive design for all devices
+- Professional color scheme (BOI Blue: `#003d80`, Orange: `#f7941d`)
+
+### 🚀 **Advanced Animations**
+- Framer Motion powered animations
+- Particle effects and floating elements
+- Interactive cards with expand/collapse functionality
+- Smooth page transitions
+
+---
+
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    A[App.js] --> B[Header Component]
+    A --> C[Sidebar Navigation]
+    A --> D[Content Router]
+    
+    D --> E[Help Desk]
+    D --> F[Who We Are]
+    D --> G[Why Sri Lanka]
+    D --> H[Guidelines]
+    D --> I[Office Map]
+    D --> J[Sectors]
+    D --> K[Services]
+    D --> L[Contact]
+    
+    J --> M[IT Sector]
+    J --> N[Textile/Apparel]
+    J --> O[Auto Components]
+    J --> P[Electronics]
+    J --> Q[Food Processing]
+    J --> R[Logistics]
+    J --> S[Medical/Pharma]
+    J --> T[Tourism]
+    
+    style A fill:#003d80,stroke:#f7941d,color:#fff
+    style D fill:#00a651,stroke:#333,color:#fff
+```
+
+---
+
+## 🛠️ Technology Stack
+
+### **Frontend Framework**
+- **React 18.2.0** - Modern component-based architecture
+- **React Scripts 5.0.1** - Build toolchain and development server
+
+### **Animation & UI Libraries**
+- **Framer Motion 12.23.12** - Advanced animations and transitions
+- **Lucide React 0.544.0** - Beautiful, customizable icons
+
+### **Styling**
+- **Custom CSS** - Tailored design system with CSS variables
+- **Responsive Grid** - Mobile-first approach
+- **CSS Animations** - Custom keyframe animations
+
+### **Assets & Resources**
+- **Google Fonts** - Roboto & Poppins typography
+- **Font Awesome 6.4.0** - Additional icon support
+- **High-quality Images** - Professional investment imagery
+
+---
+
+## 📂 Project Structure
+
+```
+boi-sri-lanka-virtual-help-desk/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Sidebar.js
+│   │   ├── Content.js
+│   │   └── tabs/
+│   │       ├── HelpDesk.js
+│   │       ├── WhoWeAre.js
+│   │       ├── WhySriLanka.js
+│   │       ├── Guideline.js
+│   │       ├── OfficeMap.js
+│   │       ├── Sectors.js
+│   │       ├── Services.js
+│   │       ├── Contact.js
+│   │       └── pages/
+│   │           ├── InformationTechnology.js
+│   │           ├── TextileApparel.js
+│   │           ├── AutoComponents.js
+│   │           ├── ElectricalElectronics.js
+│   │           ├── FoodProcessing.js
+│   │           ├── Logistics.js
+│   │           ├── MedicalPharmaceutical.js
+│   │           └── TourismLeisure.js
+│   ├── assets/
+│   │   └── frame.jpg (QR Code)
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- **Node.js** (v14 or higher)
+- **npm** or **yarn** package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/boi-sri-lanka-virtual-help-desk.git
+   cd boi-sri-lanka-virtual-help-desk
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000` to view the application.
+
+### Build for Production
+```bash
+npm run build
+# or
+yarn build
+```
+
+---
+
+## 🎨 Design System
+
+### **Color Palette**
+```css
+:root {
+  --primary: #003d80;       /* BOI Blue */
+  --secondary: #f7941d;     /* Orange */
+  --accent: #00a651;        /* Green */
+  --light: #f8f9fa;         /* Light Background */
+  --dark: #212529;          /* Dark Text */
+  --gray: #6c757d;          /* Secondary Text */
+}
+```
+
+### **Typography**
+- **Primary Font**: Roboto (300, 400, 500, 700)
+- **Accent Font**: Poppins (400, 500, 600, 700)
+
+### **Animation Principles**
+- **Duration**: 0.3s for interactions, 0.8s for page loads
+- **Easing**: `cubic-bezier(0.25, 0.8, 0.25, 1)` for smooth transitions
+- **Hover Effects**: Subtle scale and shadow changes
+
+---
+
+## 🌐 Investment Sectors
+
+<div align="center">
+
+| Sector | Min. Investment | Key Features |
+|--------|----------------|--------------|
+| 🏭 **Textile & Apparel** | $500,000 | World's first LEED Platinum facility |
+| 💻 **Information Technology** | $150,000 | 30% lower labor costs, $3B target by 2025 |
+| 🔧 **Auto Components** | $500,000 | Advanced manufacturing capabilities |
+| ⚡ **Electrical & Electronics** | $500,000 | IoT, robotics, biomedical engineering |
+| 🍽️ **Food Processing** | $150,000 | Agricultural value addition |
+| 🚛 **Logistics** | $500,000 | Strategic location advantages |
+| 💊 **Medical & Pharmaceutical** | $150,000 | Dedicated pharma zones |
+| 🏨 **Tourism & Leisure** | $500,000 | World heritage sites and beaches |
+
+</div>
+
+---
+
+## 🔧 Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm start` | Runs the app in development mode |
+| `npm test` | Launches the test runner |
+| `npm run build` | Builds the app for production |
+| `npm run eject` | **One-way operation** - ejects from Create React App |
+
+---
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for:
+
+- **Desktop** (1200px+)
+- **Tablet** (768px - 1199px)
+- **Mobile** (320px - 767px)
+
+### Mobile Features
+- Collapsible sidebar navigation
+- Touch-optimized interactions
+- Reduced animation complexity for performance
+- Optimized image loading
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to improve the BOI Virtual Help Desk! Please follow these steps:
+
+1. **Fork the repository**
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add some amazing feature'
+   ```
+4. **Push to the branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open a Pull Request**
+
+### Development Guidelines
+- Follow React best practices
+- Maintain consistent code formatting
+- Add comments for complex functionality
+- Test on multiple devices and browsers
+- Ensure accessibility standards
+
+---
+
+## 📞 Contact & Support
+
+### **Board of Investment of Sri Lanka**
+
+**Head Office:**
+```
+No. 551, T.B. Jayah Mawatha
+Colombo 10, Sri Lanka
+
+📞 Phone: +94 11 242 6900
+📧 Email: info@boi.lk
+🌐 Website: www.investsrilanka.com
+```
+
+**Investor Facilitation Center:**
+```
+Level 27, West Tower
+World Trade Center, Colombo 01
+
+📞 Phone: +94 11 2434403-5
+```
+
+---
+
+## 📜 License
+
+This project is developed for the Board of Investment of Sri Lanka. All rights reserved.
+
+---
+
+## 🙏 Acknowledgments
+
+- **BOI Leadership Team** for vision and guidance
+- **React Community** for excellent documentation
+- **Framer Motion** for powerful animation tools
+- **Lucide Icons** for beautiful iconography
+- **Sri Lankan Investment Community** for feedback and support
+
+---
+
+<div align="center">
+
+**Made with ❤️ for Sri Lankan Investment Growth**
+
+[![BOI Website](https://img.shields.io/badge/Visit-BOI_Website-blue?style=for-the-badge)](https://investsrilanka.com)
+
+</div>
