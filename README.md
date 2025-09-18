@@ -18,25 +18,6 @@
 
 The **BOI Sri Lanka Virtual Help Desk** is a comprehensive web application designed to assist investors in navigating investment opportunities in Sri Lanka. Built with modern React technology and featuring stunning animations, this platform serves as a one-stop solution for potential investors seeking information about Sri Lanka's investment landscape.
 
-### 🎯 Mission Statement
-> "To make Sri Lanka the most preferred destination for sustainable investment in Asia"
-
----
-
-## 📊 Key Statistics
-
-<div align="center">
-
-| Metric | Value | Description |
-|--------|-------|-------------|
-| 🏢 **Companies** | 1,600+ | BOI registered enterprises |
-| 📈 **National Exports** | 64% | Contribution to national exports |
-| 🏭 **Industrial Exports** | 83% | Share of national industrial exports |
-| 👕 **Textile Exports** | 96% | National garment & textile exports |
-| 👥 **Employment** | 485,000 | Direct cumulative employment |
-
-</div>
-
 ---
 
 ## ✨ Features
@@ -227,25 +208,6 @@ yarn build
 - **Duration**: 0.3s for interactions, 0.8s for page loads
 - **Easing**: `cubic-bezier(0.25, 0.8, 0.25, 1)` for smooth transitions
 - **Hover Effects**: Subtle scale and shadow changes
-
----
-
-## 🌐 Investment Sectors
-
-<div align="center">
-
-| Sector | Min. Investment | Key Features |
-|--------|----------------|--------------|
-| 🏭 **Textile & Apparel** | $500,000 | World's first LEED Platinum facility |
-| 💻 **Information Technology** | $150,000 | 30% lower labor costs, $3B target by 2025 |
-| 🔧 **Auto Components** | $500,000 | Advanced manufacturing capabilities |
-| ⚡ **Electrical & Electronics** | $500,000 | IoT, robotics, biomedical engineering |
-| 🍽️ **Food Processing** | $150,000 | Agricultural value addition |
-| 🚛 **Logistics** | $500,000 | Strategic location advantages |
-| 💊 **Medical & Pharmaceutical** | $150,000 | Dedicated pharma zones |
-| 🏨 **Tourism & Leisure** | $500,000 | World heritage sites and beaches |
-
-</div>
 
 ---
 
