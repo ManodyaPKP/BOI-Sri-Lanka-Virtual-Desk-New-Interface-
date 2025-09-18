@@ -10,8 +10,6 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23.12-ff69b4?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Lucide React](https://img.shields.io/badge/Lucide_React-0.544.0-orange?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
 
-[🚀 Live Demo](#) • [📖 Documentation](#features) • [🤝 Contributing](#contributing) • [📞 Contact](#contact)
-
 </div>
 
 ---
@@ -64,7 +62,7 @@ The **BOI Sri Lanka Virtual Help Desk** is a comprehensive web application desig
 - Professional color scheme (BOI Blue: `#003d80`, Orange: `#f7941d`)
 
 ### 🚀 **Advanced Animations**
-- Framer Motion powered animations
+- Framer Motion-powered animations
 - Particle effects and floating elements
 - Interactive cards with expand/collapse functionality
 - Smooth page transitions
@@ -278,58 +276,6 @@ The application is fully responsive and optimized for:
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions to improve the BOI Virtual Help Desk! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add some amazing feature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-### Development Guidelines
-- Follow React best practices
-- Maintain consistent code formatting
-- Add comments for complex functionality
-- Test on multiple devices and browsers
-- Ensure accessibility standards
-
----
-
-## 📞 Contact & Support
-
-### **Board of Investment of Sri Lanka**
-
-**Head Office:**
-```
-No. 551, T.B. Jayah Mawatha
-Colombo 10, Sri Lanka
-
-📞 Phone: +94 11 242 6900
-📧 Email: info@boi.lk
-🌐 Website: www.investsrilanka.com
-```
-
-**Investor Facilitation Center:**
-```
-Level 27, West Tower
-World Trade Center, Colombo 01
-
-📞 Phone: +94 11 2434403-5
-```
-
----
-
 ## 📜 License
 
 This project is developed for the Board of Investment of Sri Lanka. All rights reserved.
@@ -346,10 +292,3 @@ This project is developed for the Board of Investment of Sri Lanka. All rights r
 
 ---
 
-<div align="center">
-
-**Made with ❤️ for Sri Lankan Investment Growth**
-
-[![BOI Website](https://img.shields.io/badge/Visit-BOI_Website-blue?style=for-the-badge)](https://investsrilanka.com)
-
-</div>
