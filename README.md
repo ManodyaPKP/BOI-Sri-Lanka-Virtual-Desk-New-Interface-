@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![BOI Logo](https://investsrilanka.com/wp-content/uploads/2023/08/BOILOGO-2.png)
+![BOI Logo](https://investsrilanka.com/wp-content/uploads/2020/11/BOI-PLANE-LOGO-White.png)
 
 **A Modern, Interactive Investment Portal for Sri Lanka**
 
