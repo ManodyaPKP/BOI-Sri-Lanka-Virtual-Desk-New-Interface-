@@ -1,0 +1,19 @@
+/* Main Layout Styles - Container and main content layout */
+/* ===== MAIN LAYOUT ===== */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  transition: var(--transition);
+  padding: 0rem 0rem;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  padding: 0rem 0rem;
+}

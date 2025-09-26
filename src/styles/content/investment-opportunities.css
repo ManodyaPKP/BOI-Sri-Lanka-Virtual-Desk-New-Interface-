@@ -1,0 +1,66 @@
+/* Investment Opportunities */
+/* Investment Opportunities Styles - Opportunity cards and hover effects */
+.investment-opportunities {
+  margin-bottom: 30px;
+}
+
+.investment-opportunities h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.opportunity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.opportunity-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.opportunity-card .card-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.opportunity-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.opportunity-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.opportunity-card li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.opportunity-card li:before {
+  content: "✓";
+  color: #27ae60;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}

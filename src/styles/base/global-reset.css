@@ -1,0 +1,22 @@
+/* Global Reset & Base Styles - Basic resets and body styles */
+/* ===== GLOBAL RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-content {
+  margin-top: 90px;
+}
+
+/* ===== GLOBAL BASE STYLES ===== */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 3;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: var(--transition);
+}

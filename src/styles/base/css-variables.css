@@ -1,0 +1,30 @@
+/* CSS Variables - All custom properties for the project */
+/* ===== CSS VARIABLES ===== */
+:root {
+  --primary: #003d80;       /* BOI Blue - primary brand color */
+  --secondary: #f7941d;     /* Orange - accents and highlights */
+  --accent: #00a651;        /* Green - success/positive actions */
+  --light: #f8f9fa;         /* Light background */
+  --dark: #212529;          /* Dark text */
+  --gray: #6c757d;          /* Secondary text */
+  --light-blue: #bed9f6;    /* Light blue for backgrounds */
+  --white: #ffffff;         /* Pure white */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  --transition: all 0.3s ease; /* Smooth transitions */
+  --border-radius: 4px; /* Standard border radius */
+  --font-family: 'Roboto', sans-serif; /* Primary font */
+  --font-family-alt: 'Poppins', sans-serif; /* Secondary font */
+  --font-size-base: 16px; /* Base font size */
+  --font-size-sm: 14px; /* Small font size */
+  --font-size-lg: 18px; /* Large font size */
+  --spacing-sm: 8px; /* Small spacing */
+  --spacing-md: 16px; /* Medium spacing */
+  --spacing-lg: 24px; /* Large spacing */
+  --max-width: 1200px; /* Max content width */
+  --breakpoint-sm: 576px; /* Small screen breakpoint */
+  --breakpoint-md: 768px; /* Medium screen breakpoint */
+  --breakpoint-lg: 992px; /* Large screen breakpoint */
+  --breakpoint-xl: 1200px; /* Extra large screen breakpoint */
+  --breakpoint-xxl: 1400px; /* Extra extra large screen breakpoint */
+  
+}

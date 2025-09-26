@@ -9,7 +9,6 @@ import Services from './tabs/Services';
 import Contact from './tabs/Contact';
 
 
-
 const Content = ({ activeTab }) => {
   const renderContent = () => {
     switch(activeTab) {

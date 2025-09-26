@@ -2,15 +2,13 @@
 
 <div align="center">
 
-![BOI Logo](https://investsrilanka.com/wp-content/uploads/2023/08/BOILOGO-2.png)
+![BOI Logo](https://investsrilanka.com/wp-content/uploads/2023/08/BOILOGO-2-1024x858.png)
 
 **A Modern, Interactive Investment Portal for Sri Lanka**
 
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23.12-ff69b4?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Lucide React](https://img.shields.io/badge/Lucide_React-0.544.0-orange?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
-
-[🚀 Live Demo](#) • [📖 Documentation](#features) • [🤝 Contributing](#contributing) • [📞 Contact](#contact)
 
 </div>
 
@@ -19,25 +17,6 @@
 ## 🌟 Project Overview
 
 The **BOI Sri Lanka Virtual Help Desk** is a comprehensive web application designed to assist investors in navigating investment opportunities in Sri Lanka. Built with modern React technology and featuring stunning animations, this platform serves as a one-stop solution for potential investors seeking information about Sri Lanka's investment landscape.
-
-### 🎯 Mission Statement
-> "To make Sri Lanka the most preferred destination for sustainable investment in Asia"
-
----
-
-## 📊 Key Statistics
-
-<div align="center">
-
-| Metric | Value | Description |
-|--------|-------|-------------|
-| 🏢 **Companies** | 1,600+ | BOI registered enterprises |
-| 📈 **National Exports** | 64% | Contribution to national exports |
-| 🏭 **Industrial Exports** | 83% | Share of national industrial exports |
-| 👕 **Textile Exports** | 96% | National garment & textile exports |
-| 👥 **Employment** | 485,000 | Direct cumulative employment |
-
-</div>
 
 ---
 
@@ -232,25 +211,6 @@ yarn build
 
 ---
 
-## 🌐 Investment Sectors
-
-<div align="center">
-
-| Sector | Min. Investment | Key Features |
-|--------|----------------|--------------|
-| 🏭 **Textile & Apparel** | $500,000 | World's first LEED Platinum facility |
-| 💻 **Information Technology** | $150,000 | 30% lower labor costs, $3B target by 2025 |
-| 🔧 **Auto Components** | $500,000 | Advanced manufacturing capabilities |
-| ⚡ **Electrical & Electronics** | $500,000 | IoT, robotics, biomedical engineering |
-| 🍽️ **Food Processing** | $150,000 | Agricultural value addition |
-| 🚛 **Logistics** | $500,000 | Strategic location advantages |
-| 💊 **Medical & Pharmaceutical** | $150,000 | Dedicated pharma zones |
-| 🏨 **Tourism & Leisure** | $500,000 | World heritage sites and beaches |
-
-</div>
-
----
-
 ## 🔧 Available Scripts
 
 | Script | Description |
@@ -278,78 +238,6 @@ The application is fully responsive and optimized for:
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions to improve the BOI Virtual Help Desk! Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add some amazing feature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-### Development Guidelines
-- Follow React best practices
-- Maintain consistent code formatting
-- Add comments for complex functionality
-- Test on multiple devices and browsers
-- Ensure accessibility standards
-
----
-
-## 📞 Contact & Support
-
-### **Board of Investment of Sri Lanka**
-
-**Head Office:**
-```
-No. 551, T.B. Jayah Mawatha
-Colombo 10, Sri Lanka
-
-📞 Phone: +94 11 242 6900
-📧 Email: info@boi.lk
-🌐 Website: www.investsrilanka.com
-```
-
-**Investor Facilitation Center:**
-```
-Level 27, West Tower
-World Trade Center, Colombo 01
-
-📞 Phone: +94 11 2434403-5
-```
-
----
-
 ## 📜 License
 
 This project is developed for the Board of Investment of Sri Lanka. All rights reserved.
-
----
-
-## 🙏 Acknowledgments
-
-- **BOI Leadership Team** for vision and guidance
-- **React Community** for excellent documentation
-- **Framer Motion** for powerful animation tools
-- **Lucide Icons** for beautiful iconography
-- **Sri Lankan Investment Community** for feedback and support
-
----
-
-<div align="center">
-
-**Made with ❤️ for Sri Lankan Investment Growth**
-
-[![BOI Website](https://img.shields.io/badge/Visit-BOI_Website-blue?style=for-the-badge)](https://investsrilanka.com)
-
-</div>

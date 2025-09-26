@@ -1,0 +1,95 @@
+/* Logo Section Styles - Logo animations and effects */
+/* ===== LOGO SECTION STYLES ===== */
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+  position: relative;
+  padding: 5px;
+  border-radius: 8px;
+  animation: logoPulse 4s infinite ease-in-out;
+  right: 100px;
+}
+
+@keyframes logoPulse { 
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.logo-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+@keyframes underlinePulse {
+  0%, 100% {
+    width: 0;
+    opacity: 0.5;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+
+.logo-image {
+  height: 70px;
+  width: auto;
+  margin-right: 0.8rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  border-radius: 10px;
+  padding: 5px;
+  background: linear-gradient(to right, #70b9f4 0%, #FBFBFB 100%);
+  animation: logoGlow 6s infinite alternate;
+
+  
+}
+
+@keyframes logoGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(247, 148, 29, 0.4);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%);
+    box-shadow: 0 5px 15px rgba(255, 154, 158, 0.4);
+  }
+  33% {
+    background: linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+    box-shadow: 0 5px 15px rgba(161, 196, 253, 0.4);
+  }
+  66% {
+    background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+    box-shadow: 0 5px 15px rgba(252, 182, 159, 0.4);
+  }
+  100% {
+    background: linear-gradient(45deg, #84fab0 0%, #8fd3f4 100%);
+    box-shadow: 0 5px 15px rgba(143, 211, 244, 0.4);
+  }
+}
+
+
+
+.logo-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  animation: none;
+}

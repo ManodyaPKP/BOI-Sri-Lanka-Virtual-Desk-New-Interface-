@@ -1,0 +1,17 @@
+/* Back Button */
+/* Back Button Styles - Navigation back button with hover effects */
+.back-button {
+  background: #f6bd8e;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #62d8ef;
+  border-color: #62d8ef;
+  color: #fff;
+}

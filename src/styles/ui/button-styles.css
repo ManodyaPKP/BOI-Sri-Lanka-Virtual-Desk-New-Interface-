@@ -1,0 +1,43 @@
+/* ===== BUTTONS  ===== */
+/* Button Styles - Primary and secondary button styling and hover effects */
+/* Button Styles - All button variations and effects */
+
+.btn {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.btn:hover {
+  background: #e68312;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #003d80;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #00264d;
+}
+
+.btn-secondary {
+  background: #f7941d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #e68312;
+}

@@ -3,14 +3,14 @@ import qrcodeimage from "../../assets/frame.jpg";
 
 const HelpDesk = () => {
   const backgroundImages = [
-    "https://i.pinimg.com/1200x/c0/b0/7d/c0b07df7a86435de9b95d80978cc2631.jpg",
-    "https://i.pinimg.com/1200x/b2/88/d2/b288d27d91097176b26450bf236348d2.jpg",
+    "https://images.pexels.com/photos/16910619/pexels-photo-16910619.jpeg",
+    "https://i.pinimg.com/1200x/a7/40/e6/a740e6cb5223a2f10b54f2c9d4eb7486.jpg",
     "https://images.pexels.com/photos/33511789/pexels-photo-33511789.jpeg",
     "https://images.pexels.com/photos/33511788/pexels-photo-33511788.jpeg",
     "https://images.pexels.com/photos/20711996/pexels-photo-20711996.jpeg",
-    "https://i.pinimg.com/736x/93/43/2e/93432e4e6159d980c4fb7fa4294a4ec7.jpg",
+    "https://images.pexels.com/photos/3848793/pexels-photo-3848793.jpeg",
     "https://i.pinimg.com/1200x/f8/8b/03/f88b03fc17866c3410dee4e28ca70450.jpg",
-    "https://images.pexels.com/photos/33847304/pexels-photo-33847304.jpeg"
+    "https://images.pexels.com/photos/33126406/pexels-photo-33126406.jpeg"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,7 +19,7 @@ const HelpDesk = () => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, [backgroundImages.length]);
@@ -29,7 +29,7 @@ const HelpDesk = () => {
       <div 
         className="welcome-section"
         style={{
-          backgroundImage: `linear-gradient(rgba(246, 220, 190, 0.7), rgba(0, 61, 128, 0.7)), url(${backgroundImages[currentImageIndex]})`,
+          backgroundImage: `linear-gradient(rgb(236, 249, 255), rgba(178, 250, 255, 0.7)), url(${backgroundImages[currentImageIndex]})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -42,7 +42,13 @@ const HelpDesk = () => {
           textAlign: 'center',
           padding: '40px 20px',
           position: 'relative',
-          transition: 'background-image 1s ease-in-out'
+          transition: 'filter 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+          filter: 'brightness(0.9)',
+          borderRadius: '15px',
+          boxShadow: 'inset 0 0 0 2000px rgba(255, 255, 255, 0.2)',
+          opacity: '100%',
+          backgroundBlendMode: 'darken',
+          animation: 'fadeIn 1s ease-in-out'
 
         }}
       >
@@ -63,6 +69,25 @@ const HelpDesk = () => {
               padding: '20px',
               borderRadius: '49%',
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+              animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
+              filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3))',
+              transition: 'all 0.3s ease',
+              marginBottom: '30px',
+              marginTop: '20px',
+              marginRight: '10px',
+              marginLeft: '10px',
+              WebkitTextFillColor: 'rgb(254, 255, 167)',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+              fontStyle: 'italic',
+              color: 'rgb(254, 255, 167)',
+              fontWeight: '600',
+              textShadow: '2px 2px 4px rgba(252, 182, 60, 0.5)',
+              display: 'inline-block',
+              verticalAlign: 'middle',
+              textAlign: 'center',
+              position: 'relative',
+              overflow: 'hidden',
               border: '5px solid var(--secondary)'
             }}
           />
@@ -72,7 +97,13 @@ const HelpDesk = () => {
           fontSize: '2.5rem',
           marginBottom: '20px',
           fontWeight: '700',
-          textShadow: '2px 2px 4px rgba(252, 182, 60, 0.5)'
+          textShadow: '2px 2px 4px rgba(252, 182, 60, 0.5)',
+          textAlign: 'center',
+          WebkitTextFillColor: 'rgb(4, 0, 154)',
+          textTransform: 'uppercase',
+          letterSpacing: '2px',
+          fontStyle: 'italic',
+          color: 'rgb(4, 0, 154)',
         }}>
           We help you to grow in Sri Lanka
         </h2>
@@ -84,7 +115,12 @@ const HelpDesk = () => {
           marginBottom: '20px',
           textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
           textAlign: 'center',
-          WebkitTextFillColor: 'black'
+          WebkitTextFillColor: 'rgb(254, 255, 167)',
+          textTransform: 'uppercase',
+          letterSpacing: '2px',
+          fontStyle: 'italic',
+          color: 'rgb(254, 255, 167)',
+          fontWeight: '600'
         }}>
           Welcome to the Board of Investment of Sri Lanka Virtual Help Desk. 
           Our mission is to assist investors in navigating the investment process 
@@ -98,7 +134,11 @@ const HelpDesk = () => {
           marginBottom: '40px',
           textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
           textAlign: 'center',
-          WebkitTextFillColor: 'black',
+          WebkitTextFillColor: 'rgb(254, 255, 167)',
+          fontWeight: '600',
+          color: 'rgb(254, 255, 167)',
+          textTransform: 'uppercase',
+          letterSpacing: '2px',
           fontStyle: 'italic'
         }}>
           Sri Lanka offers a strategic location, skilled workforce, and attractive 
@@ -167,23 +207,57 @@ const HelpDesk = () => {
           </div>
         </div>
 
-        {/* Background Image Indicator */}
-        <div style={{
-          position: 'absolute',
-          bottom: '-560px',
-          right: '25px',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          backdropFilter: 'blur(5px)',
-          WebkitBackdropFilter: 'blur(5px)',
-          opacity: '0.5',
-          '&:hover': { opacity: 10 },
-          padding: '4px 15px',
-          borderRadius: '20px',
-          color: 'white',
-          fontSize: '0.9rem'
-        }}>
-          {currentImageIndex + 1} of {backgroundImages.length}
-        </div>
+       {/* Background Image Indicator */}
+<div style={{
+  position: 'absolute',
+  bottom: '-560px',
+  right: '540px',
+  display: 'flex',
+  gap: '8px',
+  padding: '8px 14px',
+  backgroundColor: 'rgba(0, 0, 0, 0.4)',
+  backdropFilter: 'blur(6px)',
+  WebkitBackdropFilter: 'blur(6px)',
+  borderRadius: '20px',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+  zIndex: '10',
+  alignItems: 'center',
+  justifyContent: 'center',
+  animation: 'fadeIn 1s ease-in-out',
+  transition: 'all 0.3s ease-in-out',
+  transform: 'translateY(0)',
+  opacity: '1',
+  filter: 'brightness(1)',
+  userSelect: 'none',
+  cursor: 'default',
+  marginBottom: '26px',
+  marginRight: '10px',
+  marginLeft: '10px',
+  marginTop: '10px',
+  color: 'white',
+  fontWeight: '600',
+  fontSize: '0.9rem',
+  letterSpacing: '1px',
+  textTransform: 'uppercase',
+  WebkitTextFillColor: 'white',
+  textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'
+
+}}>
+  {backgroundImages.map((_, index) => (
+    <div
+      key={index}
+      style={{
+        width: index === currentImageIndex ? '24px' : '10px',
+        height: '10px',
+        borderRadius: '20px',
+        backgroundColor: index === currentImageIndex ? '#003049' : '#4895ef',
+        transition: 'all 0.4s ease-in-out'
+
+      }}
+    />
+  ))}
+</div>
+
       </div>
   );
 };

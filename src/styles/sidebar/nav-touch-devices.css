@@ -1,0 +1,36 @@
+/* Navigation Touch Device Optimization - Touch-friendly styles and effects */
+ /* ===== NAVIGATION TOUCH DEVICE OPTIMIZATION ===== */
+@media (hover: none) and (pointer: coarse) {
+  .nav-item {
+    padding: 1.2rem 1.8rem;
+    min-height: 54px;
+  }
+  
+  .nav-item:active {
+    background-color: rgba(108, 92, 231, 0.15);
+    transform: scale(0.97);
+  }
+  
+  .nav-item:hover {
+    transform: none;
+  }
+  
+  .nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(108, 92, 231, 0.1);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    
+  }
+  
+  .nav-item:hover::before {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

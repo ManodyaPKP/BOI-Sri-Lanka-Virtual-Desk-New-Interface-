@@ -1,0 +1,39 @@
+/* Navigation Item Icons Styles - Icon animations and effects */
+ /* ===== NAVIGATION ITEM ICONS STYLES ===== */
+ /* Navigation Item Icons - Icon animations and effects */
+ 
+.nav-item i {
+  color: #2d3436;
+  margin-right: 14px;
+  width: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover i {
+  transform: scale(1.15) translateY(-2px);
+  color: #0e0e0e;
+  transition: all 0.3s ease;
+}
+
+.nav-item.active i {
+  color: #6c5ce7;
+  transform: scale(1.1);
+  animation: iconWiggle 0.5s ease;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  transition: all 0.3s ease;
+}
+
+@keyframes iconWiggle {
+  0%, 100% {
+    transform: rotate(0) scale(1.1);
+  }
+  25% {
+    transform: rotate(-10deg) scale(1.15);
+  }
+  75% {
+    transform: rotate(10deg) scale(1.15);
+  }
+}

@@ -1,0 +1,23 @@
+/* ===== MAP CONTAINER ===== */
+/* Map Container Styles - Map component styling and hover effects */
+.map-container {
+  height: 400px;
+  background-color: #eaeaea;
+  border-radius: 12px;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-overlay {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}

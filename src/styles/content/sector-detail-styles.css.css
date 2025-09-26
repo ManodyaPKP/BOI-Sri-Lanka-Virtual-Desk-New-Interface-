@@ -1,0 +1,56 @@
+/* ===== SECTOR DETAIL STYLES ===== */
+/* Sector Detail Styles - Sector page headers and content styling */
+.sector-detail {
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sector-header {
+  text-align: center;
+  padding: 50px 25px;
+  background: linear-gradient(135deg, #f38b04 0%, #f59905 100%);
+  color: #fff;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sector-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.sector-icon:hover {
+  transform: scale(1.1);
+}
+
+.sector-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.sector-subtitle {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  
+}

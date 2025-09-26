@@ -1,0 +1,86 @@
+/* Header Text Styles - Title and subtitle animations */
+ /* ===== HEADER TEXT STYLES ===== */
+.header-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+  animation: titleShine 5s infinite linear;
+}
+@keyframes titleShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.header-text h1::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.5s ease;
+
+}
+
+@keyframes titleUnderline {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+.header-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  animation: subtitleFadeIn 1s ease 0.3s both, subtitleFloat 6s infinite ease-in-out;
+}
+
+@keyframes subtitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtitleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}

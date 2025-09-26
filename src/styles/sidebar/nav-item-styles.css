@@ -1,0 +1,52 @@
+/* Navigation Item Styles - Sidebar navigation item effects */
+ /* ===== NAVIGATION ITEM STYLES ===== */
+ /*Navigation Item Styles - Basic nav item styling and hover/active effects*/
+.nav-item {
+  padding: 1rem 1.8rem;
+  margin: 0.25rem 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #2d3436;
+  border-left: 3px solid transparent;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(108, 92, 231, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: -1;
+}
+
+.nav-item:hover {
+  background-color: rgba(108, 92, 231, 0.08);
+  color: #6c5ce7;
+  border-left-color: #00cec9;
+  transform: translateX(5px);
+}
+
+.nav-item:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-item:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}

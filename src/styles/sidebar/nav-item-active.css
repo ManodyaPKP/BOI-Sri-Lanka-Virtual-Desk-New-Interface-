@@ -1,0 +1,56 @@
+/* Navigation Item Active State Styles - Active nav item with pulse animation */
+/* ===== NAVIGATION ITEM ACTIVE STATE STYLES ===== */
+/* Navigation Item Active State - Active navigation animations and effects */
+
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.15) 0%, rgba(0, 206, 201, 0.1) 100%);
+  color: #6c5ce7;
+  border-left-color: #6c5ce7;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.12);
+  animation: itemPulse 2s infinite;
+}
+
+@keyframes itemPulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.12);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.2);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.12);
+  }
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  width: 8px;
+  height: 8px;
+  background: #6c5ce7;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: -1;
+  box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.4);
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.4);
+    transform: scale(0.95);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(108, 92, 231, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(108, 92, 231, 0);
+    transform: scale(0.95);
+  }
+}

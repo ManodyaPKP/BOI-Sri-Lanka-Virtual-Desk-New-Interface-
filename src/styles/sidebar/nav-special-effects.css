@@ -1,0 +1,60 @@
+/* Navigation Special Effects - Animations and effects for sidebar navigation */
+ /* ===== NAVIGATION SPECIAL EFFECTS ===== */
+ /* Navigation Special Effects - Ripple effects and special animations */
+/* Subtle animation for new items */
+.nav-item.new-item {
+  animation: newItemHighlight 1.5s ease;
+}
+
+@keyframes newItemHighlight {
+  0% {
+    background-color: rgba(253, 203, 110, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Ripple effect for touch devices */
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(108, 92, 231, 0.1);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Subtle background animation for the entire sidebar */
+.sidebar:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(108, 92, 231, 0.03) 0%, transparent 20%);
+  z-index: -1;
+  animation: subtleGlow 4s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}

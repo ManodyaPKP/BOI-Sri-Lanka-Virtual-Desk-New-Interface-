@@ -1,0 +1,53 @@
+/*Header Responsive Styles - Header responsive breakpoints and adjustments */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 0.7rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo-image {
+    height: 60px;
+  }
+  
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-text h2 {
+    font-size: 1rem;
+  }
+  
+  /* Reduce animation intensity on mobile */
+  header::before, header::after {
+    animation-duration: 12s;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0.6rem 1rem;
+  }
+  
+  .logo-image {
+    height: 50px;
+    margin-right: 0.5rem;
+  }
+  
+  .header-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .header-text h2 {
+    font-size: 0.9rem;
+  }
+  
+  .logo-container {
+    margin-right: 0.5rem;
+  }
+  
+  /* Further reduce animation on small devices */
+  header::before, header::after {
+    animation-duration: 15s;
+  }
+}

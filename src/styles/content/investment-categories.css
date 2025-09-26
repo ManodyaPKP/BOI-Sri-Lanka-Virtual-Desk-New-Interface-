@@ -1,0 +1,52 @@
+/* ===== INVESTMENT CATEGORIES ===== */
+/* Investment Categories Styles - Grid layout and hover effects for investment categories */
+/*Investment Categories Styles - Investment category cards and hover effects*/
+
+.investment-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.investment-category {
+  background: var(--white);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.investment-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, var(--primary) 0%, #00264d 100%);
+  color: white;
+}
+
+.investment-category:hover h3 {
+  color: white;
+}
+
+.investment-category i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.investment-category:hover i {
+  color: white;
+}
+
+.investment-category h3 {
+  color: var(--primary);
+  margin: 0;
+}
+
+.sector-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}

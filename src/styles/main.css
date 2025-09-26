@@ -1,0 +1,45 @@
+/* ===== BASE STYLES ===== */
+@import './base/css-variables.css';
+@import './base/global-reset.css';
+@import './base/main-layout.css';
+
+/* ===== HEADER COMPONENTS ===== */
+@import './header/animated-header.css';
+@import './header/logo-section.css';
+@import './header/header-text.css';
+@import './header/header-actions.css';
+@import './header/header-responsive.css';
+
+/* ===== SIDEBAR COMPONENTS ===== */
+@import './sidebar/sidebar-styles.css';
+@import './sidebar/nav-item-styles.css';
+@import './sidebar/nav-item-active.css';
+@import './sidebar/nav-item-icons.css';
+@import './sidebar/nav-special-effects.css';
+@import './sidebar/nav-touch-devices.css';
+
+/* ===== CONTENT COMPONENTS ===== */
+@import './content/main-content-area.css';
+@import './content/card-components.css';
+@import './content/statistics-section.css';
+@import './content/investment-categories.css';
+@import './content/why-sri-lanka.css';
+@import './content/sector-detail-styles.css';
+@import './content/sector-overview.css';
+@import './content/investment-opportunities.css';
+@import './content/strengths-section.css';
+@import './content/services-section.css';
+@import './content/service-card-components.css';
+@import './content/process-steps.css';
+@import './content/contact-information.css';
+
+/* ===== UI COMPONENTS ===== */
+@import './ui/button-styles.css';
+@import './ui/map-container.css';
+@import './ui/back-button.css';
+
+/* ===== RESPONSIVE STYLES ===== */
+@import './responsive/services-responsive.css';
+@import './responsive/main-responsive-design.css';
+@import './responsive/mobile-responsive-768.css';
+@import './responsive/mobile-responsive-576.css';

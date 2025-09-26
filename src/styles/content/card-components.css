@@ -1,0 +1,44 @@
+/* ===== CARD COMPONENTS - who we are section ===== */
+/* Card Components Styles - General card styling and hover effects */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  animation: fadeIn 0.5s ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary) 0%, #00264d 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.card-header i {
+  margin-right: 10px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}

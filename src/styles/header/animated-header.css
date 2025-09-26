@@ -1,0 +1,93 @@
+/* Animated Header Styles - Main header with animations */
+/* ===== ANIMATED HEADER STYLES ===== */
+header {
+  background: linear-gradient(135deg, #2F58CD 0%, #00A9FF 100%);
+  color: white;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  animation: headerSlideDown 0.5s ease-out;
+  overflow: hidden;
+}
+
+@keyframes headerSlideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animated background elements */
+header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 8s infinite linear;
+  z-index: -1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(30deg) translateX(-100%) translateY(-100%);
+  }
+  100% {
+    transform: rotate(30deg) translateX(100%) translateY(100%);
+  }
+}
+
+/* Floating particles animation */
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(2px 2px at 60px 20px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(2px 2px at 80px 50px, rgba(247, 148, 29, 0.3), transparent),
+    radial-gradient(2px 2px at 100px 80px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(2px 2px at 120px 30px, rgba(247, 148, 29, 0.3), transparent),
+    radial-gradient(2px 2px at 140px 60px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(2px 2px at 160px 20px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(2px 2px at 180px 70px, rgba(247, 148, 29, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  z-index: -1;
+  animation: particleMove 20s infinite linear;
+}
+
+@keyframes particleMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200px 100px;
+  }
+}
