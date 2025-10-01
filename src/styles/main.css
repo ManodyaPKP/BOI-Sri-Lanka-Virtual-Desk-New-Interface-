@@ -10,6 +10,17 @@
 @import './header/header-actions.css';
 @import './header/header-responsive.css';
 
+
+/* ===== pages ===== */
+@import './pages/TextileApparel.css';
+@import './pages/AutoComponents.css';
+@import './pages/ElectricalElectronics.css';
+@import './pages/FoodProcessing.css';
+@import './pages/InformationTechnology.css';
+@import './pages/Logistics.css';
+@import './pages/MedicalPharmaceutical.css';
+@import './pages/TourismLeisure.css';
+
 /* ===== SIDEBAR COMPONENTS ===== */
 @import './sidebar/sidebar-styles.css';
 @import './sidebar/nav-item-styles.css';
@@ -32,7 +43,7 @@
 @import './content/service-card-components.css';
 @import './content/process-steps.css';
 @import './content/contact-information.css';
-
+@import './content/WhoWeAre.css';
 /* ===== UI COMPONENTS ===== */
 @import './ui/button-styles.css';
 @import './ui/map-container.css';

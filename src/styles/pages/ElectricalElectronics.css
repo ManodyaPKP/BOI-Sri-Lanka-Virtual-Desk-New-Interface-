@@ -1,0 +1,600 @@
+/* ElectricalElectronics.css - Modern Styling with Animations */
+
+.electrical-electronics-sector {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Section */
+.electrical-electronics-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #3a86ff 0%, #2667cc 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease-out;
+}
+
+.electrical-electronics-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff006e, #ff9e00, #38b000, #8338ec);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.electrical-electronics-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.electrical-electronics-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+.electrical-electronics-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Overview Section */
+.electrical-electronics-overview {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.electrical-electronics-overview h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.electrical-electronics-overview h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff006e, #ff9e00);
+  border-radius: 2px;
+}
+
+.electrical-electronics-overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Stat Cards */
+.electrical-electronics-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.electrical-electronics-stat-card {
+  background: linear-gradient(135deg, #3a86ff 0%, #2667cc 100%);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: bounce 1.5s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(58, 134, 255, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.electrical-electronics-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #ff006e 0%, #ff9e00 100%);
+  animation-delay: 0.2s;
+}
+
+.electrical-electronics-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #38b000 0%, #8338ec 100%);
+  animation-delay: 0.4s;
+}
+
+.electrical-electronics-stat-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.electrical-electronics-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.electrical-electronics-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Investment Opportunities */
+.electrical-electronics-investment {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.electrical-electronics-investment h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.electrical-electronics-investment h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #38b000, #8338ec);
+  border-radius: 2px;
+}
+
+.electrical-electronics-opportunity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.electrical-electronics-opportunity-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.electrical-electronics-opportunity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.electrical-electronics-opportunity-card:hover::before {
+  left: 100%;
+}
+
+.electrical-electronics-opportunity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #3a86ff;
+}
+
+.electrical-electronics-card-icon {
+  font-size: 2.5rem;
+  color: #3a86ff;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.electrical-electronics-opportunity-card:hover .electrical-electronics-card-icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #ff006e;
+}
+
+.electrical-electronics-opportunity-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.electrical-electronics-opportunity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.electrical-electronics-opportunity-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.electrical-electronics-opportunity-card li::before {
+  content: '⚡';
+  position: absolute;
+  left: 0;
+  color: #3a86ff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.electrical-electronics-opportunity-card li:hover {
+  padding-left: 2rem;
+  color: #ff006e;
+}
+
+.electrical-electronics-opportunity-card li:hover::before {
+  color: #ff006e;
+  transform: scale(1.5);
+}
+
+/* Advantages Section */
+.electrical-electronics-advantages {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.electrical-electronics-advantages h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.electrical-electronics-advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #8338ec, #ff006e);
+  border-radius: 2px;
+}
+
+.electrical-electronics-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.electrical-electronics-advantage-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.electrical-electronics-advantage-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3a86ff, #38b000);
+  transition: width 0.4s ease;
+}
+
+.electrical-electronics-advantage-item:hover::after {
+  width: 100%;
+}
+
+.electrical-electronics-advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.electrical-electronics-advantage-icon {
+  font-size: 2.5rem;
+  color: #3a86ff;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.electrical-electronics-advantage-item:hover .electrical-electronics-advantage-icon {
+  transform: scale(1.2);
+  color: #ff006e;
+}
+
+.electrical-electronics-advantage-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.electrical-electronics-advantage-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Incentives Section */
+.electrical-electronics-incentives {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.electrical-electronics-incentives h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.electrical-electronics-incentives h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9e00, #ff006e);
+  border-radius: 2px;
+}
+
+.electrical-electronics-incentives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.electrical-electronics-incentive-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.electrical-electronics-incentive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #3a86ff;
+}
+
+.electrical-electronics-incentive-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.electrical-electronics-incentive-item h3 i {
+  color: #38b000;
+  font-size: 1.2rem;
+}
+
+.electrical-electronics-incentive-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.electrical-electronics-incentive-item li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.electrical-electronics-incentive-item li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #38b000;
+  font-weight: bold;
+}
+
+.electrical-electronics-incentive-item li:hover {
+  padding-left: 2rem;
+  color: #3a86ff;
+}
+
+/* Success Stories */
+.electrical-electronics-success {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1s both;
+}
+
+.electrical-electronics-success h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.electrical-electronics-success h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3a86ff, #8338ec);
+  border-radius: 2px;
+}
+
+.electrical-electronics-company-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.electrical-electronics-company-logo {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.electrical-electronics-company-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #3a86ff;
+}
+
+.electrical-electronics-company-logo i {
+  font-size: 2rem;
+  color: #3a86ff;
+  transition: all 0.3s ease;
+}
+
+.electrical-electronics-company-logo:hover i {
+  transform: scale(1.2);
+  color: #ff006e;
+}
+
+.electrical-electronics-company-logo span {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .electrical-electronics-sector {
+    padding: 1rem;
+  }
+  
+  .electrical-electronics-header h1 {
+    font-size: 2rem;
+  }
+  
+  .electrical-electronics-overview,
+  .electrical-electronics-investment,
+  .electrical-electronics-advantages,
+  .electrical-electronics-incentives,
+  .electrical-electronics-success {
+    padding: 2rem 1rem;
+  }
+  
+  .electrical-electronics-stat-cards,
+  .electrical-electronics-opportunity-cards,
+  .electrical-electronics-advantages-grid,
+  .electrical-electronics-incentives-list,
+  .electrical-electronics-company-logos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .electrical-electronics-overview,
+  .electrical-electronics-investment,
+  .electrical-electronics-advantages,
+  .electrical-electronics-incentives,
+  .electrical-electronics-success {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .electrical-electronics-overview.visible,
+  .electrical-electronics-investment.visible,
+  .electrical-electronics-advantages.visible,
+  .electrical-electronics-incentives.visible,
+  .electrical-electronics-success.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

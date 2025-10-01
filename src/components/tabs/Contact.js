@@ -1,13 +1,13 @@
 // src/components/tabs/Contact.js
 import React, { useState } from "react";
-import qrcodeimage2 from "../../assets/Contact Us.jpg";
-import qrcodeimage3 from "../../assets/Gateway.jpg";
-import qrcodeimage4 from "../../assets/Department Directory.jpg";
+import qrcodeimage2 from "../../assets/ContactQR.png";
+import qrcodeimage3 from "../../assets/Gateway.png";
+import qrcodeimage8 from "../../assets/formQR.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Phone, 
   Building, 
-  Users, 
+  Users,
   FileText, 
   Flag, 
   Factory, 
@@ -81,11 +81,47 @@ const contactSections = [
     icon: Users,
     img: "https://i.pinimg.com/originals/a5/00/dd/a500dd5bf406af72b719bb447ae199ba.gif",
     details: {
-      legal: "Legal Services Department - legal@boi.lk",
-      engineering: "Engineering Division - engineering@boi.lk",
-      environment: "Environmental Division - environment@boi.lk",
-      hr: "Human Resources - hr@boi.lk",
-      monitoring: "Monitoring Department - monitoring@boi.lk"
+    InvestmentPromotionDepartment: "Tel: +9411 - 2427070 / +9411 -2427055",     
+    InvestmentAppraisalDepartment: "Tel: +9411-2339826 / +9411 - 2427074",
+    ResearchPolicyAdvocacyDepartment: "Tel: +9411-2427378",
+    InvestorServiceDepartment: "Tel: +9411 - 2427433",
+    ProjectMonitoringDepartment: "Tel: +9411 -2427244",
+    ProjectImplementationDepartment: "Tel: +9411- 2427340 / +9411-2432226",
+    LegalDepartment: "Tel: +9411- 2427013",
+    EnvironmentManagementDepartment: "Tel: +9411-2427264",
+    EngineeringApprovalsSpecialProjectsDepartment: "Tel: +9411 -2427106 / +9411 - 2427118",
+    FinanceDepartment: "Tel: +9411-2427204",
+    MediaPublicityDepartment: "Tel: +9411-2427044",
+    HumanResourceDepartment: "Tel: +9411-2427186",
+    AdministrationDepartment: "Tel: +9411-2427336",
+    InformationTechnologyDepartment: "Tel: +9411-2427294",
+    InternalAuditsDepartment: "Tel: +9411-2427326"
+    }
+  },
+   {
+    title: "Zones Contacts",
+    desc: "Direct contact with Export Processing Zones and Industrial Parks for location-specific investment opportunities.",
+    icon: Factory,
+    img: "https://i.pinimg.com/originals/52/ab/3f/52ab3f57788aac2414e7c7802da7ecf7.gif",
+    details: {  
+      KatunayakeEPZ: "Mr. A S K T Ranjan Sibera, Director, Tel: +94 11 2208100, Mobile: +94 773703044, Email: ranjans@boi.lk",
+      KoggalaEPZ: "Mr H K M N P Ranatunga, Director, Mobile: +94 718565047, Email: ranatungap@boi.lk",
+      BiyagamaEPZ: "Director, Tel: +94 11-2465212",
+      SeethawakaEPZ: "Ms. Champa Wijeshinghe, SDD, Mobile: +94 741541773, Email: champaw@boi.lk",
+      NorthWesternRegionalOffice: "Director, Tel: +94 37-2277040",
+      KandyIndustrialParkCRO: "Mr. T M P Tennakoon, Senior Deputy Director, Tel: +94 81-2420019, Mobile: +94 71-8058479, Email: prasannat@boi.lk",
+      WathupitiwelaEPZ: "Mr H G B P U Silva, Senior Deputy Director, Mobile: +94 773422933, Email: prasads@boi.lk",
+      HoranaEPZ: "Mr. D K Walpita, Senior Deputy Director, Mobile: +94 760387820, Email: darshanak@boi.lk",
+      MalwattaEPZ: "Mrs R P S Pushpakumari, Senior Deputy Director, Mobile: +94 716031039, Email: samanthip@boi.lk",
+      MirigamaEPZ: "Mr. A S Subasinghe, Senior Deputy Director, Tel: +94 33 - 2274657, Mobile: +94 741541785, Email: subasinghes@boi.lk",
+      MawathagamaEPZ: "Mrs D P C Nilmini, Senior Deputy Director, Mobile: +94 718058488, Email: chandrikan@boi.lk",
+      JaffnaRegionalOffice: "Mr. A R Jeyamanon, Senior Deputy Director, Tel: +94 21-2221336, Mobile: +94 777776606, Email: jeyamanonr@boi.lk",
+      MirijjavilaEPZ: "Mr. S S M Abeysekara, Senior Deputy Director, Tel: +94 47 2258800, Mobile: +94 764803197, Email: senakaa@boi.lk",
+      PolgahawelaEPZ: "Mr. A S Prasanna Kumara, Senior Deputy Director, Tel: +94 37-2241526, Mobile: +94 777986584, Email: prasannak@boi.lk",
+      TrincomaleeZoneOffice: "Mr. S Sathkunalinkam, Deputy Director, Tel: +94 26-2233003, Mobile: +94 777955819, Email: satkunam@boi.lk",
+      BingiriyaZoneOffice: "Mr A P P D Adikari, Officer-in-charge, Tel: +94 32 2241376, Email: dhananjayaa@boi.lk",
+      TextileManufacturingZoneEravurPattu: "Mr. R Suhanthan, Officer-in-charge, Mobile: +94 773694111 / +94 782792713, Email: suhanthanr@boi.lk",
+      PharmaceuticalManufacturingZoneHambantota: "Mr S S M Abeysekara, Senior Deputy Director, Mobile: +9476-4803197, Email: senakaa@boi.lk"
     }
   },
   {
@@ -94,11 +130,13 @@ const contactSections = [
     icon: Flag,
     img: "https://i.pinimg.com/originals/cb/e0/e5/cbe0e53deb84c694cf52d247997890be.gif",
     details: {
-      asia: "Asian Countries Desk - asia@boi.lk",
-      europe: "European Countries Desk - europe@boi.lk",
-      americas: "Americas Desk - americas@boi.lk",
-      middleeast: "Middle East & Africa Desk - mea@boi.lk",
-      services: "Country-specific investment guidance and cultural liaison services"
+     "China/HongKong/MiddleEast/Australia/NZ": "(Mr.) M.H. Casseer Deputy Director Tel: +94 11 2427122 Email: manojc@boi.lk",
+     "India/Thailand/Bangladesh/Nepal/Indonesia/Israel/Denmark/Norway/Sweden": "(Mr.) Sudath J. Jayasekara Deputy Director Tel: +94 112339976 Ext: +94 112427108 Email: sudathj@boi.lk",
+      "EU/UK/Malaysia/Belgium/Netherlands/Luxembourg": "(Ms.) Madushani Seneviratne Assistant Director Tel: +94 112427065 Email: madushanis@boi.lk",
+      "Singapore/Russia/Pakistan/Canada/USA": "(Mr.) John Doe Assistant Director Tel: +94 112427027 Email: johndoe@boi.lk",
+      "Japan/France": "(Ms.) Arunya De Silva Assistant Director Tel: +94 112427414 Email: arunyas@boi.lk",
+      "Korea/Italy": "(Ms.) Pankaja Samarajeewa Assistant Director Tel: +94 112427417 Email: pankajas@boi.lk",
+      "Germany": "(Ms.) Sugandhi Gunaratne Assistant Director Tel: +94 11 2427415 Email: sugandhikag@boi.lk"
     }
   },
   {
@@ -107,28 +145,16 @@ const contactSections = [
     icon: Briefcase,
     img: "https://i.pinimg.com/originals/82/b8/4d/82b84dbc0d2eff25af7b081bff1f3528.gif",
     details: {
-      it: "Information Technology - it@boi.lk",
-      manufacturing: "Manufacturing & Apparel - manufacturing@boi.lk",
-      tourism: "Tourism & Leisure - tourism@boi.lk",
-      logistics: "Logistics & Transportation - logistics@boi.lk",
-      medical: "Medical & Pharmaceutical - medical@boi.lk",
-      food: "Food Processing - food@boi.lk"
+      Manufacturing: "Ms Thamari Batuwantudawa, Senior Deputy Director- Investment Appraisal, Tel: +94 11-2543040 /+94 112427077, Email: thamarib@boi.lk | Mr Viran Fernando, Senior Deputy Director- Investment Appraisal, Tel: +94 112427079, Email: viranf@boi.lk",
+      Tourism: "Mr D M N Dissanayake, Director - Investment Appraisal, Tel: +94 11-2380185/ +94 112427088, Email: dissanayakemn@boi.lk",
+      Agriculture: "Mrs. Thamari Batuwantudawa, Senior Deputy Director - Investment Appraisal, Tel: +94 11-2543040/+94 112427342, Email: thamarib@boi.lk",
+      KnowledgeServices: "Mrs. Thamari Batuwantudawa, Senior Deputy Director - Investment Appraisal, Tel: +94 11-2543040/ +94 112427342, Email: thamarib@boi.lk",
+      Infrastructure: "Mr M G R Dharmasiri, Executive Director - Investment Appraisal, Tel: +94 11-2330116 /+94 1127460, Email: ranjithd@boi.lk",
+      Utilities: "Ms Chamila Kumari, Senior Deputy Director - Investment Appraisal, Tel: +94 11-2427041 / +94 112427077, Email: chamilak@boi.lk",
+      Apparel: "Mr M G R Dharmasiri, Executive Director - Investment Appraisal, Tel: +94 11-2330116 /+94 1127460, Email: ranjithd@boi.lk"
     }
   },
-  {
-    title: "Zones Contacts",
-    desc: "Direct contact with Export Processing Zones and Industrial Parks for location-specific investment opportunities.",
-    icon: Factory,
-    img: "https://i.pinimg.com/originals/52/ab/3f/52ab3f57788aac2414e7c7802da7ecf7.gif",
-    details: {
-      katunayake: "Katunayake EPZ - katunayake@boi.lk",
-      biyagama: "Biyagama EPZ - biyagama@boi.lk",
-      koggala: "Koggala EPZ - koggala@boi.lk",
-      polgahawela: "Polgahawela EPZ - polgahawela@boi.lk",
-      mirigama: "Mirigama EPZ - mirigama@boi.lk",
-      malwatta: "Malwatta EPZ - malwatta@boi.lk"
-    }
-  },
+ 
   {
     title: "Investor Services",
     desc: "Comprehensive support for existing investors including aftercare services, compliance assistance, and operational support.",
@@ -286,11 +312,11 @@ const Contact = () => {
               animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
               borderRadius: '5%',
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-              border: '3px solid var(--secondary)'
-            }} alt="Gateway QR   " className="w-24 h-24 mx-auto" />
+              border: '3px solid #667eea'
+            }} alt="Gateway QR" className="w-24 h-24 mx-auto" />
       </div>
       <div className="qr-contact">
-        <img src={qrcodeimage4}
+        <img src={qrcodeimage8}
             style={{
               width: '150px',
               height: '150px',
@@ -298,8 +324,8 @@ const Contact = () => {
               animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
               borderRadius: '5%',
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-              border: '3px solid var(--secondary)'
-            }} alt="Department QR" className="w-24 h-24 mx-auto" />
+              border: '3px solid #8AA624'
+            }} alt="form QR" className="w-24 h-24 mx-auto" />
       </div>
     </div>
   </div>

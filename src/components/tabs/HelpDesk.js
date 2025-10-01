@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import qrcodeimage from "../../assets/frame.jpg";
+import qrcodeimage from "../../assets/WebQR.png";
 
 const HelpDesk = () => {
   const backgroundImages = [

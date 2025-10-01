@@ -1,0 +1,618 @@
+/* MedicalPharmaceutical.css - Modern Styling with Animations */
+
+.medical-sector {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Section */
+.medical-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease-out;
+}
+
+.medical-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2ecc71, #3498db, #9b59b6, #e74c3c);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.medical-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.medical-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+.medical-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Overview Section */
+.medical-overview {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.medical-overview h2 {
+  color: #27ae60;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.medical-overview h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2ecc71, #3498db);
+  border-radius: 2px;
+}
+
+.medical-overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Stat Cards */
+.medical-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.medical-stat-card {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: bounce 1.5s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.medical-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  animation-delay: 0.2s;
+}
+
+.medical-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  animation-delay: 0.4s;
+}
+
+.medical-stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+  animation-delay: 0.6s;
+}
+
+.medical-stat-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.medical-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.medical-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Investment Opportunities */
+.medical-investment {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.medical-investment h2 {
+  color: #27ae60;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.medical-investment h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2ecc71, #3498db);
+  border-radius: 2px;
+}
+
+.medical-opportunity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.medical-opportunity-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.medical-opportunity-card.medical-featured {
+  border: 2px solid #27ae60;
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.2);
+}
+
+.medical-opportunity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(39, 174, 96, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.medical-opportunity-card:hover::before {
+  left: 100%;
+}
+
+.medical-opportunity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #27ae60;
+}
+
+.medical-card-icon {
+  font-size: 2.5rem;
+  color: #27ae60;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.medical-opportunity-card:hover .medical-card-icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #e74c3c;
+}
+
+.medical-opportunity-card h3 {
+  color: #27ae60;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.medical-opportunity-desc {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.medical-opportunity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.medical-opportunity-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.medical-opportunity-card li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.medical-opportunity-card li:hover {
+  padding-left: 2rem;
+  color: #e74c3c;
+}
+
+.medical-opportunity-card li:hover::before {
+  color: #e74c3c;
+  transform: scale(1.5);
+}
+
+/* Advantages Section */
+.medical-advantages {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.medical-advantages h2 {
+  color: #27ae60;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.medical-advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #9b59b6, #e74c3c);
+  border-radius: 2px;
+}
+
+.medical-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.medical-advantage-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.medical-advantage-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #27ae60, #3498db);
+  transition: width 0.4s ease;
+}
+
+.medical-advantage-item:hover::after {
+  width: 100%;
+}
+
+.medical-advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.medical-advantage-icon {
+  font-size: 2.5rem;
+  color: #27ae60;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.medical-advantage-item:hover .medical-advantage-icon {
+  transform: scale(1.2);
+  color: #e74c3c;
+}
+
+.medical-advantage-item h3 {
+  color: #27ae60;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.medical-advantage-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Incentives Section */
+.medical-incentives {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.medical-incentives h2 {
+  color: #27ae60;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.medical-incentives h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e74c3c);
+  border-radius: 2px;
+}
+
+.medical-incentives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.medical-incentive-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.medical-incentive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #27ae60;
+}
+
+.medical-incentive-item h3 {
+  color: #27ae60;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medical-incentive-item h3 i {
+  color: #2ecc71;
+  font-size: 1.2rem;
+}
+
+.medical-incentive-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.medical-incentive-item li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.medical-incentive-item li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.medical-incentive-item li:hover {
+  padding-left: 2rem;
+  color: #3498db;
+}
+
+/* Success Stories */
+.medical-success {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1s both;
+}
+
+.medical-success h2 {
+  color: #27ae60;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.medical-success h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 2px;
+}
+
+.medical-company-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.medical-company-logo {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medical-company-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #27ae60;
+}
+
+.medical-company-logo i {
+  font-size: 2rem;
+  color: #27ae60;
+  transition: all 0.3s ease;
+}
+
+.medical-company-logo:hover i {
+  transform: scale(1.2);
+  color: #e74c3c;
+}
+
+.medical-company-logo span {
+  font-weight: 600;
+  color: #27ae60;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medical-sector {
+    padding: 1rem;
+  }
+  
+  .medical-header h1 {
+    font-size: 2rem;
+  }
+  
+  .medical-overview,
+  .medical-investment,
+  .medical-advantages,
+  .medical-incentives,
+  .medical-success {
+    padding: 2rem 1rem;
+  }
+  
+  .medical-stat-cards,
+  .medical-opportunity-cards,
+  .medical-advantages-grid,
+  .medical-incentives-list,
+  .medical-company-logos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .medical-overview,
+  .medical-investment,
+  .medical-advantages,
+  .medical-incentives,
+  .medical-success {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .medical-overview.visible,
+  .medical-investment.visible,
+  .medical-advantages.visible,
+  .medical-incentives.visible,
+  .medical-success.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

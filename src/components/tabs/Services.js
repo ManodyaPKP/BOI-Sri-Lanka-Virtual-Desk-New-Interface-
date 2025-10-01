@@ -26,21 +26,21 @@ import {
 const services = [
   {
     title: "Investor Facilitation",
-    desc: "Dedicated support for investors throughout the investment process, from initial inquiry to project implementation and beyond.",
+    desc: "End-to-end investor support — from first inquiry to successful project launch and beyond.",
     icon: Headphones,
     img: "https://i.pinimg.com/originals/22/09/5d/22095d8fd02905f537e78a507c7536e0.gif",
     details: "Our one-stop shop provides guidance on regulatory requirements, approvals, and permits needed for your investment."
   },
   {
     title: "Project Implementation",
-    desc: "Assistance with project setup, construction, and operationalization to ensure smooth establishment of your business.",
+    desc: "Seamless support from setup to operations for a smooth business start.",
     icon: Wrench,
     img: "https://i.pinimg.com/originals/92/16/d3/9216d3b4baf45f25c2b3e073c4f054d4.gif",
     details: "We help navigate land acquisition, utility connections, and construction approvals to accelerate your project timeline."
   },
   {
     title: "Incentive Administration",
-    desc: "Guidance on availing investment incentives, tax benefits, and custom duty exemptions available for eligible projects.",
+    desc: "Expert guidance on investment incentives, tax breaks, and duty exemptions for your project.",
     icon: DollarSign,
     img: "https://i.pinimg.com/originals/9d/32/8f/9d328f660e7eafce403b4684f0ba2f03.gif",
     details: "We assist in securing tax holidays, duty-free imports, and other fiscal incentives based on your investment sector and scale."
@@ -54,14 +54,14 @@ const services = [
   },
   {
     title: "Sector-Specific Guidance",
-    desc: "Expert advice on investment opportunities across key sectors including technology, manufacturing, tourism and infrastructure.",
+    desc: "Expert guidance on investment opportunities in tech, manufacturing, tourism, and infrastructure.",
     icon: BarChart3,
     img: "https://i.pinimg.com/originals/3a/0c/d1/3a0cd1a1cdcde65aaf50b323daabaede.gif",
     details: "Detailed market intelligence and sector reports to help you make informed investment decisions."
   },
   {
     title: "Policy Advocacy",
-    desc: "Representing investor interests in policy discussions to improve Sri Lanka's investment climate and regulatory framework.",
+    desc: "Advocating for investors to shape a better business climate in Sri Lanka.",
     icon: Target,
     img: "https://i.pinimg.com/originals/67/28/bb/6728bb1c361d067c40b84916495fc704.gif",
     details: "We serve as a bridge between investors and government entities to address regulatory challenges."
@@ -88,7 +88,7 @@ const services = [
     details: "Discover career opportunities across Sri Lanka's dynamic investment landscape. The BOI Job Bank connects job seekers with leading enterprises in sectors like apparel, IT, logistics, and manufacturing. Whether you're starting your career or seeking growth, explore roles that match your skills and aspirations."
   },
   {
-  title: "Visa & Immigration Services",
+  title: "Visa & Immigration ",
   desc: "Streamlined visa processing and immigration support for investors, professionals, and their families.",
   icon: Plane, 
   img: "https://i.pinimg.com/originals/15/8f/7b/158f7b292473c35812ad97f6b317a668.gif",
@@ -117,7 +117,7 @@ const services = [
 },
 {
   title: "Export Data Portal",
-  desc: "Digital platform for export documentation, compliance reporting, and performance tracking for BOI enterprises.",
+  desc: "A digital platform for export docs, compliance, and performance tracking.",
   icon: Database, 
   img: "https://i.pinimg.com/originals/e6/f7/ee/e6f7ee084740b3221d00d0902618cd09.gif",
   details: "The BOI Export Data Portal provides registered exporters with a comprehensive system for submitting export documentation, tracking shipment status, and complying with regulatory requirements. The platform facilitates electronic submission of export declarations, shipping documents, and customs documentation. Exporters can generate performance reports, access historical export data, and monitor compliance with export obligations. The system integrates with Sri Lanka Customs and other relevant agencies to streamline export processes and reduce paperwork for BOI-registered companies."
@@ -145,7 +145,7 @@ const services = [
 },
 {
   title: "Industrial Labour Relations",
-  desc: "Comprehensive advisory and facilitation services for maintaining harmonious employer-employee relationships in BOI enterprises.",
+  desc: "Advisory support to foster strong employer–employee relations in BOI enterprises.",
   icon: Users, 
   img: "https://i.pinimg.com/originals/8d/da/fd/8ddafdd5048b02ed02410bdc58c63a62.gif",
   details: "The BOI Industrial Relations Department provides comprehensive advisory services and guidance to both employers and employees on all aspects of industrial relations. We promote labor-management cooperation and industrial harmony through distribution of the Labor Standards & Employment Relations Manual, clarification of IR matters, and organization of workshops. Our services include monitoring compliance with labor standards, facilitating social dialogue through Employees' Councils, mediating trade union activities, and ensuring adherence to ILO Core Labor Standards. We also help maintain a productive workforce through job placement services, dispute resolution, and promoting fair employment practices in accordance with Sri Lankan labor laws and international standards."

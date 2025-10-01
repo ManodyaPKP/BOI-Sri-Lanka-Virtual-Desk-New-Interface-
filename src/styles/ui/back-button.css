@@ -1,17 +1,204 @@
-/* Back Button */
-/* Back Button Styles - Navigation back button with hover effects */
+/* Back Button Styles - Advanced 2025 Design with Complex Animations */
 .back-button {
-  background: #f6bd8e;
-  border: 1px solid #dee2e6;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 0.875rem 2rem 0.875rem 1.75rem;
+  border-radius: 16px;
   margin-bottom: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(102, 126, 234, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+/* Animated gradient background */
+.back-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    45deg,
+    #CD1818,
+    #D4ADFC,
+    #BED754,
+    #FEA405,
+    #B9B4C7
+  );
+  background-size: 300% 300%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Shimmer effect */
+.back-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+
+
+/* Hover state */
 .back-button:hover {
-  background: #62d8ef;
-  border-color: #62d8ef;
-  color: #fff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(102, 126, 234, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.back-button:hover::before {
+  opacity: 1;
+}
+
+.back-button:hover::after {
+  left: 150%;
+}
+
+/* Active/Click state */
+.back-button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(102, 126, 234, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+/* Ripple effect container */
+.back-button {
+  --ripple-x: 50%;
+  --ripple-y: 50%;
+}
+
+/* Focus state for accessibility */
+.back-button:focus-visible {
+  outline: 3px solid rgba(102, 126, 234, 0.5);
+  outline-offset: 4px;
+  animation: focusPulse 2s ease-in-out infinite;
+}
+
+@keyframes focusPulse {
+  0%, 100% { outline-color: rgba(102, 126, 234, 0.5); }
+  50% { outline-color: rgba(102, 126, 234, 0.8); }
+}
+
+/* Glass morphism variant */
+.back-button.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.8) 0%,
+    rgba(118, 75, 162, 0.8) 100%
+  );
+   -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(102, 126, 234, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Neon glow variant */
+.back-button.neon {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+  box-shadow: 
+    0 0 20px rgba(102, 126, 234, 0.4),
+    inset 0 0 20px rgba(102, 126, 234, 0.1);
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(102, 126, 234, 0.4),
+      inset 0 0 20px rgba(102, 126, 234, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(102, 126, 234, 0.6),
+      inset 0 0 30px rgba(102, 126, 234, 0.2);
+  }
+}
+
+.back-button.neon:hover {
+  background: rgba(102, 126, 234, 0.2);
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(102, 126, 234, 1);
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .back-button {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.3),
+      0 8px 24px rgba(124, 58, 237, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  
+  .back-button::before {
+    background: linear-gradient(
+      45deg,
+    #FEA405,
+    #1D267D
+    );
+  }
+  
+  .back-button:hover {
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.4),
+      0 16px 48px rgba(124, 58, 237, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .back-button,
+  .back-button::before,
+  .back-button::after {
+    animation: none;
+    transition: none;
+  }
+  
+  .back-button:hover {
+    transform: none;
+  }
 }

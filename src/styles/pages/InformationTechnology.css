@@ -1,0 +1,600 @@
+/* InformationTechnology.css - Modern Styling with Animations */
+
+.information-technology-sector {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Section */
+.information-technology-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease-out;
+}
+
+.information-technology-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff5722, #2196f3, #1976d2, #03a9f4);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.information-technology-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.information-technology-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+.information-technology-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Overview Section */
+.information-technology-overview {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.information-technology-overview h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.information-technology-overview h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff5722, #2196f3);
+  border-radius: 2px;
+}
+
+.information-technology-overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Stat Cards */
+.information-technology-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.information-technology-stat-card {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: bounce 1.5s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.information-technology-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+  animation-delay: 0.2s;
+}
+
+.information-technology-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #03a9f4 0%, #0288d1 100%);
+  animation-delay: 0.4s;
+}
+
+.information-technology-stat-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.information-technology-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.information-technology-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Investment Opportunities */
+.information-technology-investment {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.information-technology-investment h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.information-technology-investment h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1976d2, #03a9f4);
+  border-radius: 2px;
+}
+
+.information-technology-opportunity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.information-technology-opportunity-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.information-technology-opportunity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.information-technology-opportunity-card:hover::before {
+  left: 100%;
+}
+
+.information-technology-opportunity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #2196f3;
+}
+
+.information-technology-card-icon {
+  font-size: 2.5rem;
+  color: #2196f3;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.information-technology-opportunity-card:hover .information-technology-card-icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #ff5722;
+}
+
+.information-technology-opportunity-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.information-technology-opportunity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.information-technology-opportunity-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.information-technology-opportunity-card li::before {
+  content: '💻';
+  position: absolute;
+  left: 0;
+  color: #2196f3;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.information-technology-opportunity-card li:hover {
+  padding-left: 2rem;
+  color: #ff5722;
+}
+
+.information-technology-opportunity-card li:hover::before {
+  color: #ff5722;
+  transform: scale(1.5);
+}
+
+/* Advantages Section */
+.information-technology-advantages {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.information-technology-advantages h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.information-technology-advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #03a9f4, #2196f3);
+  border-radius: 2px;
+}
+
+.information-technology-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.information-technology-advantage-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.information-technology-advantage-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2196f3, #03a9f4);
+  transition: width 0.4s ease;
+}
+
+.information-technology-advantage-item:hover::after {
+  width: 100%;
+}
+
+.information-technology-advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.information-technology-advantage-icon {
+  font-size: 2.5rem;
+  color: #2196f3;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.information-technology-advantage-item:hover .information-technology-advantage-icon {
+  transform: scale(1.2);
+  color: #ff5722;
+}
+
+.information-technology-advantage-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.information-technology-advantage-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Incentives Section */
+.information-technology-incentives {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.information-technology-incentives h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.information-technology-incentives h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff5722, #2196f3);
+  border-radius: 2px;
+}
+
+.information-technology-incentives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.information-technology-incentive-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.information-technology-incentive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #2196f3;
+}
+
+.information-technology-incentive-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.information-technology-incentive-item h3 i {
+  color: #1976d2;
+  font-size: 1.2rem;
+}
+
+.information-technology-incentive-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.information-technology-incentive-item li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.information-technology-incentive-item li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.information-technology-incentive-item li:hover {
+  padding-left: 2rem;
+  color: #2196f3;
+}
+
+/* Success Stories */
+.information-technology-success {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1s both;
+}
+
+.information-technology-success h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.information-technology-success h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2196f3, #03a9f4);
+  border-radius: 2px;
+}
+
+.information-technology-company-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.information-technology-company-logo {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.information-technology-company-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #2196f3;
+}
+
+.information-technology-company-logo i {
+  font-size: 2rem;
+  color: #2196f3;
+  transition: all 0.3s ease;
+}
+
+.information-technology-company-logo:hover i {
+  transform: scale(1.2);
+  color: #ff5722;
+}
+
+.information-technology-company-logo span {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .information-technology-sector {
+    padding: 1rem;
+  }
+  
+  .information-technology-header h1 {
+    font-size: 2rem;
+  }
+  
+  .information-technology-overview,
+  .information-technology-investment,
+  .information-technology-advantages,
+  .information-technology-incentives,
+  .information-technology-success {
+    padding: 2rem 1rem;
+  }
+  
+  .information-technology-stat-cards,
+  .information-technology-opportunity-cards,
+  .information-technology-advantages-grid,
+  .information-technology-incentives-list,
+  .information-technology-company-logos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .information-technology-overview,
+  .information-technology-investment,
+  .information-technology-advantages,
+  .information-technology-incentives,
+  .information-technology-success {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .information-technology-overview.visible,
+  .information-technology-investment.visible,
+  .information-technology-advantages.visible,
+  .information-technology-incentives.visible,
+  .information-technology-success.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

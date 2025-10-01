@@ -1,0 +1,603 @@
+/* AutoComponents.css - Modern Styling with Animations */
+
+.auto-components-sector {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Section */
+.auto-components-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease-out;
+}
+
+.auto-components-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.auto-components-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+.auto-components-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+.auto-components-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Overview Section */
+.auto-components-overview {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.auto-components-overview h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.auto-components-overview h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #e74c3c, #f39c12);
+  border-radius: 2px;
+}
+
+.auto-components-overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Stat Cards */
+.auto-components-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.auto-components-stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+ animation: bounce 1.5s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+.auto-components-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  animation-delay: 0.2s;
+}
+
+.auto-components-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  animation-delay: 0.4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.auto-components-stat-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.auto-components-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.auto-components-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Investment Opportunities */
+.auto-components-investment {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.auto-components-investment h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.auto-components-investment h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2ecc71, #3498db);
+  border-radius: 2px;
+}
+
+.auto-components-opportunity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.auto-components-opportunity-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.auto-components-opportunity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.auto-components-opportunity-card:hover::before {
+  left: 100%;
+}
+
+.auto-components-opportunity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #3498db;
+}
+
+.auto-components-card-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auto-components-opportunity-card:hover .auto-components-card-icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #e74c3c;
+}
+
+.auto-components-opportunity-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.auto-components-opportunity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.auto-components-opportunity-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.auto-components-opportunity-card li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.auto-components-opportunity-card li:hover {
+  padding-left: 2rem;
+  color: #e74c3c;
+}
+
+.auto-components-opportunity-card li:hover::before {
+  color: #e74c3c;
+  transform: scale(1.5);
+}
+
+/* Advantages Section */
+.auto-components-advantages {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.auto-components-advantages h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.auto-components-advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #9b59b6, #e74c3c);
+  border-radius: 2px;
+}
+
+.auto-components-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.auto-components-advantage-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.auto-components-advantage-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transition: width 0.4s ease;
+}
+
+.auto-components-advantage-item:hover::after {
+  width: 100%;
+}
+
+.auto-components-advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.auto-components-advantage-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auto-components-advantage-item:hover .auto-components-advantage-icon {
+  transform: scale(1.2);
+  color: #e74c3c;
+}
+
+.auto-components-advantage-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.auto-components-advantage-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Incentives Section */
+.auto-components-incentives {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.auto-components-incentives h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.auto-components-incentives h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #f39c12, #e74c3c);
+  border-radius: 2px;
+}
+
+.auto-components-incentives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.auto-components-incentive-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.auto-components-incentive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #3498db;
+}
+
+.auto-components-incentive-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auto-components-incentive-item h3 i {
+  color: #2ecc71;
+  font-size: 1.2rem;
+}
+
+.auto-components-incentive-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.auto-components-incentive-item li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.auto-components-incentive-item li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.auto-components-incentive-item li:hover {
+  padding-left: 2rem;
+  color: #3498db;
+}
+
+/* Success Stories */
+.auto-components-success {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1s both;
+}
+
+.auto-components-success h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.auto-components-success h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 2px;
+}
+
+.auto-components-company-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.auto-components-company-logo {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auto-components-company-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #3498db;
+}
+
+.auto-components-company-logo i {
+  font-size: 2rem;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+.auto-components-company-logo:hover i {
+  transform: scale(1.2);
+  color: #e74c3c;
+}
+
+.auto-components-company-logo span {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auto-components-sector {
+    padding: 1rem;
+  }
+  
+  .auto-components-header h1 {
+    font-size: 2rem;
+  }
+  
+  .auto-components-overview,
+  .auto-components-investment,
+  .auto-components-advantages,
+  .auto-components-incentives,
+  .auto-components-success {
+    padding: 2rem 1rem;
+  }
+  
+  .auto-components-stat-cards,
+  .auto-components-opportunity-cards,
+  .auto-components-advantages-grid,
+  .auto-components-incentives-list,
+  .auto-components-company-logos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .auto-components-overview,
+  .auto-components-investment,
+  .auto-components-advantages,
+  .auto-components-incentives,
+  .auto-components-success {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .auto-components-overview.visible,
+  .auto-components-investment.visible,
+  .auto-components-advantages.visible,
+  .auto-components-incentives.visible,
+  .auto-components-success.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

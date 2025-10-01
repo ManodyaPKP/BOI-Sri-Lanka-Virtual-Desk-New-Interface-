@@ -1,0 +1,600 @@
+/* TextileApparel.css - Modern Styling with Animations */
+
+.textile-apparel-sector {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Section */
+.textile-apparel-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease-out;
+}
+
+.textile-apparel-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9800, #e91e63, #9c27b0, #673ab7);
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.textile-apparel-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.textile-apparel-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #f8f9fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+.textile-apparel-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Overview Section */
+.textile-apparel-overview {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.textile-apparel-overview h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.textile-apparel-overview h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9800, #e91e63);
+  border-radius: 2px;
+}
+
+.textile-apparel-overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Stat Cards */
+.textile-apparel-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.textile-apparel-stat-card {
+  background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: bounce 1.5s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.textile-apparel-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+  animation-delay: 0.2s;
+}
+
+.textile-apparel-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #673ab7 0%, #3f51b5 100%);
+  animation-delay: 0.4s;
+}
+
+.textile-apparel-stat-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.textile-apparel-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.textile-apparel-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Investment Opportunities */
+.textile-apparel-investment {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.textile-apparel-investment h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.textile-apparel-investment h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #9c27b0, #673ab7);
+  border-radius: 2px;
+}
+
+.textile-apparel-opportunity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.textile-apparel-opportunity-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.textile-apparel-opportunity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.textile-apparel-opportunity-card:hover::before {
+  left: 100%;
+}
+
+.textile-apparel-opportunity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #e91e63;
+}
+
+.textile-apparel-card-icon {
+  font-size: 2.5rem;
+  color: #e91e63;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.textile-apparel-opportunity-card:hover .textile-apparel-card-icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #ff9800;
+}
+
+.textile-apparel-opportunity-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.textile-apparel-opportunity-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.textile-apparel-opportunity-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.textile-apparel-opportunity-card li::before {
+  content: '👕';
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.textile-apparel-opportunity-card li:hover {
+  padding-left: 2rem;
+  color: #ff9800;
+}
+
+.textile-apparel-opportunity-card li:hover::before {
+  color: #ff9800;
+  transform: scale(1.5);
+}
+
+/* Advantages Section */
+.textile-apparel-advantages {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.textile-apparel-advantages h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.textile-apparel-advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #673ab7, #e91e63);
+  border-radius: 2px;
+}
+
+.textile-apparel-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.textile-apparel-advantage-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.textile-apparel-advantage-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e91e63, #9c27b0);
+  transition: width 0.4s ease;
+}
+
+.textile-apparel-advantage-item:hover::after {
+  width: 100%;
+}
+
+.textile-apparel-advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.textile-apparel-advantage-icon {
+  font-size: 2.5rem;
+  color: #e91e63;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.textile-apparel-advantage-item:hover .textile-apparel-advantage-icon {
+  transform: scale(1.2);
+  color: #ff9800;
+}
+
+.textile-apparel-advantage-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.textile-apparel-advantage-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Incentives Section */
+.textile-apparel-incentives {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.textile-apparel-incentives h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.textile-apparel-incentives h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9800, #e91e63);
+  border-radius: 2px;
+}
+
+.textile-apparel-incentives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.textile-apparel-incentive-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.textile-apparel-incentive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #e91e63;
+}
+
+.textile-apparel-incentive-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.textile-apparel-incentive-item h3 i {
+  color: #9c27b0;
+  font-size: 1.2rem;
+}
+
+.textile-apparel-incentive-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.textile-apparel-incentive-item li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.textile-apparel-incentive-item li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #9c27b0;
+  font-weight: bold;
+}
+
+.textile-apparel-incentive-item li:hover {
+  padding-left: 2rem;
+  color: #e91e63;
+}
+
+/* Success Stories */
+.textile-apparel-success {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1s both;
+}
+
+.textile-apparel-success h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.textile-apparel-success h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #e91e63, #673ab7);
+  border-radius: 2px;
+}
+
+.textile-apparel-company-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.textile-apparel-company-logo {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.textile-apparel-company-logo:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: #e91e63;
+}
+
+.textile-apparel-company-logo i {
+  font-size: 2rem;
+  color: #e91e63;
+  transition: all 0.3s ease;
+}
+
+.textile-apparel-company-logo:hover i {
+  transform: scale(1.2);
+  color: #ff9800;
+}
+
+.textile-apparel-company-logo span {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .textile-apparel-sector {
+    padding: 1rem;
+  }
+  
+  .textile-apparel-header h1 {
+    font-size: 2rem;
+  }
+  
+  .textile-apparel-overview,
+  .textile-apparel-investment,
+  .textile-apparel-advantages,
+  .textile-apparel-incentives,
+  .textile-apparel-success {
+    padding: 2rem 1rem;
+  }
+  
+  .textile-apparel-stat-cards,
+  .textile-apparel-opportunity-cards,
+  .textile-apparel-advantages-grid,
+  .textile-apparel-incentives-list,
+  .textile-apparel-company-logos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .textile-apparel-overview,
+  .textile-apparel-investment,
+  .textile-apparel-advantages,
+  .textile-apparel-incentives,
+  .textile-apparel-success {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .textile-apparel-overview.visible,
+  .textile-apparel-investment.visible,
+  .textile-apparel-advantages.visible,
+  .textile-apparel-incentives.visible,
+  .textile-apparel-success.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
