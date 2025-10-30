@@ -1,6 +1,6 @@
-/* TourismLeisure.css - Modern Styling with Animations */
+/* TourismLeisure.css - Enhanced Modern Styling with Advanced Animations */
 
-.tourism-sector {
+.tourism-leisure-sector {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -15,11 +15,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Header Section */
-.tourism-header {
+/* Header Section with Enhanced Animations */
+.tourism-leisure-header {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
   color: white;
   border-radius: 15px;
   margin-bottom: 3rem;
@@ -29,15 +29,87 @@
   animation: slideDown 0.8s ease-out;
 }
 
-.tourism-header::before {
+.tourism-leisure-header::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #f39c12, #e74c3c, #3498db, #2ecc71);
-  animation: gradientShift 3s ease infinite;
+  background: linear-gradient(90deg, #ff9d00, #ff6b35, #4ecdc4, #44a08d, #ff9d00);
+  background-size: 200% 100%;
+  animation: gradientSlide 3s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Floating particles in header */
+.header-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(2) {
+  left: 80%;
+  top: 40%;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+}
+
+.particle:nth-child(3) {
+  left: 30%;
+  top: 70%;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+.particle:nth-child(4) {
+  left: 70%;
+  top: 80%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-20px) scale(0.8);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-30px) translateX(30px) scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 @keyframes slideDown {
@@ -45,25 +117,19 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.tourism-icon {
+.tourism-leisure-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  animation: wave 3s ease-in-out infinite;
+  animation: pulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
 }
 
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  75% { transform: rotate(-5deg); }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
 
-.tourism-header h1 {
+.tourism-leisure-header h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -72,27 +138,53 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 30px rgba(255,255,255,0.3);
 }
 
 @keyframes textGlow {
-  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
-  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+  from { filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
+  to { filter: drop-shadow(0 0 25px rgba(255,255,255,0.9)); }
 }
 
-.tourism-subtitle {
+.tourism-leisure-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
   font-weight: 300;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Overview Section */
-.tourism-overview {
+.tourism-leisure-overview {
   background: white;
   padding: 3rem;
   border-radius: 15px;
   margin-bottom: 3rem;
   box-shadow: 0 5px 25px rgba(0,0,0,0.1);
   animation: slideUp 0.8s ease-out 0.2s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.tourism-leisure-overview::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes slideUp {
@@ -100,94 +192,271 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-.tourism-overview h2 {
-  color: #e67e22;
+.tourism-leisure-overview h2 {
+  color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
 }
 
-.tourism-overview h2::after {
+.tourism-leisure-overview h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #f39c12, #3498db);
+  background: linear-gradient(90deg, #ff9d00, #ff6b35);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
 }
 
-.tourism-overview p {
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+.tourism-leisure-overview p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Stat Cards */
-.tourism-stat-cards {
+/* Enhanced Stat Cards */
+.tourism-leisure-stat-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.tourism-stat-card {
-  background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+.tourism-leisure-stat-card {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
   color: white;
   padding: 2rem 1rem;
   border-radius: 12px;
   text-align: center;
-  transition: all 0.3s ease;
-  animation: bounce 1.5s ease-in-out infinite;
-  box-shadow: 0 8px 25px rgba(230, 126, 34, 0.3);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: scaleIn 0.6s ease-out both;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
+.tourism-leisure-stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: ripple 3s ease-out infinite;
 }
 
-.tourism-stat-card:nth-child(2) {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.tourism-leisure-stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.tourism-leisure-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
   animation-delay: 0.2s;
 }
 
-.tourism-stat-card:nth-child(3) {
-  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+.tourism-leisure-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #ff9d00 0%, #ff6b6b 100%);
+  animation-delay: 0.3s;
+}
+
+.tourism-leisure-stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   animation-delay: 0.4s;
 }
 
-.tourism-stat-card:nth-child(4) {
-  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-  animation-delay: 0.6s;
+.tourism-leisure-stat-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-.tourism-stat-card:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+.tourism-leisure-stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
 }
 
-.tourism-stat-number {
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.tourism-leisure-stat-number {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
-.tourism-stat-label {
+.tourism-leisure-stat-label {
   font-size: 0.9rem;
   opacity: 0.9;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
 
-/* Investment Opportunities */
-.tourism-investment {
+.stat-growth {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.85;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Growth Chart Section */
+.tourism-leisure-growth {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.3s both;
+}
+
+.tourism-leisure-growth h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.tourism-leisure-growth h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4ecdc4, #ff6b35);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.growth-insight {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #ff6b35;
+}
+
+.growth-insight p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.growth-chart-container {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 300px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-bar {
+  flex: 1;
+  background: linear-gradient(180deg, #ff6b35 0%, #f7931e 100%);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  transition: all 0.5s ease;
+  animation: growUp 1.5s ease-out both;
+  box-shadow: 0 -5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.chart-bar:nth-child(1) { animation-delay: 0.2s; }
+.chart-bar:nth-child(2) { 
+  animation-delay: 0.4s;
+  background: linear-gradient(180deg, #4ecdc4 0%, #44a08d 100%);
+}
+.chart-bar:nth-child(3) { 
+  animation-delay: 0.6s;
+  background: linear-gradient(180deg, #ff9d00 0%, #ff6b6b 100%);
+}
+.chart-bar:nth-child(4) { 
+  animation-delay: 0.8s;
+  background: linear-gradient(180deg, #6a11cb 0%, #2575fc 100%);
+}
+.chart-bar:nth-child(5) { 
+  animation-delay: 1s;
+  background: linear-gradient(180deg, #ff6b6b 0%, #ff9d00 100%);
+}
+
+@keyframes growUp {
+  from { height: 0; opacity: 0; }
+  to { opacity: 1; }
+}
+
+.chart-bar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 -10px 30px rgba(255, 107, 53, 0.5);
+}
+
+.bar-value {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chart-note {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Investment Opportunities Section */
+.tourism-leisure-investment {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -196,32 +465,40 @@
   animation: slideUp 0.8s ease-out 0.4s both;
 }
 
-.tourism-investment h2 {
-  color: #e67e22;
+.tourism-leisure-investment h2 {
+  color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
 }
 
-.tourism-investment h2::after {
+.tourism-leisure-investment h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #f39c12, #3498db);
+  background: linear-gradient(90deg, #4ecdc4, #ff6b35);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
 }
 
-.tourism-opportunity-cards {
+.investment-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.tourism-leisure-opportunity-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.tourism-opportunity-card {
+.tourism-leisure-opportunity-card {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 2rem;
   border-radius: 15px;
@@ -231,93 +508,121 @@
   overflow: hidden;
 }
 
-.tourism-opportunity-card.tourism-featured {
-  border: 2px solid #e67e22;
-  box-shadow: 0 8px 25px rgba(230, 126, 34, 0.2);
-}
-
-.tourism-opportunity-card::before {
+.tourism-leisure-opportunity-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(230, 126, 34, 0.1), transparent);
-  transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: left 0.6s ease;
 }
 
-.tourism-opportunity-card:hover::before {
+.tourism-leisure-opportunity-card:hover::before {
   left: 100%;
 }
 
-.tourism-opportunity-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  border-color: #e67e22;
+.tourism-leisure-opportunity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-color: #ff6b35;
 }
 
-.tourism-card-icon {
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.opportunity-badge {
+  background: linear-gradient(135deg, #ff9d00, #ff6b35);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.tourism-leisure-card-icon {
   font-size: 2.5rem;
-  color: #e67e22;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  color: #ff6b35;
+  transition: all 0.4s ease;
 }
 
-.tourism-opportunity-card:hover .tourism-card-icon {
-  transform: scale(1.2) rotate(10deg);
-  color: #e74c3c;
+.tourism-leisure-opportunity-card:hover .tourism-leisure-card-icon {
+  transform: scale(1.3) rotate(15deg);
+  color: #ff9d00;
 }
 
-.tourism-opportunity-card h3 {
-  color: #e67e22;
+.tourism-leisure-opportunity-card h3 {
+  color: #2c3e50;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
-.tourism-opportunity-desc {
+.opportunity-desc {
   color: #666;
-  font-style: italic;
+  font-size: 0.95rem;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  font-style: italic;
 }
 
-.tourism-opportunity-card ul {
+.tourism-leisure-opportunity-card ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 1rem;
 }
 
-.tourism-opportunity-card li {
+.tourism-leisure-opportunity-card li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #f1f2f6;
   position: relative;
   padding-left: 1.5rem;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
-.tourism-opportunity-card li::before {
-  content: '▸';
+.tourism-leisure-opportunity-card li::before {
+  content: '🏝️';
   position: absolute;
   left: 0;
-  color: #e67e22;
+  color: #ff6b35;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-.tourism-opportunity-card li:hover {
+.tourism-leisure-opportunity-card li:hover {
   padding-left: 2rem;
-  color: #e74c3c;
+  color: #ff9d00;
 }
 
-.tourism-opportunity-card li:hover::before {
-  color: #e74c3c;
+.tourism-leisure-opportunity-card li:hover::before {
+  color: #ff9d00;
   transform: scale(1.5);
 }
 
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #e9ecef;
+}
+
+.market-potential {
+  display: inline-block;
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
 /* Advantages Section */
-.tourism-advantages {
+.tourism-leisure-advantages {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -326,32 +631,40 @@
   animation: slideUp 0.8s ease-out 0.6s both;
 }
 
-.tourism-advantages h2 {
-  color: #e67e22;
+.tourism-leisure-advantages h2 {
+  color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
 }
 
-.tourism-advantages h2::after {
+.tourism-leisure-advantages h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #9b59b6, #e74c3c);
+  background: linear-gradient(90deg, #44a08d, #ff9d00);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
 }
 
-.tourism-advantages-grid {
+.advantages-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.tourism-leisure-advantages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.tourism-advantage-item {
+.tourism-leisure-advantage-item {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 2rem;
   border-radius: 12px;
@@ -359,55 +672,182 @@
   transition: all 0.4s ease;
   border: 1px solid #e9ecef;
   position: relative;
+  overflow: hidden;
 }
 
-.tourism-advantage-item::after {
+.advantage-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255, 107, 53, 0.1);
+  transition: all 0.4s ease;
+}
+
+.tourism-leisure-advantage-item:hover .advantage-number {
+  color: rgba(255, 157, 0, 0.2);
+  transform: scale(1.2);
+}
+
+.tourism-leisure-advantage-item::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, #e67e22, #3498db);
+  background: linear-gradient(90deg, #ff6b35, #4ecdc4);
   transition: width 0.4s ease;
 }
 
-.tourism-advantage-item:hover::after {
+.tourism-leisure-advantage-item:hover::after {
   width: 100%;
 }
 
-.tourism-advantage-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.tourism-leisure-advantage-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.tourism-advantage-icon {
+.tourism-leisure-advantage-icon {
   font-size: 2.5rem;
-  color: #e67e22;
+  color: #ff6b35;
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
-.tourism-advantage-item:hover .tourism-advantage-icon {
-  transform: scale(1.2);
-  color: #e74c3c;
+.tourism-leisure-advantage-item:hover .tourism-leisure-advantage-icon {
+  transform: scale(1.3) rotate(10deg);
+  color: #ff9d00;
 }
 
-.tourism-advantage-item h3 {
-  color: #e67e22;
+.tourism-leisure-advantage-item h3 {
+  color: #2c3e50;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.tourism-advantage-item p {
+.tourism-leisure-advantage-item p {
   color: #666;
   line-height: 1.6;
   font-size: 0.95rem;
+  text-align: left;
 }
 
-/* Incentives Section */
-.tourism-incentives {
+/* Markets Section */
+.tourism-leisure-markets {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.7s both;
+}
+
+.tourism-leisure-markets h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.tourism-leisure-markets h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9d00, #4ecdc4);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.markets-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.market-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.market-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-color: #ff6b35;
+}
+
+.market-flag {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.market-item h4 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.market-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.market-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b35, #4ecdc4);
+  border-radius: 4px;
+  animation: fillBar 1.5s ease-out both;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+}
+
+.market-share {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.market-item p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* Capabilities Section */
+.tourism-leisure-capabilities {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -416,98 +856,210 @@
   animation: slideUp 0.8s ease-out 0.8s both;
 }
 
-.tourism-incentives h2 {
-  color: #e67e22;
+.tourism-leisure-capabilities h2 {
+  color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
 }
 
-.tourism-incentives h2::after {
+.tourism-leisure-capabilities h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #f39c12, #e74c3c);
+  background: linear-gradient(90deg, #ff9d00, #44a08d);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
 }
 
-.tourism-incentives-list {
+.capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
-.tourism-incentive-item {
+.capability-item {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 2rem;
   border-radius: 12px;
   transition: all 0.4s ease;
   border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
 }
 
-.tourism-incentive-item:hover {
+.capability-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #ff6b35, #4ecdc4);
+  transition: height 0.4s ease;
+}
+
+.capability-item:hover::before {
+  height: 100%;
+}
+
+.capability-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border-color: #e67e22;
 }
 
-.tourism-incentive-item h3 {
-  color: #e67e22;
+.capability-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
+}
+
+.capability-item:hover .capability-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.capability-item h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.capability-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Incentives Section */
+.tourism-leisure-incentives {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.9s both;
+}
+
+.tourism-leisure-incentives h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.tourism-leisure-incentives h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9d00, #ff6b6b);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.incentives-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.tourism-leisure-incentives-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tourism-leisure-incentive-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.tourism-leisure-incentive-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #ff6b35;
+}
+
+.incentive-icon {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  transition: all 0.4s ease;
+  margin-top: -2rem;
+}
+
+.tourism-leisure-incentive-item:hover .incentive-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.tourism-leisure-incentive-item h3 {
+  color: #2c3e50;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-weight: 600;
 }
 
-.tourism-incentive-item h3 i {
-  color: #2ecc71;
-  font-size: 1.2rem;
-}
-
-.tourism-incentive-item ul {
+.tourism-leisure-incentive-item ul {
   list-style: none;
   padding: 0;
 }
 
-.tourism-incentive-item li {
+.tourism-leisure-incentive-item li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #f1f2f6;
   position: relative;
   padding-left: 1.5rem;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
-.tourism-incentive-item li::before {
+.tourism-leisure-incentive-item li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #2ecc71;
+  color: #4ecdc4;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.tourism-incentive-item li:hover {
+.tourism-leisure-incentive-item li:hover {
   padding-left: 2rem;
-  color: #3498db;
+  color: #ff6b35;
 }
 
-/* Success Stories */
-.tourism-success {
+.tourism-leisure-incentive-item li:hover::before {
+  transform: scale(1.3);
+}
+
+/* Success Stories Section - Updated for logo images */
+.tourism-leisure-success {
   background: white;
   padding: 3rem;
   border-radius: 15px;
+  margin-bottom: 3rem;
   box-shadow: 0 5px 25px rgba(0,0,0,0.1);
   animation: slideUp 0.8s ease-out 1s both;
 }
 
-.tourism-success h2 {
-  color: #e67e22;
+.tourism-leisure-success h2 {
+  color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
   display: inline-block;
@@ -515,7 +1067,7 @@
   transform: translateX(-50%);
 }
 
-.tourism-success h2::after {
+.tourism-leisure-success h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -523,17 +1075,26 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #3498db, #9b59b6);
+  background: linear-gradient(90deg, #f39c12, #2ecc71);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
 }
 
-.tourism-company-logos {
+.success-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.tourism-leisure-company-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
 }
 
-.tourism-company-logo {
+.tourism-leisure-company-logo {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 1.5rem;
   border-radius: 10px;
@@ -544,76 +1105,461 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.tourism-company-logo:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border-color: #e67e22;
+.tourism-leisure-company-logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(243, 156, 18, 0.1) 0%, transparent 70%);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
 }
 
-.tourism-company-logo i {
-  font-size: 2rem;
-  color: #e67e22;
-  transition: all 0.3s ease;
+.tourism-leisure-company-logo:hover::before {
+  width: 200%;
+  height: 200%;
 }
 
-.tourism-company-logo:hover i {
-  transform: scale(1.2);
-  color: #e74c3c;
+.tourism-leisure-company-logo:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-color: #f39c12;
 }
 
-.tourism-company-logo span {
+.tourism-leisure-company-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+
+.tourism-leisure-company-logo:hover img {
+  transform: scale(1.3);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.tourism-leisure-company-logo span {
   font-weight: 600;
-  color: #e67e22;
+  color: #2c3e50;
   font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Future Outlook Section */
+.tourism-leisure-future {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1.1s both;
+}
+
+.tourism-leisure-future h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tourism-leisure-future h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9d00, #44a08d);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.future-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.future-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.future-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 107, 53, 0.1), transparent 360deg);
+  animation: rotate 4s linear infinite;
+}
+
+.future-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #ff6b35;
+}
+
+.future-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.future-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.future-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Call to Action Section */
+.tourism-leisure-cta {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.8s ease-out 1.2s both;
+}
+
+.tourism-leisure-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  animation: backgroundMove 20s linear infinite;
+}
+
+@keyframes backgroundMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: textFloat 3s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.cta-content p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.cta-button i {
+  font-size: 1.2rem;
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover i {
+  transform: scale(1.3) rotate(10deg);
+}
+
+.cta-button.primary {
+  background: white;
+  color: #ff6b35;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid white;
+  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+  background: white;  
+  color: #ff6b35;
+  transform: translateY(-3px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .tourism-sector {
-    padding: 1rem;
+  .tourism-leisure-sector {
+    padding: 1rem; 
   }
   
-  .tourism-header h1 {
+  .tourism-leisure-header h1 {
     font-size: 2rem;
+  } 
+  
+  .tourism-leisure-subtitle {
+    font-size: 1rem;
   }
   
-  .tourism-overview,
-  .tourism-investment,
-  .tourism-advantages,
-  .tourism-incentives,
-  .tourism-success {
+  .tourism-leisure-overview,
+  .tourism-leisure-growth,
+  .tourism-leisure-investment,
+  .tourism-leisure-advantages,
+  .tourism-leisure-markets,
+  .tourism-leisure-capabilities,
+  .tourism-leisure-incentives,
+  .tourism-leisure-success,
+  .tourism-leisure-future,
+  .tourism-leisure-cta {
     padding: 2rem 1rem;
   }
   
-  .tourism-stat-cards,
-  .tourism-opportunity-cards,
-  .tourism-advantages-grid,
-  .tourism-incentives-list,
-  .tourism-company-logos {
+  .tourism-leisure-stat-cards,
+  .tourism-leisure-opportunity-cards,
+  .tourism-leisure-advantages-grid,
+  .markets-grid,
+  .capabilities-grid,
+  .tourism-leisure-incentives-list,
+  .tourism-leisure-company-logos,
+  .future-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .chart-wrapper {
+    height: 200px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cta-button {
+    justify-content: center;
+  }
+  
+  .advantage-number {
+    font-size: 2rem;
   }
 }
 
-/* Scroll Animations */
-@media (prefers-reduced-motion: no-preference) {
-  .tourism-overview,
-  .tourism-investment,
-  .tourism-advantages,
-  .tourism-incentives,
-  .tourism-success {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+/* Additional Advanced Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
   }
-  
-  .tourism-overview.visible,
-  .tourism-investment.visible,
-  .tourism-advantages.visible,
-  .tourism-incentives.visible,
-  .tourism-success.visible {
-    opacity: 1;
-    transform: translateY(0);
+  100% {
+    background-position: 1000px 0;
   }
+}
+
+.tourism-leisure-stat-card:hover,
+.tourism-leisure-opportunity-card:hover,
+.tourism-leisure-advantage-item:hover,
+.market-item:hover,
+.capability-item:hover,
+.tourism-leisure-incentive-item:hover,
+.tourism-leisure-company-logo:hover,
+.future-item:hover {
+  animation: shimmerEffect 2s ease-in-out;
+}
+
+@keyframes shimmerEffect {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Glow effects */
+.tourism-leisure-opportunity-card:hover,
+.tourism-leisure-advantage-item:hover,
+.future-item:hover {
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.15),
+    0 0 20px rgba(255, 107, 53, 0.3),
+    inset 0 0 20px rgba(255, 107, 53, 0.1);
+}
+
+/* Pulsing animation for badges */
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 157, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 157, 0, 0);
+  }
+}
+
+.opportunity-badge {
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tourism-leisure-header h1,
+.tourism-leisure-cta h2 {
+  background-size: 200% auto;
+  animation: gradientText 3s ease infinite;
+}
+
+/* Floating animation */
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.tourism-leisure-icon,
+.future-icon,
+.capability-icon {
+  animation: floatSoft 3s ease-in-out infinite;
+}
+
+.tourism-leisure-icon {
+  animation-delay: 0s;
+}
+
+.future-icon:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.future-icon:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Focus styles for accessibility */
+.cta-button:focus,
+.tourism-leisure-opportunity-card:focus,
+.tourism-leisure-advantage-item:focus {
+  outline: 3px solid #ff6b35;
+  outline-offset: 3px;
 }

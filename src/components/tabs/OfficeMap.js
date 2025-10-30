@@ -3,31 +3,38 @@ import qrcodeimage5 from "../../assets/ZonesQR.png";
 import qrcodeimage6 from "../../assets/DepartmentQR.png";
 import qrcodeimage7 from "../../assets/LocationQR.png";
 
-const OfficeMap = () => {
-  return (
+const OfficeMap = () => { 
+
+  return (  
     <div className="tab-content">
       {/* Hero Section */}
       <div style={{
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        padding: '2rem 2rem',
-        borderRadius: '20px',
+        padding: '2rem 2rem', 
+        borderRadius: '20px', 
         marginBottom: '2rem',
         color: 'white',
-        boxShadow: '0 10px 40px rgba(102, 126, 234, 0.3)'
+        boxShadow: '0 10px 40px rgba(102, 126, 234, 0.3)',
+        
       }}>
         <h2 style={{
           fontSize: '2rem',
           fontWeight: '700',
           marginBottom: '0.5rem',
-          textAlign: 'center'
+          textAlign: 'center',
+          animation: 'fadeIn 2.0s ease',
+          alignItems: 'center',
+          color: 'white',
         }}>
-          Board of Investment of Sri Lanka - Interactive Office Layout Map
+           Interactive Office Layout Map
         </h2>
       </div>
 
+        
+
       {/* Full Width Interactive Map Section */}
       <div style={{
-        background: 'white',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         borderRadius: '20px',
         padding: '1.5rem',
         boxShadow: '0 5px 25px rgba(0, 0, 0, 0.08)',
@@ -63,11 +70,10 @@ const OfficeMap = () => {
       }}>
         {/* Location Card */}
         <div style={{
-          background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           borderRadius: '16px',
           padding: '2rem',
           color: 'white',
-          boxShadow: '0 8px 30px rgba(245, 87, 108, 0.3)',
           transition: 'transform 0.3s ease',
         }}
         onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
@@ -82,21 +88,21 @@ const OfficeMap = () => {
             <h4 style={{fontSize: '1.5rem', fontWeight: '600', margin: 0}}>Our Location</h4>
           </div>
           <div style={{lineHeight: '1.8'}}>
-            <p style={{margin: '0.5rem 0', fontSize: '1.1rem', fontWeight: '600'}}>BOI Head Office</p>
-            <p style={{margin: '0.3rem 0', opacity: '0.95'}}>No. 551, T.B. Jayah Mawatha</p>
-            <p style={{margin: '0.3rem 0', opacity: '0.95'}}>(Deans Road)</p>
-            <p style={{margin: '0.3rem 0', opacity: '0.95'}}>Colombo 10, Sri Lanka</p>
+            <p style={{margin: '0.5rem 0', fontSize: '1.1rem', fontWeight: '600', color: 'white'}}>BOI Head Office</p>
+            <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>No. 551, T.B. Jayah Mawatha</p>
+            <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>(Deans Road)</p>
+            <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>Colombo 10, Sri Lanka</p>
           </div>
         </div>
 
         {/* Office Hours Card */}
         <div style={{
-          background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+          background:  'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           borderRadius: '16px',
           padding: '2rem',
           color: 'white',
-          boxShadow: '0 8px 30px rgba(79, 172, 254, 0.3)',
           transition: 'transform 0.3s ease',
+          
         }}
         onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
         onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
@@ -110,50 +116,18 @@ const OfficeMap = () => {
             <h4 style={{fontSize: '1.5rem', fontWeight: '600', margin: 0}}>Office Hours</h4>
           </div>
           <div style={{lineHeight: '1.8'}}>
-            <p style={{margin: '0.8rem 0', fontSize: '1.05rem'}}>
-              <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem'}}>Weekdays</span>
+            <p style={{margin: '0.8rem 0', fontSize: '1.05rem', color: 'white'}}>
+              <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem', color: 'white'}}>Weekdays</span>
               Monday - Friday: 8:30 AM - 4:15 PM
             </p>
-            <p style={{margin: '0.8rem 0', fontSize: '1.05rem'}}>
-              <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem'}}>Weekend</span>
+            <p style={{margin: '0.8rem 0', fontSize: '1.05rem', color: 'white'}}>
+              <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem', color: 'white'}}>Weekend</span>
               Saturday & Sunday: Closed
             </p>
           </div>
         </div>
 
-        {/* Contact Card */}
-        <div style={{
-          background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-          borderRadius: '16px',
-          padding: '2rem',
-          color: 'white',
-          boxShadow: '0 8px 30px rgba(250, 112, 154, 0.3)',
-          transition: 'transform 0.3s ease',
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            marginBottom: '1rem'
-          }}>
-            <i className="fas fa-phone-alt" style={{fontSize: '2rem'}}></i>
-            <h4 style={{fontSize: '1.5rem', fontWeight: '600', margin: 0}}>Get in Touch</h4>
-          </div>
-          <div style={{lineHeight: '1.8'}}>
-            <p style={{margin: '0.8rem 0', fontSize: '1.05rem'}}>
-              <i className="fas fa-phone" style={{marginRight: '10px'}}></i>
-              <span style={{fontWeight: '600'}}>Phone:</span><br />
-              <span style={{marginLeft: '30px'}}>+94 11 242 6900</span>
-            </p>
-            <p style={{margin: '0.8rem 0', fontSize: '1.05rem'}}>
-              <i className="fas fa-envelope" style={{marginRight: '10px'}}></i>
-              <span style={{fontWeight: '600'}}>Email:</span><br />
-              <span style={{marginLeft: '30px'}}>info@boi.lk</span>
-            </p>
-          </div>
-        </div>
+       
       </div>
 
       {/* QR Code Section */}
@@ -162,7 +136,8 @@ const OfficeMap = () => {
         borderRadius: '16px',
         padding: '2rem',
         textAlign: 'center',
-        boxShadow: '0 5px 25px rgba(0, 0, 0, 0.08)'
+        boxShadow: '0 5px 25px rgba(0, 0, 0, 0.08)',
+        background:  'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
       }}>
         <h4 style={{
           fontSize: '1.3rem',
@@ -171,7 +146,7 @@ const OfficeMap = () => {
           marginBottom: '1rem'
         }}>
           Need Directions?
-        </h4>
+        </h4>  
         <p style={{
           color: '#E8F9FF',
           marginBottom: '2rem',
@@ -187,7 +162,7 @@ const OfficeMap = () => {
         }}>
           {/* QR Code 5 */}
           <div className="qr-contact" style={{
-            padding: '1.5rem',
+            padding: '1.5rem', 
             borderRadius: '12px',
             transition: 'transform 0.3s ease',
             minWidth: '180px'

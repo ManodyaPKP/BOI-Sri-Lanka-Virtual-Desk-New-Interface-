@@ -20,6 +20,8 @@
 @import './pages/Logistics.css';
 @import './pages/MedicalPharmaceutical.css';
 @import './pages/TourismLeisure.css';
+@import './pages/RubberBasedProducts.css';
+@import './pages/MiningInfrastructureDevelopment.css';
 
 /* ===== SIDEBAR COMPONENTS ===== */
 @import './sidebar/sidebar-styles.css';
@@ -44,6 +46,7 @@
 @import './content/process-steps.css';
 @import './content/contact-information.css';
 @import './content/WhoWeAre.css';
+
 /* ===== UI COMPONENTS ===== */
 @import './ui/button-styles.css';
 @import './ui/map-container.css';

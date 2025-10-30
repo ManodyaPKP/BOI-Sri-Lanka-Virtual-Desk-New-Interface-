@@ -9,6 +9,8 @@
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  
+  
 }
 
 .map-container:hover {
@@ -43,6 +45,7 @@
   animation: shimmer 2s infinite;
   z-index: 1;
   pointer-events: none;
+
 }
 
 @keyframes shimmer {
@@ -80,6 +83,8 @@
   color: #667eea;
   animation: pulse 2s infinite;
 }
+
+
 
 @keyframes pulse {
   0%, 100% {

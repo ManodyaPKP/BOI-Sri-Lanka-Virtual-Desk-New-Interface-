@@ -1,4 +1,4 @@
-/* FoodProcessing.css - Modern Styling with Animations */
+/* FoodProcessing.css - Enhanced Modern Styling with Advanced Animations */
 
 .food-processing-sector {
   max-width: 1200px;
@@ -15,11 +15,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Header Section */
+/* Header Section with Enhanced Animations */
 .food-processing-header {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, #38b000 0%, #2b8c00 100%);
   color: white;
   border-radius: 15px;
   margin-bottom: 3rem;
@@ -36,8 +36,80 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #ff9800, #4caf50, #2e7d32, #8bc34a);
-  animation: gradientShift 3s ease infinite;
+  background: linear-gradient(90deg, #ff9e00, #38b000, #ff6b6b, #4ecdc4, #ff9e00);
+  background-size: 200% 100%;
+  animation: gradientSlide 3s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Floating particles in header */
+.header-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(2) {
+  left: 80%;
+  top: 40%;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+}
+
+.particle:nth-child(3) {
+  left: 30%;
+  top: 70%;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+.particle:nth-child(4) {
+  left: 70%;
+  top: 80%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-20px) scale(0.8);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-30px) translateX(30px) scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 @keyframes slideDown {
@@ -45,21 +117,16 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .food-processing-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
   animation: pulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
 }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.15); }
 }
 
 .food-processing-header h1 {
@@ -71,17 +138,24 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 30px rgba(255,255,255,0.3);
 }
 
 @keyframes textGlow {
-  from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
-  to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+  from { filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
+  to { filter: drop-shadow(0 0 25px rgba(255,255,255,0.9)); }
 }
 
 .food-processing-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
   font-weight: 300;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Overview Section */
@@ -92,6 +166,25 @@
   margin-bottom: 3rem;
   box-shadow: 0 5px 25px rgba(0,0,0,0.1);
   animation: slideUp 0.8s ease-out 0.2s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.food-processing-overview::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56, 176, 0, 0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes slideUp {
@@ -114,8 +207,14 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #ff9800, #4caf50);
+  background: linear-gradient(90deg, #ff9e00, #38b000);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 60px; }
 }
 
 .food-processing-overview p {
@@ -123,9 +222,11 @@
   line-height: 1.7;
   color: #555;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Stat Cards */
+/* Enhanced Stat Cards */
 .food-processing-stat-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -134,53 +235,223 @@
 }
 
 .food-processing-stat-card {
-  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, #38b000 0%, #2b8c00 100%);
   color: white;
   padding: 2rem 1rem;
   border-radius: 12px;
   text-align: center;
-  transition: all 0.3s ease;
-  animation: bounce 1.5s ease-in-out infinite;
-  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(56, 176, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: scaleIn 0.6s ease-out both;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25px);
-  }
+.food-processing-stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: ripple 3s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.food-processing-stat-card:nth-child(1) {
+  animation-delay: 0.1s;
 }
 
 .food-processing-stat-card:nth-child(2) {
-  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+  background: linear-gradient(135deg, #ff9e00 0%, #ff6b6b 100%);
   animation-delay: 0.2s;
 }
 
 .food-processing-stat-card:nth-child(3) {
-  background: linear-gradient(135deg, #8bc34a 0%, #689f38 100%);
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  animation-delay: 0.3s;
+}
+
+.food-processing-stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff9e00 100%);
   animation-delay: 0.4s;
 }
 
 .food-processing-stat-card:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.food-processing-stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .food-processing-stat-number {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .food-processing-stat-label {
   font-size: 0.9rem;
   opacity: 0.9;
   font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
 
-/* Investment Opportunities */
+.stat-growth {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.85;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Growth Chart Section */
+.food-processing-growth {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.3s both;
+}
+
+.food-processing-growth h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.food-processing-growth h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4ecdc4, #38b000);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.growth-insight {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #38b000;
+}
+
+.growth-insight p {
+  margin: 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.growth-chart-container {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 300px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-bar {
+  flex: 1;
+  background: linear-gradient(180deg, #38b000 0%, #2b8c00 100%);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  transition: all 0.5s ease;
+  animation: growUp 1.5s ease-out both;
+  box-shadow: 0 -5px 15px rgba(56, 176, 0, 0.3);
+}
+
+.chart-bar:nth-child(1) { animation-delay: 0.2s; }
+.chart-bar:nth-child(2) { 
+  animation-delay: 0.4s;
+  background: linear-gradient(180deg, #ff9e00 0%, #ff6b6b 100%);
+}
+.chart-bar:nth-child(3) { 
+  animation-delay: 0.6s;
+  background: linear-gradient(180deg, #4ecdc4 0%, #44a08d 100%);
+}
+.chart-bar:nth-child(4) { 
+  animation-delay: 0.8s;
+  background: linear-gradient(180deg, #ff6b6b 0%, #ff9e00 100%);
+}
+
+@keyframes growUp {
+  from { height: 0; opacity: 0; }
+  to { opacity: 1; }
+}
+
+.chart-bar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 -10px 30px rgba(56, 176, 0, 0.5);
+}
+
+.bar-value {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chart-note {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Investment Opportunities Section */
 .food-processing-investment {
   background: white;
   padding: 3rem;
@@ -193,7 +464,7 @@
 .food-processing-investment h2 {
   color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
 }
@@ -205,8 +476,16 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #2e7d32, #8bc34a);
+  background: linear-gradient(90deg, #4ecdc4, #38b000);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.investment-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
 .food-processing-opportunity-cards {
@@ -232,8 +511,8 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: left 0.6s ease;
 }
 
 .food-processing-opportunity-card:hover::before {
@@ -241,33 +520,57 @@
 }
 
 .food-processing-opportunity-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  border-color: #4caf50;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-color: #38b000;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.opportunity-badge {
+  background: linear-gradient(135deg, #ff9e00, #38b000);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .food-processing-card-icon {
   font-size: 2.5rem;
-  color: #4caf50;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  color: #38b000;
+  transition: all 0.4s ease;
 }
 
 .food-processing-opportunity-card:hover .food-processing-card-icon {
-  transform: scale(1.2) rotate(10deg);
-  color: #ff9800;
+  transform: scale(1.3) rotate(15deg);
+  color: #ff9e00;
 }
 
 .food-processing-opportunity-card h3 {
   color: #2c3e50;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+.opportunity-desc {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .food-processing-opportunity-card ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 1rem;
 }
 
 .food-processing-opportunity-card li {
@@ -276,25 +579,42 @@
   position: relative;
   padding-left: 1.5rem;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .food-processing-opportunity-card li::before {
   content: '🍎';
   position: absolute;
   left: 0;
-  color: #4caf50;
+  color: #38b000;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .food-processing-opportunity-card li:hover {
   padding-left: 2rem;
-  color: #ff9800;
+  color: #ff9e00;
 }
 
 .food-processing-opportunity-card li:hover::before {
-  color: #ff9800;
+  color: #ff9e00;
   transform: scale(1.5);
+}
+
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #e9ecef;
+}
+
+.market-potential {
+  display: inline-block;
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #38b000;
+  font-weight: 600;
 }
 
 /* Advantages Section */
@@ -310,7 +630,7 @@
 .food-processing-advantages h2 {
   color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
 }
@@ -322,8 +642,16 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #8bc34a, #4caf50);
+  background: linear-gradient(90deg, #44a08d, #ff9e00);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.advantages-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
 .food-processing-advantages-grid {
@@ -340,6 +668,22 @@
   transition: all 0.4s ease;
   border: 1px solid #e9ecef;
   position: relative;
+  overflow: hidden;
+}
+
+.advantage-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(56, 176, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.food-processing-advantage-item:hover .advantage-number {
+  color: rgba(255, 158, 0, 0.2);
+  transform: scale(1.2);
 }
 
 .food-processing-advantage-item::after {
@@ -349,7 +693,7 @@
   left: 0;
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  background: linear-gradient(90deg, #38b000, #4ecdc4);
   transition: width 0.4s ease;
 }
 
@@ -358,20 +702,20 @@
 }
 
 .food-processing-advantage-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .food-processing-advantage-icon {
   font-size: 2.5rem;
-  color: #4caf50;
+  color: #38b000;
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .food-processing-advantage-item:hover .food-processing-advantage-icon {
-  transform: scale(1.2);
-  color: #ff9800;
+  transform: scale(1.3) rotate(10deg);
+  color: #ff9e00;
 }
 
 .food-processing-advantage-item h3 {
@@ -385,6 +729,206 @@
   color: #666;
   line-height: 1.6;
   font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Markets Section */
+.food-processing-markets {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.7s both;
+}
+
+.food-processing-markets h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.food-processing-markets h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9e00, #4ecdc4);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.markets-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.market-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+}
+
+.market-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-color: #38b000;
+}
+
+.market-flag {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.market-item h4 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.market-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.market-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38b000, #4ecdc4);
+  border-radius: 4px;
+  animation: fillBar 1.5s ease-out both;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+}
+
+.market-share {
+  display: inline-block;
+  background: #38b000;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.market-item p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* Capabilities Section */
+.food-processing-capabilities {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.food-processing-capabilities h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.food-processing-capabilities h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9e00, #44a08d);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.capability-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.capability-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #38b000, #4ecdc4);
+  transition: height 0.4s ease;
+}
+
+.capability-item:hover::before {
+  height: 100%;
+}
+
+.capability-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.capability-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
+}
+
+.capability-item:hover .capability-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.capability-item h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.capability-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* Incentives Section */
@@ -394,13 +938,13 @@
   border-radius: 15px;
   margin-bottom: 3rem;
   box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-  animation: slideUp 0.8s ease-out 0.8s both;
+  animation: slideUp 0.8s ease-out 0.9s both;
 }
 
 .food-processing-incentives h2 {
   color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
 }
@@ -412,8 +956,16 @@
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #ff9800, #4caf50);
+  background: linear-gradient(90deg, #ff9e00, #ff6b6b);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.incentives-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
 .food-processing-incentives-list {
@@ -428,12 +980,24 @@
   border-radius: 12px;
   transition: all 0.4s ease;
   border: 1px solid #e9ecef;
+  position: relative;
 }
 
 .food-processing-incentive-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  border-color: #4caf50;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #38b000;
+}
+
+.incentive-icon {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  transition: all 0.4s ease;
+  margin-top: -2rem;
+}
+
+.food-processing-incentive-item:hover .incentive-icon {
+  transform: scale(1.2) rotate(10deg);
 }
 
 .food-processing-incentive-item h3 {
@@ -443,11 +1007,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.food-processing-incentive-item h3 i {
-  color: #2e7d32;
-  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .food-processing-incentive-item ul {
@@ -461,26 +1021,33 @@
   position: relative;
   padding-left: 1.5rem;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .food-processing-incentive-item li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #2e7d32;
+  color: #38b000;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .food-processing-incentive-item li:hover {
   padding-left: 2rem;
-  color: #4caf50;
+  color: #38b000;
 }
 
-/* Success Stories */
+.food-processing-incentive-item li:hover::before {
+  transform: scale(1.3);
+}
+
+/* Success Stories Section - Updated for logo images */
 .food-processing-success {
   background: white;
   padding: 3rem;
   border-radius: 15px;
+  margin-bottom: 3rem;
   box-shadow: 0 5px 25px rgba(0,0,0,0.1);
   animation: slideUp 0.8s ease-out 1s both;
 }
@@ -488,7 +1055,7 @@
 .food-processing-success h2 {
   color: #2c3e50;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
   display: inline-block;
@@ -504,8 +1071,17 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  background: linear-gradient(90deg, #e67e22, #e74c3c);
   border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.success-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
 .food-processing-company-logos {
@@ -525,29 +1101,288 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.food-processing-company-logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 126, 34, 0.1) 0%, transparent 70%);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+}
+
+.food-processing-company-logo:hover::before {
+  width: 200%;
+  height: 200%;
 }
 
 .food-processing-company-logo:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border-color: #4caf50;
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-color: #e67e22;
 }
 
-.food-processing-company-logo i {
-  font-size: 2rem;
-  color: #4caf50;
-  transition: all 0.3s ease;
+.food-processing-company-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(100%);
+  opacity: 0.8;
 }
 
-.food-processing-company-logo:hover i {
-  transform: scale(1.2);
-  color: #ff9800;
+.food-processing-company-logo:hover img {
+  transform: scale(1.3);
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .food-processing-company-logo span {
   font-weight: 600;
   color: #2c3e50;
   font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  line-height: 1.2;
+}
+/* Future Outlook Section */
+.food-processing-future {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.8s ease-out 1.1s both;
+}
+
+.food-processing-future h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.food-processing-future h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9e00, #44a08d);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.5s both;
+}
+
+.future-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.future-item {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.future-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(56, 176, 0, 0.1), transparent 360deg);
+  animation: rotate 4s linear infinite;
+}
+
+.future-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  border-color: #38b000;
+}
+
+.future-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.future-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.future-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Call to Action Section */
+.food-processing-cta {
+  background: linear-gradient(135deg, #38b000 0%, #2b8c00 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(56, 176, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.8s ease-out 1.2s both;
+}
+
+.food-processing-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  animation: backgroundMove 20s linear infinite;
+}
+
+@keyframes backgroundMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: textFloat 3s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.cta-content p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+.cta-button i {
+  font-size: 1.2rem;
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover i {
+  transform: scale(1.3) rotate(10deg);
+}
+
+.cta-button.primary {
+  background: white;
+  color: #38b000;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid white;
+  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+  background: white;
+  color: #38b000;
+  transform: translateY(-3px);
 }
 
 /* Responsive Design */
@@ -560,41 +1395,166 @@
     font-size: 2rem;
   }
   
+  .food-processing-subtitle {
+    font-size: 1rem;
+  }
+  
   .food-processing-overview,
+  .food-processing-growth,
   .food-processing-investment,
   .food-processing-advantages,
+  .food-processing-markets,
+  .food-processing-capabilities,
   .food-processing-incentives,
-  .food-processing-success {
+  .food-processing-success,
+  .food-processing-future,
+  .food-processing-cta {
     padding: 2rem 1rem;
   }
   
   .food-processing-stat-cards,
   .food-processing-opportunity-cards,
   .food-processing-advantages-grid,
+  .markets-grid,
+  .capabilities-grid,
   .food-processing-incentives-list,
-  .food-processing-company-logos {
+  .food-processing-company-logos,
+  .future-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .chart-wrapper {
+    height: 200px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cta-button {
+    justify-content: center;
+  }
+  
+  .advantage-number {
+    font-size: 2rem;
   }
 }
 
-/* Scroll Animations */
-@media (prefers-reduced-motion: no-preference) {
-  .food-processing-overview,
-  .food-processing-investment,
-  .food-processing-advantages,
-  .food-processing-incentives,
-  .food-processing-success {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+/* Additional Advanced Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
   }
-  
-  .food-processing-overview.visible,
-  .food-processing-investment.visible,
-  .food-processing-advantages.visible,
-  .food-processing-incentives.visible,
-  .food-processing-success.visible {
-    opacity: 1;
-    transform: translateY(0);
+  100% {
+    background-position: 1000px 0;
   }
+}
+
+.food-processing-stat-card:hover,
+.food-processing-opportunity-card:hover,
+.food-processing-advantage-item:hover,
+.market-item:hover,
+.capability-item:hover,
+.food-processing-incentive-item:hover,
+.food-processing-company-logo:hover,
+.future-item:hover {
+  animation: shimmerEffect 2s ease-in-out;
+}
+
+@keyframes shimmerEffect {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Glow effects */
+.food-processing-opportunity-card:hover,
+.food-processing-advantage-item:hover,
+.future-item:hover {
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.15),
+    0 0 20px rgba(56, 176, 0, 0.3),
+    inset 0 0 20px rgba(56, 176, 0, 0.1);
+}
+
+/* Pulsing animation for badges */
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 158, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 158, 0, 0);
+  }
+}
+
+.opportunity-badge {
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.food-processing-header h1,
+.food-processing-cta h2 {
+  background-size: 200% auto;
+  animation: gradientText 3s ease infinite;
+}
+
+/* Floating animation */
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.food-processing-icon,
+.future-icon,
+.capability-icon {
+  animation: floatSoft 3s ease-in-out infinite;
+}
+
+.food-processing-icon {
+  animation-delay: 0s;
+}
+
+.future-icon:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.future-icon:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Focus styles for accessibility */
+.cta-button:focus,
+.food-processing-opportunity-card:focus,
+.food-processing-advantage-item:focus {
+  outline: 3px solid #38b000;
+  outline-offset: 3px;
 }

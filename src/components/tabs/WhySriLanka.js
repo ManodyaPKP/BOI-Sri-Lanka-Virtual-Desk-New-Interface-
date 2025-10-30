@@ -82,12 +82,12 @@ const WhySriLanka = () => {
       <div className="reasons-grid">
         {reasons.map((item, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
+            key={index} 
+            initial={{ opacity: 0, scale: 0.9 }}  
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="reason-card"
+            viewport={{ once: true }} 
+            className="reason-card"  
           >
             <div className="card-image-container">
               <motion.img

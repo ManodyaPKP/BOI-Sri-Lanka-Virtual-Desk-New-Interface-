@@ -1,7 +1,6 @@
+/* RubberBasedProducts.css - Enhanced Modern Styling with Advanced Animations */
 
-/* AutoComponents.css - Enhanced Modern Styling with Advanced Animations */
-
-.auto-components-sector {
+.rubber-based-products-sector {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -17,10 +16,10 @@
 }
 
 /* Header Section with Enhanced Animations */
-.auto-components-header {
+.rubber-based-products-header {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
   color: white;
   border-radius: 15px;
   margin-bottom: 3rem;
@@ -30,14 +29,14 @@
   animation: slideDown 0.8s ease-out;
 }
 
-.auto-components-header::before {
+.rubber-based-products-header::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db, #e74c3c);
+  background: linear-gradient(90deg, #f39c12, #e74c3c, #3498db, #9b59b6, #f39c12);
   background-size: 200% 100%;
   animation: gradientSlide 3s linear infinite;
 }
@@ -118,7 +117,7 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-.auto-components-icon {
+.rubber-based-products-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
   animation: pulse 2s ease-in-out infinite;
@@ -130,7 +129,7 @@
   50% { transform: scale(1.15); }
 }
 
-.auto-components-header h1 {
+.rubber-based-products-header h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -147,7 +146,7 @@
   to { filter: drop-shadow(0 0 25px rgba(255,255,255,0.9)); }
 }
 
-.auto-components-subtitle {
+.rubber-based-products-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
   font-weight: 300;
@@ -160,7 +159,7 @@
 }
 
 /* Overview Section */
-.auto-components-overview {
+.rubber-based-products-overview {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -171,14 +170,14 @@
   overflow: hidden;
 }
 
-.auto-components-overview::before {
+.rubber-based-products-overview::before {
   content: '';
   position: absolute;
   top: -50%;
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(231, 76, 60, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(39, 174, 96, 0.05) 0%, transparent 70%);
   animation: rotate 20s linear infinite;
   pointer-events: none;
 }
@@ -193,7 +192,7 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-.auto-components-overview h2 {
+.rubber-based-products-overview h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
@@ -201,14 +200,14 @@
   display: inline-block;
 }
 
-.auto-components-overview h2::after {
+.rubber-based-products-overview h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #e74c3c, #f39c12);
+  background: linear-gradient(90deg, #f39c12, #e74c3c);
   border-radius: 2px;
   animation: expandWidth 1s ease-out 0.5s both;
 }
@@ -218,7 +217,7 @@
   to { width: 60px; }
 }
 
-.auto-components-overview p {
+.rubber-based-products-overview p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #555;
@@ -228,27 +227,27 @@
 }
 
 /* Enhanced Stat Cards */
-.auto-components-stat-cards {
+.rubber-based-products-stat-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.auto-components-stat-card {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+.rubber-based-products-stat-card {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
   color: white;
   padding: 2rem 1rem;
   border-radius: 12px;
   text-align: center;
   transition: all 0.4s ease;
-  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
   position: relative;
   overflow: hidden;
   animation: scaleIn 0.6s ease-out both;
 }
 
-.auto-components-stat-card::before {
+.rubber-based-products-stat-card::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -269,31 +268,31 @@
   to { transform: scale(1); opacity: 1; }
 }
 
-.auto-components-stat-card:nth-child(1) {
+.rubber-based-products-stat-card:nth-child(1) {
   animation-delay: 0.1s;
 }
 
-.auto-components-stat-card:nth-child(2) {
-  background: linear-gradient(135deg, #f39c12 0%, #d35400 100%);
+.rubber-based-products-stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
   animation-delay: 0.2s;
 }
 
-.auto-components-stat-card:nth-child(3) {
-  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+.rubber-based-products-stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
   animation-delay: 0.3s;
 }
 
-.auto-components-stat-card:nth-child(4) {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+.rubber-based-products-stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
   animation-delay: 0.4s;
 }
 
-.auto-components-stat-card:hover {
+.rubber-based-products-stat-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-.auto-components-stat-icon {
+.rubber-based-products-stat-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   animation: bounce 2s ease-in-out infinite;
@@ -304,7 +303,7 @@
   50% { transform: translateY(-10px); }
 }
 
-.auto-components-stat-number {
+.rubber-based-products-stat-number {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -312,7 +311,7 @@
   z-index: 1;
 }
 
-.auto-components-stat-label {
+.rubber-based-products-stat-label {
   font-size: 0.9rem;
   opacity: 0.9;
   font-weight: 500;
@@ -330,7 +329,7 @@
 }
 
 /* Growth Chart Section */
-.auto-components-growth {
+.rubber-based-products-growth {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -339,7 +338,7 @@
   animation: slideUp 0.8s ease-out 0.3s both;
 }
 
-.auto-components-growth h2 {
+.rubber-based-products-growth h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
@@ -347,14 +346,14 @@
   display: inline-block;
 }
 
-.auto-components-growth h2::after {
+.rubber-based-products-growth h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #2ecc71, #3498db);
+  background: linear-gradient(90deg, #3498db, #9b59b6);
   border-radius: 2px;
   animation: expandWidth 1s ease-out 0.5s both;
 }
@@ -364,7 +363,7 @@
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-  border-left: 4px solid #e74c3c;
+  border-left: 4px solid #27ae60;
 }
 
 .growth-insight p {
@@ -391,26 +390,26 @@
 
 .chart-bar {
   flex: 1;
-  background: linear-gradient(180deg, #e74c3c 0%, #c0392b 100%);
+  background: linear-gradient(180deg, #27ae60 0%, #2ecc71 100%);
   border-radius: 8px 8px 0 0;
   position: relative;
   transition: all 0.5s ease;
   animation: growUp 1.5s ease-out both;
-  box-shadow: 0 -5px 15px rgba(231, 76, 60, 0.3);
+  box-shadow: 0 -5px 15px rgba(39, 174, 96, 0.3);
 }
 
 .chart-bar:nth-child(1) { animation-delay: 0.2s; }
 .chart-bar:nth-child(2) { 
   animation-delay: 0.4s;
-  background: linear-gradient(180deg, #f39c12 0%, #d35400 100%);
+  background: linear-gradient(180deg, #e74c3c 0%, #f39c12 100%);
 }
 .chart-bar:nth-child(3) { 
   animation-delay: 0.6s;
-  background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+  background: linear-gradient(180deg, #3498db 0%, #9b59b6 100%);
 }
 .chart-bar:nth-child(4) { 
   animation-delay: 0.8s;
-  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+  background: linear-gradient(180deg, #f39c12 0%, #e74c3c 100%);
 }
 
 @keyframes growUp {
@@ -420,7 +419,7 @@
 
 .chart-bar:hover {
   transform: scale(1.05);
-  box-shadow: 0 -10px 30px rgba(231, 76, 60, 0.5);
+  box-shadow: 0 -10px 30px rgba(39, 174, 96, 0.5);
 }
 
 .bar-value {
@@ -453,7 +452,7 @@
 }
 
 /* Investment Opportunities Section */
-.auto-components-investment {
+.rubber-based-products-investment {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -462,7 +461,7 @@
   animation: slideUp 0.8s ease-out 0.4s both;
 }
 
-.auto-components-investment h2 {
+.rubber-based-products-investment h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -470,14 +469,14 @@
   display: inline-block;
 }
 
-.auto-components-investment h2::after {
+.rubber-based-products-investment h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #2ecc71, #3498db);
+  background: linear-gradient(90deg, #3498db, #9b59b6);
   border-radius: 2px;
   animation: expandWidth 1s ease-out 0.5s both;
 }
@@ -489,13 +488,13 @@
   font-style: italic;
 }
 
-.auto-components-opportunity-cards {
+.rubber-based-products-opportunity-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.auto-components-opportunity-card {
+.rubber-based-products-opportunity-card {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 2rem;
   border-radius: 15px;
@@ -505,7 +504,7 @@
   overflow: hidden;
 }
 
-.auto-components-opportunity-card::before {
+.rubber-based-products-opportunity-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -516,14 +515,14 @@
   transition: left 0.6s ease;
 }
 
-.auto-components-opportunity-card:hover::before {
+.rubber-based-products-opportunity-card:hover::before {
   left: 100%;
 }
 
-.auto-components-opportunity-card:hover {
+.rubber-based-products-opportunity-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  border-color: #e74c3c;
+  border-color: #27ae60;
 }
 
 .card-header {
@@ -543,18 +542,18 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
-.auto-components-card-icon {
+.rubber-based-products-card-icon {
   font-size: 2.5rem;
-  color: #e74c3c;
+  color: #27ae60;
   transition: all 0.4s ease;
 }
 
-.auto-components-opportunity-card:hover .auto-components-card-icon {
+.rubber-based-products-opportunity-card:hover .rubber-based-products-card-icon {
   transform: scale(1.3) rotate(15deg);
-  color: #3498db;
+  color: #e74c3c;
 }
 
-.auto-components-opportunity-card h3 {
+.rubber-based-products-opportunity-card h3 {
   color: #2c3e50;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
@@ -568,13 +567,13 @@
   font-style: italic;
 }
 
-.auto-components-opportunity-card ul {
+.rubber-based-products-opportunity-card ul {
   list-style: none;
   padding: 0;
   margin-bottom: 1rem;
 }
 
-.auto-components-opportunity-card li {
+.rubber-based-products-opportunity-card li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #f1f2f6;
   position: relative;
@@ -583,22 +582,22 @@
   font-size: 0.95rem;
 }
 
-.auto-components-opportunity-card li::before {
-  content: '⚙️';
+.rubber-based-products-opportunity-card li::before {
+  content: '🌿';
   position: absolute;
   left: 0;
-  color: #e74c3c;
+  color: #27ae60;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-.auto-components-opportunity-card li:hover {
+.rubber-based-products-opportunity-card li:hover {
   padding-left: 2rem;
-  color: #3498db;
+  color: #e74c3c;
 }
 
-.auto-components-opportunity-card li:hover::before {
-  color: #3498db;
+.rubber-based-products-opportunity-card li:hover::before {
+  color: #e74c3c;
   transform: scale(1.5);
 }
 
@@ -614,12 +613,12 @@
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  color: #e74c3c;
+  color: #27ae60;
   font-weight: 600;
 }
 
 /* Advantages Section */
-.auto-components-advantages {
+.rubber-based-products-advantages {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -628,7 +627,7 @@
   animation: slideUp 0.8s ease-out 0.6s both;
 }
 
-.auto-components-advantages h2 {
+.rubber-based-products-advantages h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -636,7 +635,7 @@
   display: inline-block;
 }
 
-.auto-components-advantages h2::after {
+.rubber-based-products-advantages h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -655,13 +654,13 @@
   font-style: italic;
 }
 
-.auto-components-advantages-grid {
+.rubber-based-products-advantages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.auto-components-advantage-item {
+.rubber-based-products-advantage-item {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 2rem;
   border-radius: 12px;
@@ -678,55 +677,55 @@
   right: 1rem;
   font-size: 3rem;
   font-weight: 700;
-  color: rgba(231, 76, 60, 0.1);
+  color: rgba(39, 174, 96, 0.1);
   transition: all 0.4s ease;
 }
 
-.auto-components-advantage-item:hover .advantage-number {
-  color: rgba(52, 152, 219, 0.2);
+.rubber-based-products-advantage-item:hover .advantage-number {
+  color: rgba(231, 76, 60, 0.2);
   transform: scale(1.2);
 }
 
-.auto-components-advantage-item::after {
+.rubber-based-products-advantage-item::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, #e74c3c, #3498db);
+  background: linear-gradient(90deg, #27ae60, #3498db);
   transition: width 0.4s ease;
 }
 
-.auto-components-advantage-item:hover::after {
+.rubber-based-products-advantage-item:hover::after {
   width: 100%;
 }
 
-.auto-components-advantage-item:hover {
+.rubber-based-products-advantage-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.auto-components-advantage-icon {
+.rubber-based-products-advantage-icon {
   font-size: 2.5rem;
-  color: #e74c3c;
+  color: #27ae60;
   margin-bottom: 1rem;
   transition: all 0.4s ease;
 }
 
-.auto-components-advantage-item:hover .auto-components-advantage-icon {
+.rubber-based-products-advantage-item:hover .rubber-based-products-advantage-icon {
   transform: scale(1.3) rotate(10deg);
-  color: #3498db;
+  color: #e74c3c;
 }
 
-.auto-components-advantage-item h3 {
+.rubber-based-products-advantage-item h3 {
   color: #2c3e50;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.auto-components-advantage-item p {
+.rubber-based-products-advantage-item p {
   color: #666;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -734,7 +733,7 @@
 }
 
 /* Markets Section */
-.auto-components-markets {
+.rubber-based-products-markets {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -743,7 +742,7 @@
   animation: slideUp 0.8s ease-out 0.7s both;
 }
 
-.auto-components-markets h2 {
+.rubber-based-products-markets h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -751,14 +750,14 @@
   display: inline-block;
 }
 
-.auto-components-markets h2::after {
+.rubber-based-products-markets h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #f39c12, #e74c3c);
+  background: linear-gradient(90deg, #e74c3c, #3498db);
   border-radius: 2px;
   animation: expandWidth 1s ease-out 0.5s both;
 }
@@ -788,7 +787,7 @@
 .market-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  border-color: #e74c3c;
+  border-color: #27ae60;
 }
 
 .market-flag {
@@ -816,7 +815,7 @@
 
 .market-fill {
   height: 100%;
-  background: linear-gradient(90deg, #e74c3c, #3498db);
+  background: linear-gradient(90deg, #27ae60, #3498db);
   border-radius: 4px;
   animation: fillBar 1.5s ease-out both;
 }
@@ -827,7 +826,7 @@
 
 .market-share {
   display: inline-block;
-  background: #e74c3c;
+  background: #27ae60;
   color: white;
   padding: 0.3rem 1rem;
   border-radius: 20px;
@@ -844,7 +843,7 @@
 }
 
 /* Capabilities Section */
-.auto-components-capabilities {
+.rubber-based-products-capabilities {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -853,7 +852,7 @@
   animation: slideUp 0.8s ease-out 0.8s both;
 }
 
-.auto-components-capabilities h2 {
+.rubber-based-products-capabilities h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 2rem;
@@ -861,7 +860,7 @@
   display: inline-block;
 }
 
-.auto-components-capabilities h2::after {
+.rubber-based-products-capabilities h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -896,7 +895,7 @@
   left: 0;
   width: 4px;
   height: 0;
-  background: linear-gradient(180deg, #e74c3c, #3498db);
+  background: linear-gradient(180deg, #27ae60, #3498db);
   transition: height 0.4s ease;
 }
 
@@ -933,7 +932,7 @@
 }
 
 /* Incentives Section */
-.auto-components-incentives {
+.rubber-based-products-incentives {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -942,7 +941,7 @@
   animation: slideUp 0.8s ease-out 0.9s both;
 }
 
-.auto-components-incentives h2 {
+.rubber-based-products-incentives h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -950,7 +949,7 @@
   display: inline-block;
 }
 
-.auto-components-incentives h2::after {
+.rubber-based-products-incentives h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -969,13 +968,13 @@
   font-style: italic;
 }
 
-.auto-components-incentives-list {
+.rubber-based-products-incentives-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.auto-components-incentive-item {
+.rubber-based-products-incentive-item {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 2rem;
   border-radius: 12px;
@@ -984,10 +983,10 @@
   position: relative;
 }
 
-.auto-components-incentive-item:hover {
+.rubber-based-products-incentive-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  border-color: #e74c3c;
+  border-color: #27ae60;
 }
 
 .incentive-icon {
@@ -997,11 +996,11 @@
   margin-top: -2rem;
 }
 
-.auto-components-incentive-item:hover .incentive-icon {
+.rubber-based-products-incentive-item:hover .incentive-icon {
   transform: scale(1.2) rotate(10deg);
 }
 
-.auto-components-incentive-item h3 {
+.rubber-based-products-incentive-item h3 {
   color: #2c3e50;
   font-size: 1.3rem;
   margin-bottom: 1rem;
@@ -1011,12 +1010,12 @@
   font-weight: 600;
 }
 
-.auto-components-incentive-item ul {
+.rubber-based-products-incentive-item ul {
   list-style: none;
   padding: 0;
 }
 
-.auto-components-incentive-item li {
+.rubber-based-products-incentive-item li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #f1f2f6;
   position: relative;
@@ -1025,26 +1024,26 @@
   font-size: 0.95rem;
 }
 
-.auto-components-incentive-item li::before {
+.rubber-based-products-incentive-item li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #2ecc71;
+  color: #3498db;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-.auto-components-incentive-item li:hover {
+.rubber-based-products-incentive-item li:hover {
   padding-left: 2rem;
-  color: #e74c3c;
+  color: #27ae60;
 }
 
-.auto-components-incentive-item li:hover::before {
+.rubber-based-products-incentive-item li:hover::before {
   transform: scale(1.3);
 }
 
 /* Success Stories Section - Updated for logo images */
-.auto-components-success {
+.rubber-based-products-success {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -1053,7 +1052,7 @@
   animation: slideUp 0.8s ease-out 1s both;
 }
 
-.auto-components-success h2 {
+.rubber-based-products-success h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -1064,7 +1063,7 @@
   transform: translateX(-50%);
 }
 
-.auto-components-success h2::after {
+.rubber-based-products-success h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -1072,7 +1071,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #e74c3c, #9b59b6);
+  background: linear-gradient(90deg, #e74c3c, #f39c12);
   border-radius: 2px;
   animation: expandWidth 1s ease-out 0.5s both;
 }
@@ -1085,13 +1084,13 @@
   font-style: italic;
 }
 
-.auto-components-company-logos {
+.rubber-based-products-company-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
 }
 
-.auto-components-company-logo {
+.rubber-based-products-company-logo {
   background: linear-gradient(145deg, #ffffff, #f8f9fa);
   padding: 1.5rem;
   border-radius: 10px;
@@ -1106,7 +1105,7 @@
   overflow: hidden;
 }
 
-.auto-components-company-logo::before {
+.rubber-based-products-company-logo::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -1119,18 +1118,18 @@
   transform: translate(-50%, -50%);
 }
 
-.auto-components-company-logo:hover::before {
+.rubber-based-products-company-logo:hover::before {
   width: 200%;
   height: 200%;
 }
 
-.auto-components-company-logo:hover {
+.rubber-based-products-company-logo:hover {
   transform: translateY(-8px) scale(1.08);
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
   border-color: #e74c3c;
 }
 
-.auto-components-company-logo img {
+.rubber-based-products-company-logo img {
   width: 60px;
   height: 60px;
   object-fit: contain;
@@ -1141,13 +1140,13 @@
   opacity: 0.8;
 }
 
-.auto-components-company-logo:hover img {
+.rubber-based-products-company-logo:hover img {
   transform: scale(1.3);
   filter: grayscale(0%);
   opacity: 1;
 }
 
-.auto-components-company-logo span {
+.rubber-based-products-company-logo span {
   font-weight: 600;
   color: #2c3e50;
   font-size: 0.9rem;
@@ -1156,9 +1155,8 @@
   text-align: center;
   line-height: 1.2;
 }
-
 /* Future Outlook Section */
-.auto-components-future {
+.rubber-based-products-future {
   background: white;
   padding: 3rem;
   border-radius: 15px;
@@ -1167,7 +1165,7 @@
   animation: slideUp 0.8s ease-out 1.1s both;
 }
 
-.auto-components-future h2 {
+.rubber-based-products-future h2 {
   color: #2c3e50;
   font-size: 2.2rem;
   margin-bottom: 1rem;
@@ -1178,7 +1176,7 @@
   transform: translateX(-50%);
 }
 
-.auto-components-future h2::after {
+.rubber-based-products-future h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -1223,14 +1221,14 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(from 0deg, transparent, rgba(231, 76, 60, 0.1), transparent 360deg);
+  background: conic-gradient(from 0deg, transparent, rgba(39, 174, 96, 0.1), transparent 360deg);
   animation: rotate 4s linear infinite;
 }
 
 .future-item:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  border-color: #e74c3c;
+  border-color: #27ae60;
 }
 
 .future-icon {
@@ -1259,18 +1257,18 @@
 }
 
 /* Call to Action Section */
-.auto-components-cta {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+.rubber-based-products-cta {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
   padding: 3rem;
   border-radius: 15px;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+  box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
   position: relative;
   overflow: hidden;
   animation: slideUp 0.8s ease-out 1.2s both;
 }
 
-.auto-components-cta::before {
+.rubber-based-products-cta::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1291,9 +1289,9 @@
   text-align: center;
   position: relative;
   z-index: 1;
-}
+} 
 
-.cta-content h2 {
+.cta-content h2 { 
   color: white;
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -1314,113 +1312,40 @@
   opacity: 0.95;
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-button {
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transition: all 0.6s ease;
-  transform: translate(-50%, -50%);
-}
-
-.cta-button:hover::before {
-  width: 300%;
-  height: 300%;
-}
-
-.cta-button:hover i {
-  transform: scale(1.3) rotate(10deg);
-}
-
-.cta-button i {
-  font-size: 1.2rem;
-  transition: all 0.4s ease;
-}
-
-.cta-button.primary {
-  background: white;
-  color: #e74c3c;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
-}
-
-.cta-button.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5);
-}
-
-.cta-button.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 2px solid white;
-  -webkit-backdrop-filter: blur(10px); 
-  backdrop-filter: blur(10px);
-}
-
-.cta-button.secondary:hover {
-  background: white;
-  color: #e74c3c;
-  transform: translateY(-3px);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .auto-components-sector {
+  .rubber-based-products-sector {
     padding: 1rem;
   }
   
-  .auto-components-header h1 {
+  .rubber-based-products-header h1 {
     font-size: 2rem;
   }
   
-  .auto-components-subtitle {
+  .rubber-based-products-subtitle {
     font-size: 1rem;
   }
   
-  .auto-components-overview,
-  .auto-components-growth,
-  .auto-components-investment,
-  .auto-components-advantages,
-  .auto-components-markets,
-  .auto-components-capabilities,
-  .auto-components-incentives,
-  .auto-components-success,
-  .auto-components-future,
-  .auto-components-cta {
+  .rubber-based-products-overview,
+  .rubber-based-products-growth,
+  .rubber-based-products-investment,
+  .rubber-based-products-advantages,
+  .rubber-based-products-markets,
+  .rubber-based-products-capabilities,
+  .rubber-based-products-incentives,
+  .rubber-based-products-success,
+  .rubber-based-products-future,
+  .rubber-based-products-cta {
     padding: 2rem 1rem;
   }
   
-  .auto-components-stat-cards,
-  .auto-components-opportunity-cards,
-  .auto-components-advantages-grid,
+  .rubber-based-products-stat-cards,
+  .rubber-based-products-opportunity-cards,
+  .rubber-based-products-advantages-grid,
   .markets-grid,
   .capabilities-grid,
-  .auto-components-incentives-list,
-  .auto-components-company-logos,
+  .rubber-based-products-incentives-list,
+  .rubber-based-products-company-logos,
   .future-grid {
     grid-template-columns: 1fr;
   }
@@ -1433,73 +1358,12 @@
     font-size: 1.8rem;
   }
   
-  .cta-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .cta-button {
-    justify-content: center;
-  }
-  
   .advantage-number {
     font-size: 2rem;
   }
 }
 
-/* Scroll Reveal Animations */
-@media (prefers-reduced-motion: no-preference) {
-  .auto-components-overview,
-  .auto-components-growth,
-  .auto-components-investment,
-  .auto-components-advantages,
-  .auto-components-markets,
-  .auto-components-capabilities,
-  .auto-components-incentives,
-  .auto-components-success,
-  .auto-components-future,
-  .auto-components-cta {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-  }
-  
-  .auto-components-overview.visible,
-  .auto-components-growth.visible,
-  .auto-components-investment.visible,
-  .auto-components-advantages.visible,
-  .auto-components-markets.visible,
-  .auto-components-capabilities.visible,
-  .auto-components-incentives.visible,
-  .auto-components-success.visible,
-  .auto-components-future.visible,
-  .auto-components-cta.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Additional Advanced Animations */
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-.auto-components-stat-card:hover,
-.auto-components-opportunity-card:hover,
-.auto-components-advantage-item:hover,
-.market-item:hover,
-.capability-item:hover,
-.auto-components-incentive-item:hover,
-.auto-components-company-logo:hover,
-.future-item:hover {
-  animation: shimmerEffect 2s ease-in-out;
-}
-
 @keyframes shimmerEffect {
   0% {
     filter: brightness(1);
@@ -1512,14 +1376,25 @@
   }
 }
 
+.rubber-based-products-stat-card:hover,
+.rubber-based-products-opportunity-card:hover,
+.rubber-based-products-advantage-item:hover,
+.market-item:hover,
+.capability-item:hover,
+.rubber-based-products-incentive-item:hover,
+.rubber-based-products-company-logo:hover,
+.future-item:hover {
+  animation: shimmerEffect 2s ease-in-out;
+}
+
 /* Glow effects */
-.auto-components-opportunity-card:hover,
-.auto-components-advantage-item:hover,
+.rubber-based-products-opportunity-card:hover,
+.rubber-based-products-advantage-item:hover,
 .future-item:hover {
   box-shadow: 
     0 20px 40px rgba(0,0,0,0.15),
-    0 0 20px rgba(231, 76, 60, 0.3),
-    inset 0 0 20px rgba(231, 76, 60, 0.1);
+    0 0 20px rgba(39, 174, 96, 0.3),
+    inset 0 0 20px rgba(39, 174, 96, 0.1);
 }
 
 /* Pulsing animation for badges */
@@ -1551,8 +1426,8 @@
   }
 }
 
-.auto-components-header h1,
-.auto-components-cta h2 {
+.rubber-based-products-header h1,
+.rubber-based-products-cta h2 {
   background-size: 200% auto;
   animation: gradientText 3s ease infinite;
 }
@@ -1567,13 +1442,13 @@
   }
 }
 
-.auto-components-icon,
+.rubber-based-products-icon,
 .future-icon,
 .capability-icon {
   animation: floatSoft 3s ease-in-out infinite;
 }
 
-.auto-components-icon {
+.rubber-based-products-icon {
   animation-delay: 0s;
 }
 
@@ -1585,43 +1460,29 @@
   animation-delay: 0.4s;
 }
 
-/* Stagger animations for cards */
-.auto-components-stat-card:nth-child(1) { animation-delay: 0.1s; }
-.auto-components-stat-card:nth-child(2) { animation-delay: 0.2s; }
-.auto-components-stat-card:nth-child(3) { animation-delay: 0.3s; }
-.auto-components-stat-card:nth-child(4) { animation-delay: 0.4s; }
-
-.auto-components-opportunity-card:nth-child(1) { animation-delay: 0.1s; }
-.auto-components-opportunity-card:nth-child(2) { animation-delay: 0.2s; }
-.auto-components-opportunity-card:nth-child(3) { animation-delay: 0.3s; }
-.auto-components-opportunity-card:nth-child(4) { animation-delay: 0.4s; }
-.auto-components-opportunity-card:nth-child(5) { animation-delay: 0.5s; }
-.auto-components-opportunity-card:nth-child(6) { animation-delay: 0.6s; }
-
 /* Focus styles for accessibility */
-.cta-button:focus,
-.auto-components-opportunity-card:focus,
-.auto-components-advantage-item:focus {
-  outline: 3px solid #e74c3c;
+.rubber-based-products-opportunity-card:focus,
+.rubber-based-products-advantage-item:focus {
+  outline: 3px solid #27ae60;
   outline-offset: 3px;
 }
 
 /* Print styles */
 @media print {
-  .auto-components-sector {
+  .rubber-based-products-sector {
     background: white;
   }
   
-  .auto-components-header,
-  .auto-components-cta {
-    background: #e74c3c !important;
+  .rubber-based-products-header,
+  .rubber-based-products-cta {
+    background: #27ae60 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
   
-  .auto-components-stat-card,
-  .auto-components-opportunity-card,
-  .auto-components-advantage-item {
+  .rubber-based-products-stat-card,
+  .rubber-based-products-opportunity-card,
+  .rubber-based-products-advantage-item {
     break-inside: avoid;
     page-break-inside: avoid;
   }

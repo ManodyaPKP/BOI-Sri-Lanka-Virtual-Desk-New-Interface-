@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import qrcodeimage9 from "../../assets/GuideQR.png";
+import qrcodeimage10 from "../../assets/Register IFC QR.png";
+
 import {
   FileCheck,
   DollarSign,
@@ -21,7 +24,7 @@ const investmentThresholds = [
   {
     category: "Manufacturing",
     icon: Building,
-    color: "#667eea",
+    color: 'linear-gradient(135deg, #f7fafc 0%, #A6AEBF 100%)',
     items: [
       { title: "Export Manufacturing", amount: "$500,000", code: "1.1" },
       { title: "Advanced Technology (Local)", amount: "$5,000,000", code: "1.2" },
@@ -31,7 +34,7 @@ const investmentThresholds = [
   {
     category: "Services",
     icon: Briefcase,
-    color: "#f093fb",
+    color:'linear-gradient(135deg, #f7fafc 0%, #A6AEBF 100%)',
     items: [
       { title: "IT/IT Enabled Services", amount: "$150,000", code: "2.1" },
       { title: "BPO Industry", amount: "$150,000", code: "2.3" },
@@ -43,7 +46,7 @@ const investmentThresholds = [
   {
     category: "Agriculture",
     icon: TrendingUp,
-    color: "#4facfe",
+    color: 'linear-gradient(135deg, #f7fafc 0%, #A6AEBF 100%)',
     items: [
       { title: "Agriculture & Agro Processing (Export)", amount: "$150,000", code: "3.1" },
       { title: "Agriculture & Agro Processing (Local)", amount: "$150,000", code: "3.2" }
@@ -52,7 +55,7 @@ const investmentThresholds = [
   {
     category: "Infrastructure",
     icon: MapPin,
-    color: "#fa709a",
+    color: 'linear-gradient(135deg, #f7fafc 0%, #A6AEBF 100%)',
     items: [
       { title: "Hospital Construction", amount: "$500,000", code: "4.1(a)" },
       { title: "Housing Projects", amount: "$3,000,000", code: "4.1" },
@@ -138,7 +141,7 @@ const keyIncentives = [
   {
     title: "Duty-Free Imports",
     icon: Globe,
-    description: "Import machinery, equipment, and raw materials duty-free",
+    description: "Import machinery, equipment and raw materials duty-free",
     benefits: ["Capital goods exemption", "Raw material concessions", "Simplified customs procedures"]
   },
   {
@@ -159,6 +162,101 @@ const Guidelines = () => {
   const [expandedThreshold, setExpandedThreshold] = useState(null);
   const [activeStep, setActiveStep] = useState(null);
   const [expandedIncentive, setExpandedIncentive] = useState(null);
+  const [activeQR, setActiveQR] = useState(null);
+
+  const renderQRCode = (type) => {
+    switch(type) {
+      case 'contact':
+        return (
+          <motion.div
+            className="qr-code-section"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="qr-code-items-container">
+              <div className="qr-code-item">
+                <div className="qr-code-wrapper">
+                  <div className="qr-code-placeholder">
+                      <img src={qrcodeimage10} 
+                     style={{
+              width: '140px',
+              height: '140px',
+              marginBottom: '0px',
+              animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
+              borderRadius: '5%',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+              border: '3px solid #667eea'
+
+            }} alt="Register IFC QR" className="w-24 h-24 mx-auto" />
+                  </div>
+                </div>
+                <p className="qr-code-label">Scan to Contact IFC</p>
+              </div>
+            </div>
+            <button 
+              className="cta-button back-button"
+              onClick={() => setActiveQR(null)}
+            >
+              Back to Options
+            </button>
+          </motion.div>
+        );
+      case 'download':
+        return (
+          <motion.div
+            className="qr-code-section"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="qr-code-items-container">
+              <div className="qr-code-item">
+                <div className="qr-code-wrapper">
+                  <div className="qr-code-placeholder">
+                      <img src={qrcodeimage9} 
+                     style={{
+              width: '140px',
+              height: '140px',
+              marginBottom: '0px',
+              animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
+              borderRadius: '5%',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+              border: '3px solid #667eea'
+
+            }} alt="Guide QR" className="w-24 h-24 mx-auto" />
+                  </div>
+                </div>
+                <p className="qr-code-label">Scan to Download Guide</p>
+              </div>
+            </div>
+            <button 
+              className="cta-button back-button"
+              onClick={() => setActiveQR(null)}
+            >
+              Back to Options
+            </button>
+          </motion.div>
+        );
+      default:
+        return (
+          <>
+            <button 
+              className="cta-button primary"
+              onClick={() => setActiveQR('contact')}
+            >
+              Contact IFC
+            </button>
+            <button 
+              className="cta-button secondary"
+              onClick={() => setActiveQR('download')}
+            >
+              Download Guide
+            </button>
+          </>
+        );
+    }
+  };
 
   return (
     <div className="guidelines-container">
@@ -218,7 +316,7 @@ const Guidelines = () => {
                       <div key={itemIdx} className="threshold-item">
                         <div className="threshold-item-header">
                           <span className="threshold-code">{item.code}</span>
-                          <span className="threshold-title">{item.title}</span>
+                          <span className="threshold-title">{item.title}</span>   
                         </div>
                         <div className="threshold-amount">{item.amount}</div>
                       </div>
@@ -228,7 +326,7 @@ const Guidelines = () => {
               </AnimatePresence>
               <button className="threshold-toggle">
                 {expandedThreshold === idx ? "Show Less" : "View Details"}
-              </button>
+              </button> 
             </motion.div>
           ))}
         </div>
@@ -398,8 +496,7 @@ const Guidelines = () => {
         <h3>Ready to Begin Your Investment Journey?</h3>
         <p>Contact the BOI Investor Facilitation Center to start your application process today</p>
         <div className="cta-buttons">
-          <button className="cta-button primary">Contact IFC</button>
-          <button className="cta-button secondary">Download Guide</button>
+          {renderQRCode(activeQR)}
         </div>
       </motion.div>
     </div>

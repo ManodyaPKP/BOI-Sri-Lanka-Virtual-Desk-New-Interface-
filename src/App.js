@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Content from './components/Content';
-
+import useRestrictUserActions from './hooks/useRestrictUserActions';
+import useAutoRefresh from './hooks/useAutoRefresh';
 
 function App() {
   const [activeTab, setActiveTab] = useState('helpdesk');
   
+  // Use the custom hooks
+  useRestrictUserActions(); // Disables right-click and zoom
+  useAutoRefresh(5); // Auto-refresh after 5 minutes of inactivity
+
   return (
     <div className="container">
       <Header />
@@ -15,10 +20,7 @@ function App() {
         <Content activeTab={activeTab} />
       </div>
     </div>
-    
   );
 }
-
-
 
 export default App;
