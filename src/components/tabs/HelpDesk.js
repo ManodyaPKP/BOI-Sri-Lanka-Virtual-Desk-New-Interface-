@@ -3,7 +3,27 @@ import qrcodeimage from "../../assets/WebQR.png";
 import qrcode21 from "../../assets/DepartmentQR.png"; 
 import qrcode31 from "../../assets/WebQR.png"; 
 
-const HelpDesk = () => {                              
+const HelpDesk = () => {       
+  
+    useEffect(() => {
+    const scrollPosition = window.scrollY;
+    
+    // Prevent scrolling  
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+
+    // Cleanup - restore scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPosition); 
+    };
+  }, []); 
+  
   const backgroundImages = [
     "https://i.pinimg.com/originals/86/fa/f3/86faf30598360ff6e1c5e747689286ca.gif",
     "https://i.pinimg.com/originals/84/d4/a7/84d4a78bc3db24b6fdcfb61491479944.gif",
@@ -140,14 +160,14 @@ const HelpDesk = () => {
         padding: '0px',
         position: 'relative',
         overflowX: 'hidden',
-        overflowY: 'hidden'
+        overflowY: 'hidden',
      }}> 
 
       <div 
         className="welcome-section"
         style={{
           position: 'relative',
-          minHeight: '100vh',
+          height: '80vh',
           display: 'flex',  
           flexDirection: 'column',
           alignItems: 'center',
@@ -177,7 +197,7 @@ const HelpDesk = () => {
             boxShadow: 'inset 0 0 0 2000px rgba(255, 255, 255, 0.2)',
             opacity: isTransitioning ? 0 : 1,
             transition: 'opacity 2s cubic-bezier(0.4, 0, 0.2, 1)',
-            zIndex: 1
+            zIndex: 1  
           }}
         />
 
@@ -188,7 +208,8 @@ const HelpDesk = () => {
           width: '100%', 
           display: 'flex', 
           flexDirection: 'column', 
-          alignItems: 'center' 
+          alignItems: 'center', 
+          
         }}>
           
           {/* Enhanced Title with Modern Animations - Moved Up */}
@@ -266,7 +287,7 @@ const HelpDesk = () => {
             display: 'flex',
             justifyContent: 'center',
             gap: '25px',
-            marginBottom: '40px',
+            marginBottom: '30px',
             flexWrap: 'wrap'
           }}>
             {qrCodes.map((qr) => (

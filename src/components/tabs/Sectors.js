@@ -188,7 +188,7 @@ const Sectors = () => {
             <div id="SSectors-Sectors-rubberIcon" className="sector-icon-modern">
               <i className="fas fa-industry"></i>
             </div>
-            <h3 id="SSectors-Sectors-rubberTitle">Rubber & Rubber-Based Products</h3>
+            <h3 id="SSectors-Sectors-rubberTitle">Rubber-Based Products</h3>
             <p id="SSectors-Sectors-rubberDesc" className="sector-description-modern">
               Rubber manufacturing and rubber-based product development
             </p>
@@ -200,7 +200,7 @@ const Sectors = () => {
             <div id="SSectors-Sectors-infrastructureIcon" className="sector-icon-modern">
               <i className="fas fa-hard-hat"></i>
             </div>
-            <h3 id="SSectors-Sectors-infrastructureTitle">Infrastructure, Utilities & Mineral & Mining</h3>
+            <h3 id="SSectors-Sectors-infrastructureTitle">Infrastructure & Mining</h3>
             <p id="SSectors-Sectors-infrastructureDesc" className="sector-description-modern">
               Infrastructure development, utilities, and mining operations
             </p>

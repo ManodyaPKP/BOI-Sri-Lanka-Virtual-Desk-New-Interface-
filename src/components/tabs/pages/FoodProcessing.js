@@ -1,8 +1,71 @@
 import React from 'react';
 
 const FoodProcessing = () => {
+  // Smooth scroll function
+  const smoothScrollTo = (element, to, duration) => {
+    const start = element.scrollTop;
+    const change = to - start;
+    const increment = 20;
+    let currentTime = 0;
+
+    const animateScroll = () => {
+      currentTime += increment;
+      const val = Math.easeInOutQuad(currentTime, start, change, duration);
+      element.scrollTop = val;
+      if (currentTime < duration) {
+        setTimeout(animateScroll, increment);
+      }
+    };
+
+    Math.easeInOutQuad = (t, b, c, d) => {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+
+    animateScroll();
+  };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    smoothScrollTo(document.documentElement, 0, 600); // scroll to top in 600ms
+  };
+
   return (
     <div className="food-processing-sector">
+      {/* Scroll to Top Button */}
+      <button 
+        onClick={scrollToTop}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 1000,
+          background: '#38b000',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '50px',
+          height: '50px',
+          cursor: 'pointer',
+          fontSize: '20px',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.background = '#2b8c00';
+          e.target.style.transform = 'scale(1.1)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = '#38b000';
+          e.target.style.transform = 'scale(1)';
+        }}
+        title="Scroll to top"
+      >
+        ↑
+      </button>
+
       <div className="food-processing-header">
         <div className="food-processing-icon">
           <i className="fas fa-utensils"></i>
@@ -17,6 +80,7 @@ const FoodProcessing = () => {
         </div>
       </div>
 
+      {/* Rest of your existing JSX remains exactly the same */}
       <div className="food-processing-overview">
         <h2>Industry Overview</h2>
         <p>
@@ -63,6 +127,7 @@ const FoodProcessing = () => {
         </div>
       </div>
 
+      {/* All other sections remain exactly the same */}
       <div className="food-processing-growth">
         <h2>Export Performance & Growth Trajectory</h2>
         <div className="growth-insight">
@@ -420,44 +485,44 @@ const FoodProcessing = () => {
       </div>
 
       <div className="food-processing-success">
-  <h2>Global Food Partnerships</h2>
-  <p className="success-intro">Sri Lankan food processors are trusted partners to the world's leading food brands</p>
-  
-  <div className="food-processing-company-logos">
-    <div className="food-processing-company-logo">
-      <img src="https://cdn.worldvectorlogo.com/logos/nestle-9.svg" alt="Nestlé" />
-      <span>Nestlé</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://1000logos.net/wp-content/uploads/2017/06/Unilever-logo.jpg" alt="Unilever" />
-      <span>Unilever</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://www.logo.wine/a/logo/Mars%2C_Incorporated/Mars%2C_Incorporated-Logo.wine.svg" alt="Mars" />
-      <span>Mars</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://brandemia.org/contenido/subidas/2023/01/logo-coca-cola-2003-2020-1536x864.png" alt="Coca-Cola" />
-      <span>Coca-Cola</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Kellogg_s_Logo_Design_History_Evolution_0_1024x1024.jpg?v=1692865122" alt="Kellogg's" />
-      <span>Kellogg's</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://www.care.org/wp-content/uploads/2020/05/GeneralMills-Logo.webp" alt="General Mills" />
-      <span>General Mills</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://www.nwahomepage.com/wp-content/uploads/sites/90/2024/02/New-Tyson-Foods-Logo.png?resize=512,288" alt="Tyson Foods" />
-      <span>Tyson Foods</span>
-    </div>
-    <div className="food-processing-company-logo">
-      <img src="https://cdn.brandfetch.io/idGlz87Cpv/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758835023015" alt="Thai Union" />
-      <span>Thai Union</span>
-    </div>
-  </div>
-</div>
+        <h2>Global Food Partnerships</h2>
+        <p className="success-intro">Sri Lankan food processors are trusted partners to the world's leading food brands</p>
+        
+        <div className="food-processing-company-logos">
+          <div className="food-processing-company-logo">
+            <img src="https://cdn.worldvectorlogo.com/logos/nestle-9.svg" alt="Nestlé" />
+            <span>Nestlé</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://1000logos.net/wp-content/uploads/2017/06/Unilever-logo.jpg" alt="Unilever" />
+            <span>Unilever</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://www.logo.wine/a/logo/Mars%2C_Incorporated/Mars%2C_Incorporated-Logo.wine.svg" alt="Mars" />
+            <span>Mars</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://brandemia.org/contenido/subidas/2023/01/logo-coca-cola-2003-2020-1536x864.png" alt="Coca-Cola" />
+            <span>Coca-Cola</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Kellogg_s_Logo_Design_History_Evolution_0_1024x1024.jpg?v=1692865122" alt="Kellogg's" />
+            <span>Kellogg's</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://www.care.org/wp-content/uploads/2020/05/GeneralMills-Logo.webp" alt="General Mills" />
+            <span>General Mills</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://www.nwahomepage.com/wp-content/uploads/sites/90/2024/02/New-Tyson-Foods-Logo.png?resize=512,288" alt="Tyson Foods" />
+            <span>Tyson Foods</span>
+          </div>
+          <div className="food-processing-company-logo">
+            <img src="https://cdn.brandfetch.io/idGlz87Cpv/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758835023015" alt="Thai Union" />
+            <span>Thai Union</span>
+          </div>
+        </div>
+      </div>
 
       <div className="food-processing-future">
         <h2>Future Outlook & Strategic Vision</h2>
@@ -494,9 +559,8 @@ const FoodProcessing = () => {
         <div className="cta-content">
           <h2>Ready to Invest in Sri Lanka's Food Processing Sector?</h2>
           <p>Join leading global food companies in Sri Lanka's thriving food processing ecosystem</p>
-       
+        </div>
       </div>
-    </div>
     </div>
   );
 };

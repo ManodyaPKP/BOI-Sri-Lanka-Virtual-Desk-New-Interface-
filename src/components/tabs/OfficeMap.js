@@ -5,44 +5,22 @@ import qrcodeimage7 from "../../assets/LocationQR.png";
 
 const OfficeMap = () => { 
 
+  
+
   return (  
     <div className="tab-content">
-      {/* Hero Section */}
-      <div style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        padding: '2rem 2rem', 
-        borderRadius: '20px', 
-        marginBottom: '2rem',
-        color: 'white',
-        boxShadow: '0 10px 40px rgba(102, 126, 234, 0.3)',
-        
-      }}>
-        <h2 style={{
-          fontSize: '2rem',
-          fontWeight: '700',
-          marginBottom: '0.5rem',
-          textAlign: 'center',
-          animation: 'fadeIn 2.0s ease',
-          alignItems: 'center',
-          color: 'white',
-        }}>
-           Interactive Office Layout Map
-        </h2>
-      </div>
-
-        
 
       {/* Full Width Interactive Map Section */}
       <div style={{
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         borderRadius: '20px',
-        padding: '1.5rem',
+        padding: '0.0 rem',
         boxShadow: '0 5px 25px rgba(0, 0, 0, 0.08)',
-        marginBottom: '2rem'
+        marginBottom: '1rem'
       }}>
         <div className="map-container" style={{
           height: '700px',
-          borderRadius: '16px',
+          borderRadius: '10px',
           overflow: 'auto',
           position: 'relative',
           boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)'

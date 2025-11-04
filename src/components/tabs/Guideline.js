@@ -164,6 +164,37 @@ const Guidelines = () => {
   const [expandedIncentive, setExpandedIncentive] = useState(null);
   const [activeQR, setActiveQR] = useState(null);
 
+  // Smooth scroll function
+  const smoothScrollTo = (element, to, duration) => {
+    const start = element.scrollTop;
+    const change = to - start;
+    const increment = 20;
+    let currentTime = 0;
+
+    const animateScroll = () => {
+      currentTime += increment;
+      const val = Math.easeInOutQuad(currentTime, start, change, duration);
+      element.scrollTop = val;
+      if (currentTime < duration) {
+        setTimeout(animateScroll, increment);
+      }
+    };
+
+    Math.easeInOutQuad = (t, b, c, d) => {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+
+    animateScroll();
+  };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    smoothScrollTo(document.documentElement, 0, 600); // scroll to top in 600ms
+  };
+
   const renderQRCode = (type) => {
     switch(type) {
       case 'contact':
@@ -260,6 +291,38 @@ const Guidelines = () => {
 
   return (
     <div className="guidelines-container">
+      {/* Scroll to Top Button */}
+      <button 
+        onClick={scrollToTop}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 1000,
+          background: '#e74c3c',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '50px',
+          height: '50px',
+          cursor: 'pointer',
+          fontSize: '20px',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          transition: 'all 0.3s ease'
+        }}
+        onMouseOver={(e) => {
+          e.target.style.background = '#c0392b';
+          e.target.style.transform = 'scale(1.1)';
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = '#e74c3c';
+          e.target.style.transform = 'scale(1)';
+        }}
+        title="Scroll to top"
+      >
+        ↑
+      </button>
+
       {/* Hero Section */}
       <motion.div
         className="guidelines-hero"
@@ -282,7 +345,7 @@ const Guidelines = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <DollarSign className="heading-icon" />
+          <DollarSign className="heading-icon-dollar" />
           Investment Thresholds
         </motion.h2>
         <p className="section-description">
@@ -335,7 +398,7 @@ const Guidelines = () => {
       {/* Approval Process Timeline */}
       <section className="guidelines-section approval-section">
         <motion.h2
-          className="section-heading"
+          className="section-heading-approval"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -343,7 +406,7 @@ const Guidelines = () => {
           <CheckCircle className="heading-icon" />
           BOI Approval Process
         </motion.h2>
-        <p className="section-description">
+        <p className="section-description-approval">
           Step-by-step guide through the investment approval journey
         </p>
 
@@ -394,7 +457,7 @@ const Guidelines = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <Scale className="heading-icon" />
+          <Scale className="heading-icon-fees" />
           BOI Fees & Charges
         </motion.h2>
         <p className="section-description">
@@ -437,7 +500,7 @@ const Guidelines = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <TrendingUp className="heading-icon" />
+          <TrendingUp className="heading-icon-key1" />
           Investment Incentives
         </motion.h2>
         <p className="section-description">
