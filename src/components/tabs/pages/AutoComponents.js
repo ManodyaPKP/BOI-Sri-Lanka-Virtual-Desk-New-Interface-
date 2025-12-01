@@ -1,4 +1,16 @@
 import React from 'react';
+import Au001 from '../../../assets/sectors/AutoComponents/Au001.png';
+import Au002 from '../../../assets/sectors/AutoComponents/Au002.png';
+import Au003 from '../../../assets/sectors/AutoComponents/Au003.png';
+import Au004 from '../../../assets/sectors/AutoComponents/Au004.png';
+import Au005 from '../../../assets/sectors/AutoComponents/Au005.png';
+import Au006 from '../../../assets/sectors/AutoComponents/Au006.png';
+import Au007 from '../../../assets/sectors/AutoComponents/Au007.png';
+import Au008 from '../../../assets/sectors/AutoComponents/Au008.png';
+import Au009 from '../../../assets/sectors/AutoComponents/Au009.png';
+import Au0010 from '../../../assets/sectors/AutoComponents/Au0010.png';
+import Au0011 from '../../../assets/sectors/AutoComponents/Au0011.png';
+import Au0012 from '../../../assets/sectors/AutoComponents/Au0012.png';
 
 const AutoComponents = () => {
   // Smooth scroll function
@@ -98,13 +110,13 @@ const AutoComponents = () => {
         <div className="auto-components-stat-cards">
           <div className="auto-components-stat-card">
             <div className="auto-components-stat-icon">💰</div>
-            <div className="auto-components-stat-number">$250M+</div>
-            <div className="auto-components-stat-label">Annual Export Revenue</div>
+            <div className="auto-components-stat-number"> Targeting  800M – 2B</div>
+            <div className="auto-components-stat-label">Annual Export Revenue within the next 5 years</div>
             <div className="stat-growth">↑ 15% YoY Growth</div>
           </div>
           <div className="auto-components-stat-card">
             <div className="auto-components-stat-icon">👥</div>
-            <div className="auto-components-stat-number">15,000+</div>
+            <div className="auto-components-stat-number">5,000+</div>
             <div className="auto-components-stat-label">Skilled Professionals</div>
             <div className="stat-growth">Highly Trained Workforce</div>
           </div>
@@ -123,35 +135,47 @@ const AutoComponents = () => {
         </div>
       </div>
 
-      <div className="auto-components-growth">
-        <h2>Export Performance & Growth Trajectory</h2>
-        <div className="growth-insight">
-          <p>The sector has demonstrated remarkable resilience and consistent growth, with exports increasing 
-          by an average of 15% annually over the past five years, positioning Sri Lanka as an emerging 
-          automotive components manufacturing destination.</p>
-        </div>
-        <div className="growth-chart-container">
-          <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '40%'}}>
-              <span className="bar-value">$100M</span>
-              <span className="bar-label">2020</span>
-            </div>
-            <div className="chart-bar" data-year="2021" style={{height: '60%'}}>
-              <span className="bar-value">$150M</span>
-              <span className="bar-label">2021</span>
-            </div>
-            <div className="chart-bar" data-year="2022" style={{height: '80%'}}>
-              <span className="bar-value">$200M</span>
-              <span className="bar-label">2022</span>
-            </div>
-            <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$250M</span>
-              <span className="bar-label">2023</span>
-            </div>
-          </div>
-          <p className="chart-note">📈 Consistent double-digit growth in auto components exports</p>
-        </div>
+    
+ {/* //(not to update yet)
+<div className="auto-components-growth">
+  <h2>Export Performance & Growth Trajectory</h2>
+  <div className="growth-insight">
+    <p>
+      The sector has demonstrated remarkable resilience and consistent growth, 
+      with exports increasing by an average of 15% annually over the past five 
+      years, positioning Sri Lanka as an emerging automotive components 
+      manufacturing destination.
+    </p>
+  </div>
+
+  <div className="growth-chart-container">
+    <div className="chart-wrapper">
+      <div className="chart-bar" data-year="2020" style={{ height: '40%' }}>
+        <span className="bar-value">$100M</span>
+        <span className="bar-label">2020</span>
       </div>
+
+      <div className="chart-bar" data-year="2021" style={{ height: '60%' }}>
+        <span className="bar-value">$150M</span>
+        <span className="bar-label">2021</span>
+      </div>
+
+      <div className="chart-bar" data-year="2022" style={{ height: '80%' }}>
+        <span className="bar-value">$200M</span>
+        <span className="bar-label">2022</span>
+      </div>
+
+      <div className="chart-bar" data-year="2023" style={{ height: '100%' }}>
+        <span className="bar-value">$250M</span>
+        <span className="bar-label">2023</span>
+      </div>
+    </div>
+
+    <p className="chart-note">📈 Consistent double-digit growth in auto components exports</p>
+  </div>
+</div>
+*/}
+
 
       <div className="auto-components-investment">
         <h2>Strategic Investment Opportunities</h2>
@@ -487,51 +511,51 @@ const AutoComponents = () => {
   
   <div className="auto-components-company-logos">
     <div className="auto-components-company-logo">
-      <img src="https://imgs.search.brave.com/CMsyD1NmcyV92VQfW6kuY3rfrvUltCr_sr21EzIhlsM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by90b3lvdGEtbG9n/by13aXRoLXdvcmQt/dG95b3RhLWl0XzEx/ODk3MjYtOTM3OC5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw/JnE9ODA" alt="Toyota" />
+      <img src={Au001} alt="Toyota" />
       <span>Toyota</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://imgs.search.brave.com/7rchR9qZ7qYl19EK8k56jOEdPZF-o9LnfZmmeQpphiI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi93ZWIt/MTgzMjgxNzcyLmpw/Zw" alt="Honda" />
+      <img src={Au002} alt="Honda" />
       <span>Honda</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://1000logos.net/wp-content/uploads/2018/02/Ford-Logo-768x432.png" alt="Ford" />
+      <img src={Au003} alt="Ford" />
       <span>Ford</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://imgs.search.brave.com/A05XceY2TqRIJF-jd2UBUZd6mZEjT3-hBokRXg3a9b4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzBkLzhk/L2I5LzBkOGRiOTYx/MmU4ZmQ1MGQwOWEx/NTI5MzViYTM0ZWM2/LmpwZw" alt="Volkswagen" />
+      <img src={Au004} alt="Volkswagen" />
       <span>Volkswagen</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://imgs.search.brave.com/H3Bq74hFh_5ECIRwxQmUgOvDtxBwVrNTW_bWRG1kOzk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzAyLzQy/L2EwLzAyNDJhMGM5/N2M2ZmM4ZTNjNmE3/MDk5ZTZhN2YzNTMx/LmpwZw" alt="BMW" />
+      <img src={Au005} alt="BMW" />
       <span>BMW</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://wallpapers.com/images/high/mercedes-benz-logo-pictures-3t29mp34kr3qfoef.webp" alt="Mercedes-Benz" />
+      <img src={Au006} alt="Mercedes-Benz" />
       <span>Mercedes-Benz</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://mcdn.wallpapersafari.com/medium/57/27/gEXAwB.jpg" alt="Nissan" />
+      <img src={Au007} alt="Nissan" />
       <span>Nissan</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://wallpapercave.com/wp/wp4045308.jpg" alt="Hyundai" />
+      <img src={Au008} alt="Hyundai" />
       <span>Hyundai</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/6/1/gm-logo-png_seeklogo-61467.png" alt="General Motors" />
+      <img src={Au009} alt="General Motors" />
       <span>General Motors</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://www.carlogos.org/logo/Volvo-logo-2014-640x550.jpg" alt="Volvo" />
+      <img src={Au0010} alt="Volvo" />
       <span>Volvo</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://www.freepnglogos.com/uploads/land-rover-png-logo/jaguar-land-rover-sports-png-logo-3.png" alt="Jaguar Land Rover" />
+      <img src={Au0011} alt="Jaguar Land Rover" />
       <span>Jaguar Land Rover</span>
     </div>
     <div className="auto-components-company-logo">
-      <img src="https://imgs.search.brave.com/Utvaf6nElBegOvMoU8_xJE0Zw-_OBWUTaB-R50TAyUI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXZl/LnN0YXRpY2ZsaWNr/ci5jb20vNjA0Ni81/ODc4NzcwNTYyXzhm/NWYwMGY0YWEuanBn" alt="Tier 1 Suppliers" />
+      <img src={Au0012} alt="Tier 1 Suppliers" />
       <span>Tier 1 Suppliers</span>
     </div>
   </div>

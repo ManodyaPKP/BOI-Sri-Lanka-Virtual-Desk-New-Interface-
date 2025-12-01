@@ -1,8 +1,18 @@
 // src/components/tabs/Contact.js
 import React, { useState } from "react";
-import qrcodeimage2 from "../../assets/ContactQR.png";
-import qrcodeimage3 from "../../assets/Gateway.png";
-import qrcodeimage8 from "../../assets/formQR.png";
+import Hotline001 from "../../assets/Hotline001.png";
+import BOIGatewayQR001 from "../../assets/BOIGatewayQR001.png";
+import SeniorMcontact001 from "../../assets/SeniorMcontact001.png";
+import GeneralInquiries02 from "../../assets/contactimg/GeneralInquiries02.gif";
+import OfficeoftheChairman02 from "../../assets/contactimg/OfficeoftheChairman02.gif";
+import officedirectorgeneral02 from "../../assets/contactimg/officedirectorgeneral02.gif";
+import RightToInformation02 from "../../assets/contactimg/RightToInformation02.gif";
+import DepartmentContacts02 from "../../assets/contactimg/DepartmentContacts02.gif";
+import ZonesContacts02 from "../../assets/contactimg/ZonesContacts02.gif";
+import CountryDesk02 from "../../assets/contactimg/CountryDesk02.gif";
+import SectorContacts02 from "../../assets/contactimg/SectorContacts02.gif";
+import InvestorServices02 from "../../assets/contactimg/InvestorServices02.gif";
+import OfficeHoursSupport02 from "../../assets/contactimg/OfficeHoursSupport02.gif";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Phone, 
@@ -28,7 +38,7 @@ const contactSections = [
     title: "General Inquiries",
     desc: "Main contact point for all investment-related inquiries and general information about BOI services.",
     icon: Phone,
-    img: "https://i.pinimg.com/originals/d3/70/e5/d370e515ecba80b8cc994e849fd0c44d.gif",
+    img: GeneralInquiries02,
     details: {
       address: "Level 24, West Tower, World Trade Centre, Colombo 01",
       hotline: "+94-77-1211213",
@@ -43,7 +53,7 @@ const contactSections = [
     title: "Office of the Chairman",
     desc: "Direct access to the Chairman's office for high-level inquiries and strategic investment discussions.",
     icon: User,
-    img: "https://i.pinimg.com/originals/d3/5a/2c/d35a2c4885ba237815fc5178d7e900d1.gif",
+    img: OfficeoftheChairman02,
     details: {
       position: "Secretary to the Chairman",
       Chairman: "Mr. Arjuna Herath",
@@ -57,7 +67,7 @@ const contactSections = [
     title: "Office of the Director General",
     desc: "Administrative and operational inquiries related to BOI's executive management and policy implementation.",
     icon: Building,
-    img: "https://i.pinimg.com/originals/86/fa/f3/86faf30598360ff6e1c5e747689286ca.gif",
+    img: officedirectorgeneral02,
     details: {
       position: "Secretary to the Director General",
       DirectorGeneral: "Mrs.Renuka Weerakone",
@@ -73,7 +83,7 @@ const contactSections = [
     title: "Right To Information (RTI)",
     desc: "Access to public information and transparency-related requests under Sri Lanka's Right to Information Act.",
     icon: FileText,
-    img: "https://i.pinimg.com/originals/a3/6c/0e/a36c0e58e081afd3f5802ecd63e2fc6b.gif",
+    img: RightToInformation02,
     details: {
       service: "RTI Information Officer", 
       Name: "Mrs D A S Amarakoon",
@@ -89,7 +99,7 @@ const contactSections = [
     title: "Department Contacts",
     desc: "Specialized contact points for different BOI departments including Legal, Engineering, and Environmental divisions.",
     icon: Users,
-    img: "https://i.pinimg.com/originals/a5/00/dd/a500dd5bf406af72b719bb447ae199ba.gif",
+    img: DepartmentContacts02,
     details: {
       InvestmentPromotionDepartment: "Tel: +9411 - 2427070 / +9411 -2427055",     
       InvestmentAppraisalDepartment: "Tel: +9411-2339826 / +9411 - 2427074",
@@ -113,7 +123,7 @@ const contactSections = [
     title: "Zones Contacts",
     desc: "Direct contact with Export Processing Zones and Industrial Parks for location-specific investment opportunities.",
     icon: Factory,
-    img: "https://i.pinimg.com/originals/52/ab/3f/52ab3f57788aac2414e7c7802da7ecf7.gif",
+    img: ZonesContacts02,
     details: {  
       KatunayakeEPZ: "Mr. A S K T Ranjan Sibera, Director, Tel: +94 11 2208100, Mobile: +94 773703044, Email: ranjans@boi.lk",
       KoggalaEPZ: "Mr H K M N P Ranatunga, Director, Mobile: +94 718565047, Email: ranatungap@boi.lk",
@@ -140,7 +150,7 @@ const contactSections = [
     title: "Country Desk",
     desc: "Dedicated support for investors from specific countries and regions, providing tailored assistance and cultural liaison.",
     icon: Flag,
-    img: "https://i.pinimg.com/originals/cb/e0/e5/cbe0e53deb84c694cf52d247997890be.gif",
+    img: CountryDesk02,
     details: {
       "China/HongKong/MiddleEast/Australia/NZ": "(Mr.) M.H. Casseer Deputy Director Tel: +94 11 2427122 Email: manojc@boi.lk",
       "India/Thailand/Bangladesh/Nepal/Indonesia/Israel/Denmark/Norway/Sweden": "(Mr.) Sudath J. Jayasekara Deputy Director Tel: +94 112339976 Ext: +94 112427108 Email: sudathj@boi.lk",
@@ -156,7 +166,7 @@ const contactSections = [
     title: "Sector Contacts",
     desc: "Specialized support for investments in key sectors including IT, manufacturing, tourism, and emerging industries.",
     icon: Briefcase,
-    img: "https://i.pinimg.com/originals/82/b8/4d/82b84dbc0d2eff25af7b081bff1f3528.gif",
+    img: SectorContacts02,
     details: {
       Manufacturing: "Ms Thamari Batuwantudawa, Senior Deputy Director- Investment Appraisal, Tel: +94 11-2543040 /+94 112427077, Email: thamarib@boi.lk | Mr Viran Fernando, Senior Deputy Director- Investment Appraisal, Tel: +94 112427079, Email: viranf@boi.lk",
       Tourism: "Mr D M N Dissanayake, Director - Investment Appraisal, Tel: +94 11-2380185/ +94 112427088, Email: dissanayakemn@boi.lk",
@@ -172,7 +182,7 @@ const contactSections = [
     title: "Investor Services",
     desc: "Comprehensive support for existing investors including aftercare services, compliance assistance, and operational support.",
     icon: MessageSquare,
-    img: "https://i.pinimg.com/originals/d1/e2/54/d1e25483fe75e83eb9ab17746c08b0a3.gif",
+    img: InvestorServices02,
     details: {
       aftercare: "Investor Aftercare - aftercare@boi.lk",
       compliance: "Compliance Support - compliance@boi.lk",
@@ -186,7 +196,7 @@ const contactSections = [
     title: "Office Hours & Support",
     desc: "Operating hours, emergency contacts, and additional support services for international investors.",
     icon: Clock,
-    img: "https://i.pinimg.com/originals/7c/29/87/7c2987f664ceebc44c2e9e620f8a0645.gif",
+    img: OfficeHoursSupport02,
     details: {
       hours: "Monday - Friday: 8:30 AM - 4:15 PM",
       timezone: "Sri Lanka Standard Time (GMT +5:30)",
@@ -461,7 +471,7 @@ const Contact = () => {
           <h3>Need Immediate Assistance?</h3>
           <p>Scan any of the QR codes below for quick access</p>
           <div id="emergency-contacts">
-            {[qrcodeimage2, qrcodeimage3, qrcodeimage8].map((qr, index) => (
+            {[Hotline001, BOIGatewayQR001, SeniorMcontact001,].map((qr, index) => (
               <motion.div
                 key={index}
                 id="qr-contact"
@@ -471,9 +481,9 @@ const Contact = () => {
                   delay: 0.3 + index * 0.1,
                   duration: 0.5
                 }}
-                whileHover={{
+                whileHover={{ 
                   scale: 1.05,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 } 
                 }}
               >
                 <img 
@@ -483,6 +493,7 @@ const Contact = () => {
                     width: '150px',
                     height: '150px',
                     borderRadius: '5%',
+                    animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
                   }}
                 />
               </motion.div>

@@ -1,7 +1,6 @@
 import React from 'react';
-import qrcodeimage5 from "../../assets/ZonesQR.png";
-import qrcodeimage6 from "../../assets/DepartmentQR.png";
-import qrcodeimage7 from "../../assets/LocationQR.png";
+import Department001QR from "../../assets/Department001QR.png";
+import qrcodeimage7 from "../../assets/Location007.png";
 
 const OfficeMap = () => { 
 
@@ -20,20 +19,21 @@ const OfficeMap = () => {
       }}>
         <div className="map-container" style={{
           height: '700px',
+          width: '100%',
           borderRadius: '10px',
-          overflow: 'auto',
+      
           position: 'relative',
           boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)'
         }}>
           <iframe 
             src="https://worldsbestcables.com/boi_dev"
             style={{
-              width: '100%', 
-              height: '100%', 
+              width: '105%',  
+              height: '100%',  
               border: 'none',
               display: 'block'
             }}
-            title="BOI Office Interactive Map"
+            title="BOI Office Interactive Map" 
             allowFullScreen
           />
         </div>
@@ -50,9 +50,9 @@ const OfficeMap = () => {
         <div style={{
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           borderRadius: '16px',
-          padding: '2rem',
+          padding: '2rem', 
           color: 'white',
-          transition: 'transform 0.3s ease',
+          transition: 'transform 0.3s ease',   
         }}
         onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
         onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
@@ -67,7 +67,7 @@ const OfficeMap = () => {
           </div>
           <div style={{lineHeight: '1.8'}}>
             <p style={{margin: '0.5rem 0', fontSize: '1.1rem', fontWeight: '600', color: 'white'}}>BOI Head Office</p>
-            <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>No. 551, T.B. Jayah Mawatha</p>
+            <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>No. 551, T.B. Jayah Mawatha</p> 
             <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>(Deans Road)</p>
             <p style={{margin: '0.3rem 0', opacity: '0.95', color: 'white'}}>Colombo 10, Sri Lanka</p>
           </div>
@@ -82,10 +82,10 @@ const OfficeMap = () => {
           transition: 'transform 0.3s ease',
           
         }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'} 
         onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-          <div style={{
-            display: 'flex',
+          <div style={{ 
+            display: 'flex',   
             alignItems: 'center',
             gap: '12px',
             marginBottom: '1rem'
@@ -94,16 +94,16 @@ const OfficeMap = () => {
             <h4 style={{fontSize: '1.5rem', fontWeight: '600', margin: 0}}>Office Hours</h4>
           </div>
           <div style={{lineHeight: '1.8'}}>
-            <p style={{margin: '0.8rem 0', fontSize: '1.05rem', color: 'white'}}>
+            <p style={{margin: '0.8rem 0', fontSize: '1.05rem', color: 'white'}}> 
               <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem', color: 'white'}}>Weekdays</span>
               Monday - Friday: 8:30 AM - 4:15 PM
             </p>
             <p style={{margin: '0.8rem 0', fontSize: '1.05rem', color: 'white'}}>
-              <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem', color: 'white'}}>Weekend</span>
+              <span style={{fontWeight: '600', display: 'block', marginBottom: '0.3rem', color: 'white'}}>Weekend</span> 
               Saturday & Sunday: Closed
             </p>
           </div>
-        </div>
+        </div> 
 
        
       </div>
@@ -127,10 +127,10 @@ const OfficeMap = () => {
         </h4>  
         <p style={{
           color: '#E8F9FF',
-          marginBottom: '2rem',
+          marginBottom: '2rem',  
           fontSize: '1.05rem'
         }}>
-          Use the interactive map above to navigate to our office or scan the QR codes below
+          Use the interactive map above to navigate to our office or scan the QR codes below 
         </p>
         <div style={{
           display: 'flex',
@@ -138,30 +138,7 @@ const OfficeMap = () => {
           justifyContent: 'center',
           flexWrap: 'wrap'
         }}>
-          {/* QR Code 5 */}
-          <div className="qr-contact" style={{
-            padding: '1.5rem', 
-            borderRadius: '12px',
-            transition: 'transform 0.3s ease',
-            minWidth: '180px'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-            <img 
-              src={qrcodeimage5}
-              style={{
-                width: '150px',
-                height: '150px',
-                marginBottom: '25px',
-                animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
-                borderRadius: '5%',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-                border: '3px solid #667eea'
-              }} 
-              alt="QR Code 5" 
-              className="w-24 h-24 mx-auto" 
-            />
-          </div>
+        
 
           {/* QR Code 6 */}
           <div className="qr-contact" style={{
@@ -173,7 +150,7 @@ const OfficeMap = () => {
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
             <img 
-              src={qrcodeimage6}
+              src={Department001QR}
               style={{
                 width: '150px',
                 height: '150px',

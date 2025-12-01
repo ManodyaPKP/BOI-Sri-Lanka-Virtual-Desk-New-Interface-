@@ -1,4 +1,6 @@
 import React from 'react';
+import chairman from '../../assets/whoweareimg/chairman.png';
+import directorGeneral from '../../assets/whoweareimg/DirectorGeneral.png';
 
 const WhoWeAre = () => {
   // Smooth scroll function
@@ -182,7 +184,7 @@ const WhoWeAre = () => {
             <div className="whoweare-leader-image-container">
               <div className="whoweare-leader-image-frame">
                 <img 
-                  src="https://investsrilanka.com/wp-content/uploads/2025/05/chairman.png" 
+                  src={chairman}
                   alt="Mr. Arjuna Herath" 
                   className="whoweare-leader-photo" 
                   onError={(e) => {
@@ -209,7 +211,7 @@ const WhoWeAre = () => {
             <div className="whoweare-leader-image-container">
               <div className="whoweare-leader-image-frame">
                 <img 
-                  src="https://investsrilanka.com/wp-content/uploads/2023/08/DG_Image-1.jpg" 
+                  src={directorGeneral} 
                   alt="Mrs. Renuka M. Weerakone" 
                   className="whoweare-leader-photo" 
                   onError={(e) => {

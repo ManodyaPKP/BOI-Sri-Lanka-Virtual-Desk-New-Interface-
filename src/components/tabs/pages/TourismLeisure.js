@@ -1,4 +1,12 @@
 import React from 'react';
+import Tou001 from '../../../assets/sectors/TourismLeisure/Tou001.png';
+import Tou002 from '../../../assets/sectors/TourismLeisure/Tou002.png';
+import Tou003 from '../../../assets/sectors/TourismLeisure/Tou003.png';
+import Tou004 from '../../../assets/sectors/TourismLeisure/Tou004.png';
+import Tou005 from '../../../assets/sectors/TourismLeisure/Tou005.png';
+import Tou006 from '../../../assets/sectors/TourismLeisure/Tou006.png';
+import Tou007 from '../../../assets/sectors/TourismLeisure/Tou007.png';
+import Tou008 from '../../../assets/sectors/TourismLeisure/Tou008.png';
 
 const TourismLeisure = () => {
   // Smooth scroll function
@@ -83,52 +91,52 @@ const TourismLeisure = () => {
       <div className="tourism-leisure-overview">
         <h2>Industry Overview</h2>
         <p>
-          Sri Lanka's Tourism and Leisure sector has emerged as a <strong>key economic driver</strong>, 
-          contributing <strong>over $4 billion annually</strong> to the national economy. With its stunning 
-          natural beauty, rich cultural heritage, and warm hospitality, the island nation has firmly 
-          established itself as a premier destination for global travelers.
+         Blessed with natural and cultural endowments throughout the island, Sri Lanka is home to a rich and diverse Tourism & Leisure industry which is the economy’s third largest foreign exchange earner. Accordingly, the government has positioned tourism as a central pillar of the economy which is poised for resurgence in the wake of increasing tourist arrivals with a focus on investments that provide world-class visitor experiences in established sub-sectors and new offerings.
         </p>
         <p>
-          From pristine beaches and ancient cities to lush tea plantations and diverse wildlife, 
-          Sri Lanka offers <strong>unparalleled diversity</strong> in tourism experiences. The sector 
-          has demonstrated remarkable resilience and growth, welcoming <strong>over 2 million visitors annually</strong> 
-          pre-pandemic with strong recovery momentum.
+         <h2> Key Facts </h2>
+         <strong>
+<ol> ❖ Tourist Accommodation & Services (Hotels, Transit Hotels, Resorts, Villas, Higher-end restaurants, Convention Centres, MICE Tourism, Wellness Tourism) </ol>
+<ol>❖ Leisure & Recreational (Golf Course, Entertainment Complexes, Theme Parks, Tourist
+Shopping Complexes, Eco-Lodges, Camping, Whale & Dolphin Watching, Water Sports)</ol>
+<ol>❖ Adventure & Eco Tourism (Adventure parks)</ol>
+<ol>❖ Transportation (Yacht Marina, Coastal Ferry Services, Cruise Lines)</ol>
+<ol>❖ Skill Development: Hotel / Hospitality Training Institutes</ol>
+<ol>❖ Marine & Coastal Infrastructure</ol>
+
+ </strong>
         </p>
-        <p>
-          The industry supports <strong>over 500,000 direct and indirect jobs</strong> across accommodation, 
-          transportation, food services, and entertainment, making it a vital component of Sri Lanka's 
-          economic landscape and social development.
-        </p>
+     
         
         <div className="tourism-leisure-stat-cards">
           <div className="tourism-leisure-stat-card">
             <div className="tourism-leisure-stat-icon">🏖️</div>
-            <div className="tourism-leisure-stat-number">$4B+</div>
-            <div className="tourism-leisure-stat-label">Annual Revenue</div>
-            <div className="stat-growth">↑ 25% YoY Growth</div>
+            <div className="tourism-leisure-stat-number">$181 </div>
+            <div className="tourism-leisure-stat-label"> Foreign exchange receipts</div>
+            <div className="stat-growth">↑ per tourist per day</div>
           </div>
           <div className="tourism-leisure-stat-card">
             <div className="tourism-leisure-stat-icon">👥</div>
-            <div className="tourism-leisure-stat-number">500K+</div>
-            <div className="tourism-leisure-stat-label">Jobs Supported</div>
-            <div className="stat-growth">Direct & Indirect</div>
+            <div className="tourism-leisure-stat-number">40 countries</div>
+            <div className="tourism-leisure-stat-label">Free visa for tourists </div>
+            
           </div>
           <div className="tourism-leisure-stat-card">
             <div className="tourism-leisure-stat-icon">🏨</div>
-            <div className="tourism-leisure-stat-number">2K+</div>
-            <div className="tourism-leisure-stat-label">Hotels & Resorts</div>
-            <div className="stat-growth">Luxury to Budget</div>
+            <div className="tourism-leisure-stat-number">192</div>
+            <div className="tourism-leisure-stat-label">BOI Enterprises</div>
+            
           </div>
           <div className="tourism-leisure-stat-card">
             <div className="tourism-leisure-stat-icon">🌍</div>
-            <div className="tourism-leisure-stat-number">100+</div>
-            <div className="tourism-leisure-stat-label">Source Markets</div>
-            <div className="stat-growth">Global Reach</div>
+            <div className="tourism-leisure-stat-number">38.07% </div>
+            <div className="tourism-leisure-stat-label"> growth in arrivals</div>
+            <div className="stat-growth">↑ Global Reach</div>
           </div>
         </div>
       </div>
 
-      <div className="tourism-leisure-growth">
+    { /* <div className="tourism-leisure-growth">
         <h2>Tourism Performance & Recovery</h2>
         <div className="growth-insight">
           <p>The sector has shown remarkable resilience with visitor numbers recovering strongly post-pandemic, 
@@ -159,7 +167,7 @@ const TourismLeisure = () => {
           </div>
           <p className="chart-note">📈 Strong recovery trajectory with 2024 projected to exceed pre-pandemic levels</p>
         </div>
-      </div>
+      </div>*/ }
 
       <div className="tourism-leisure-investment">
         <h2>Strategic Investment Opportunities</h2>
@@ -498,35 +506,35 @@ const TourismLeisure = () => {
   
   <div className="tourism-leisure-company-logos">
     <div className="tourism-leisure-company-logo">
-      <img src="https://www.pngmart.com/files/23/Marriott-Logo-PNG-Picture.png" alt="Marriott" />
+      <img src={Tou001} alt="Marriott" />
       <span>Marriott</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://logos-world.net/wp-content/uploads/2021/02/Hilton-Hotels-Resorts-Logo-1998-2010-700x394.png" alt="Hilton" />
+      <img src={Tou002} alt="Hilton" />
       <span>Hilton</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://4193479.fs1.hubspotusercontent-na1.net/hubfs/4193479/aman-black-600.jpg" alt="Aman Resorts" />
+      <img src={Tou003} alt="Aman Resorts" />
       <span>Aman Resorts</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://logodix.com/logo/328096.png" alt="Shangri-La" />
+      <img src={Tou004} alt="Shangri-La" />
       <span>Shangri-La</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://companylogos.org/wp-content/uploads/2024/08/Six-Senses-768x768.jpg" alt="Six Senses" />
+      <img src={Tou005} alt="Six Senses" />
       <span>Six Senses</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://wp.logos-download.com/wp-content/uploads/2019/11/Anantara_Hotels_Resorts__Spas_Logo-700x417.png" alt="Anantara" />
+      <img src={Tou006} alt="Anantara" />
       <span>Anantara</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://lakpura.com/cdn/shop/collections/Jetwing_Hotels.jpg?v=1698304406&width=750" alt="Jetwing" />
+      <img src={Tou007} alt="Jetwing" />
       <span>Jetwing</span>
     </div>
     <div className="tourism-leisure-company-logo">
-      <img src="https://lakpura.com/cdn/shop/collections/uga_escapes.jpg?v=1700218462&width=750" alt="Uga Escapes" />
+      <img src={Tou008} alt="Uga Escapes" />
       <span>Uga Escapes</span>
     </div>
   </div>

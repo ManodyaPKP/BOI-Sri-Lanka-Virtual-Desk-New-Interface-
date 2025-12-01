@@ -1,4 +1,12 @@
 import React from 'react';
+import Mini001 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini001.png';
+import Mini002 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini002.png';
+import Mini003 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini003.png';
+import Mini004 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini004.png';
+import Mini005 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini005.png';
+import Mini006 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini006.svg';
+import Mini007 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini007.png';
+import Mini008 from '../../../assets/sectors/MiningInfrastructureDevelopment/Mini008.png';
 
 const MiningInfrastructureDevelopment = () => {
   // Smooth scroll function
@@ -103,19 +111,19 @@ const MiningInfrastructureDevelopment = () => {
         <div className="mining-infrastructure-stat-cards">
           <div className="mining-infrastructure-stat-card">
             <div className="mining-infrastructure-stat-icon">⛏️</div>
-            <div className="mining-infrastructure-stat-number">$850M+</div>
-            <div className="mining-infrastructure-stat-label">Mineral Export Value</div>
-            <div className="stat-growth">↑ 15% Annual Growth</div>
+            <div className="mining-infrastructure-stat-number">$30M</div>
+            <div className="mining-infrastructure-stat-label">Mineral Export </div>
+            <div className="stat-growth">↑ Annual </div>
           </div>
           <div className="mining-infrastructure-stat-card">
             <div className="mining-infrastructure-stat-icon">🏗️</div>
-            <div className="mining-infrastructure-stat-number">$5B+</div>
-            <div className="mining-infrastructure-stat-label">Infrastructure Projects</div>
-            <div className="stat-growth">Ongoing Development</div>
+            <div className="mining-infrastructure-stat-number">PMI Hits 52.9</div>
+            <div className="mining-infrastructure-stat-label">Construction</div>
+            <div className="stat-growth">in Jan 2025</div>
           </div>
           <div className="mining-infrastructure-stat-card">
             <div className="mining-infrastructure-stat-icon">📊</div>
-            <div className="mining-infrastructure-stat-number">30K+</div>
+            <div className="mining-infrastructure-stat-number">500K</div>
             <div className="mining-infrastructure-stat-label">Direct Employment</div>
             <div className="stat-growth">Skilled Workforce</div>
           </div>
@@ -487,35 +495,35 @@ const MiningInfrastructureDevelopment = () => {
   
   <div className="mining-infrastructure-company-logos">
     <div className="mining-infrastructure-company-logo">
-      <img src="https://www.guiaminera.cl/wp-content/uploads/2018/07/sierra-gorda.jpg" alt="Sierra Gorda" />
+      <img src={Mini001} alt="Sierra Gorda" />
       <span>Sierra Gorda</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="https://companieslogo.com/img/orig/601186.SS-a0c0c5aa.png?t=1744741411" alt="China Railway" />
+      <img src={Mini002} alt="China Railway" />
       <span>China Railway</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="https://brandlogos.net/wp-content/uploads/2022/02/larsen__toubro-logo_brandlogos.net_egljc.png" alt="Larsen & Toubro" />
+      <img src={Mini003} alt="Larsen & Toubro" />
       <span>Larsen & Toubro</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Taisei_Corporation_logo.svg/280px-Taisei_Corporation_logo.svg.png" alt="Taisei Corporation" />
+      <img src={Mini004} alt="Taisei Corporation" />
       <span>Taisei Corporation</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="https://imgs.search.brave.com/O3zegw0aWffH8bzLcqjYMUVJ8gbh_YQb5dFqFgVm41I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hdGdy/YXBoaXRlLmNvbS9f/bmV4dC9zdGF0aWMv/bWVkaWEvZGV2ZWxv/cGVycy1tb2JpbGUu/N2JjY2NhNDQucG5n" alt="Graphite Developers" />
+      <img src={Mini005} alt="Graphite Developers" />
       <span>Graphite Developers</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="https://cdn.worldvectorlogo.com/logos/minerals-technologies.svg" alt="Mineral Holdings" />
+      <img src={Mini006} alt="Mineral Holdings" />
       <span>Mineral Holdings</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/en/b/b6/Access_Engineering_logo.jpg" alt="Access Engineering" />
+      <img src={Mini007} alt="Access Engineering" />
       <span>Access Engineering</span>
     </div>
     <div className="mining-infrastructure-company-logo">
-      <img src="http://metprodco.com/wp-content/uploads/2021/12/logo3.jpg" alt="Metallurgical Corp" />
+      <img src={Mini008} alt="Metallurgical Corp" />
       <span>Metallurgical Corp</span>
     </div>
   </div>

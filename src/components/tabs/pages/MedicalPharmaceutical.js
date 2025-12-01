@@ -1,4 +1,13 @@
 import React from 'react';
+import Med001 from '../../../assets/sectors/MedicalPharmaceutical/Med001.png';
+import Med002 from '../../../assets/sectors/MedicalPharmaceutical/Med002.svg';
+import Med003 from '../../../assets/sectors/MedicalPharmaceutical/Med003.svg';
+import Med004 from '../../../assets/sectors/MedicalPharmaceutical/Med004.png';
+import Med005 from '../../../assets/sectors/MedicalPharmaceutical/Med005.png';
+import Med006 from '../../../assets/sectors/MedicalPharmaceutical/Med006.png';
+import Med007 from '../../../assets/sectors/MedicalPharmaceutical/Med007.png';
+import Med008 from '../../../assets/sectors/MedicalPharmaceutical/Med008.png';
+
 
 const MedicalPharmaceutical = () => {
   // Smooth scroll function
@@ -83,27 +92,15 @@ const MedicalPharmaceutical = () => {
       <div className="medical-pharmaceutical-overview">
         <h2>Industry Overview</h2>
         <p>
-          Sri Lanka's Medical and Pharmaceutical sector has emerged as a <strong>rapidly growing industry</strong> 
-          with <strong>annual exports exceeding $500 million</strong>. The sector combines modern manufacturing 
-          capabilities with traditional Ayurvedic knowledge, creating a unique value proposition for global markets.
-        </p>
-        <p>
-          With <strong>over 100 pharmaceutical manufacturers</strong> and a robust healthcare ecosystem, 
-          Sri Lanka has established itself as a reliable source of high-quality medical products, 
-          ranging from generic medicines to sophisticated medical devices and traditional remedies.
-        </p>
-        <p>
-          The industry employs <strong>over 25,000 healthcare professionals</strong> and technical staff, 
-          supported by strong regulatory frameworks and international quality certifications that ensure 
-          product safety and efficacy for both domestic and international markets.
+          Sri Lanka’s pharmaceutical market is valued at<strong> USD 750 million in 2025 </strong> and is growing at a <strong>5-year CAGR of 4.1%</strong>, reflecting strong and steady demand. With <strong>85% of pharmaceutical needs met through imports</strong>, there is significant potential for <strong>export-oriented investments</strong>in generic drugs, specialty medicines, biologics, vaccines, and Ayurvedic products. Supported by <strong>government incentives, regulatory oversight, strategic location, and competitive costs</strong>, Sri Lanka offers a thriving environment for foreign investors seeking sustainable, profitable pharmaceutical ventures with regional market access.
         </p>
         
         <div className="medical-pharmaceutical-stat-cards">
           <div className="medical-pharmaceutical-stat-card">
             <div className="medical-pharmaceutical-stat-icon">💊</div>
-            <div className="medical-pharmaceutical-stat-number">$500M+</div>
-            <div className="medical-pharmaceutical-stat-label">Annual Exports</div>
-            <div className="stat-growth">↑ 20% YoY Growth</div>
+            <div className="medical-pharmaceutical-stat-number">11.07%</div>
+            <div className="medical-pharmaceutical-stat-label">Projected growth rate</div>
+            <div className="stat-growth"> by 2027</div>
           </div>
           <div className="medical-pharmaceutical-stat-card">
             <div className="medical-pharmaceutical-stat-icon">👥</div>
@@ -113,9 +110,9 @@ const MedicalPharmaceutical = () => {
           </div>
           <div className="medical-pharmaceutical-stat-card">
             <div className="medical-pharmaceutical-stat-icon">🏭</div>
-            <div className="medical-pharmaceutical-stat-number">100+</div>
-            <div className="medical-pharmaceutical-stat-label">Manufacturers</div>
-            <div className="stat-growth">Certified Facilities</div>
+            <div className="medical-pharmaceutical-stat-number">$750M</div>
+            <div className="medical-pharmaceutical-stat-label">Market Valued</div>
+            <div className="stat-growth">In 2025</div>
           </div>
           <div className="medical-pharmaceutical-stat-card">
             <div className="medical-pharmaceutical-stat-icon">🌍</div>
@@ -134,21 +131,18 @@ const MedicalPharmaceutical = () => {
         </div>
         <div className="growth-chart-container">
           <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '45%'}}>
-              <span className="bar-value">$290M</span>
-              <span className="bar-label">2020</span>
+            
+            <div className="chart-bar" data-year="2025" style={{height: '80%'}}>
+              <span className="bar-value">9.28%</span>
+              <span className="bar-label">2025</span>
             </div>
-            <div className="chart-bar" data-year="2021" style={{height: '60%'}}>
-              <span className="bar-value">$350M</span>
-              <span className="bar-label">2021</span>
+            <div className="chart-bar" data-year="2026" style={{height: '90%'}}>
+              <span className="bar-value">10.8%</span>
+              <span className="bar-label">2026</span>
             </div>
-            <div className="chart-bar" data-year="2022" style={{height: '80%'}}>
-              <span className="bar-value">$420M</span>
-              <span className="bar-label">2022</span>
-            </div>
-            <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$500M</span>
-              <span className="bar-label">2023</span>
+            <div className="chart-bar" data-year="2027" style={{height: '100%'}}>
+              <span className="bar-value">11.07%</span>
+              <span className="bar-label">2027</span>
             </div>
           </div>
           <p className="chart-note">📈 Strong growth in pharmaceutical exports and medical technology</p>
@@ -494,35 +488,35 @@ const MedicalPharmaceutical = () => {
   
   <div className="medical-pharmaceutical-company-logos">
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://logotyp.us/file/gsk.svg" alt="GSK" />
+      <img src={Med001} alt="GSK" />
       <span>GSK</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://www.logo.wine/a/logo/Pfizer/Pfizer-Logo.wine.svg" alt="Pfizer" />
+      <img src={Med002} alt="Pfizer" />
       <span>Pfizer</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://www.logo.wine/a/logo/Novartis/Novartis-Logo.wine.svg" alt="Novartis" />
+      <img src={Med003} alt="Novartis" />
       <span>Novartis</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://imgs.search.brave.com/SJV1oldRNMkJANV_sLFW3iuDeMq5KIz4vBjptWKVPoQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIx/MzQxMzQzOS9wdC9m/b3RvL2EtcGhvdG8t/dGFrZW4tb24tZmVi/cnVhcnktMi0yMDEx/LXNob3dzLXRoZS1s/b2dvLW9mLXN3aXNz/LXBoYXJtYWNldXRp/Y2FsLWdpYW50LXJv/Y2hlLWluLWJhc2Vs/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz14dDI2REVaUlU5/dW9HNUZBTEE1c1I2/YVhpb0hzc0VUd2l3/Q3I2dWZweG1VPQ" alt="Roche" />
+      <img src={Med004} alt="Roche" />
       <span>Roche</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://logos-world.net/wp-content/uploads/2022/09/Merck-Co.-Logo-500x281.png" alt="Merck" />
+      <img src={Med005} alt="Merck" />
       <span>Merck</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/1/1/astrazeneca-logo-png_seeklogo-12559.png" alt="AstraZeneca" />
+      <img src={Med006} alt="AstraZeneca" />
       <span>AstraZeneca</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://brandlogos.net/wp-content/uploads/2011/06/sanofi-aventis-logo-vector.png" alt="Sanofi" />
+      <img src={Med007} alt="Sanofi" />
       <span>Sanofi</span>
     </div>
     <div className="medical-pharmaceutical-company-logo">
-      <img src="https://imgs.search.brave.com/v_XPaubU0rk8YPA1lHYcJXzC9VNSgXrTAnwmYIOu35E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzVj/YzI5ZmJmOWI3ZDE1/MDg1YWY2NzFkYS8x/NjczNTM5MTA4Nzk0/LTJSVjJEQTFMWUky/MlZVUkxQSUdKL0hJ/TSstK1N1bnJheStD/aXJjbGUrKEdyZWVu/KSszMDAweDE2NTAu/cG5n" alt="Himalaya" />
+      <img src={Med008} alt="Himalaya" />
       <span>Himalaya</span>
     </div>
   </div>
