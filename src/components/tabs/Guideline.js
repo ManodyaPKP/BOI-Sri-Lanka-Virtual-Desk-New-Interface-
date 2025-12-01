@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import qrcodeimage9 from "../../assets/GuideQR.png";
-import qrcodeimage10 from "../../assets/Register IFC QR.png";
+import qrcodeimage9 from "../../assets/GuideQr001.png";
+import qrcodeimage10 from "../../assets/NewInvestor001.png";
 
 import {
   FileCheck,
@@ -36,12 +36,19 @@ const investmentThresholds = [
     icon: Briefcase,
     color:'linear-gradient(135deg, #f7fafc 0%, #A6AEBF 100%)',
     items: [
-      { title: "IT/IT Enabled Services", amount: "$150,000", code: "2.1" },
-      { title: "BPO Industry", amount: "$150,000", code: "2.3" },
-      { title: "Tourism & Leisure", amount: "$500,000", code: "2.4" },
-      { title: "Utilities", amount: "$500,000", code: "2.5" },
-      { title: "Regional HQ", amount: "$250,000", code: "2.11" }
-    ]
+  { "title": "IT/IT Enabled Services", "amount": "$150,000", "code": "2.1" },
+  { "title": "IT/IT Enabled Services (Local Market)", "amount": "$150,000", "code": "2.2" },
+  { "title": "BPO Industry", "amount": "$150,000", "code": "2.3" },
+  { "title": "Tourism & Leisure", "amount": "$500,000", "code": "2.4" },
+  { "title": "Utilities", "amount": "$500,000", "code": "2.5" },
+  { "title": "Export-oriented services", "amount": "$500,000", "code": "2.6" },
+  { "title": "Warehouse, logistic and Supply Chain Management and Cold Storage", "amount": "$500,000", "code": "2.7" },
+  { "title": "Training Institutes", "amount": "$100,000", "code": "2.8" },
+  { "title": "Research & Development", "amount": "$100,000", "code": "2.9" },
+  { "title": "Large scale service projects as approved by the Board local market", "amount": "$5,000,000", "code": "2.10" },
+  { "title": "Regional Operating Headquarters", "amount": "$250,000", "code": "2.11" },
+  { "title": "Export Trading House", "amount": "$5,000,000", "code": "2.12" }
+]
   },
   {
     category: "Agriculture",
@@ -58,7 +65,8 @@ const investmentThresholds = [
     color: 'linear-gradient(135deg, #f7fafc 0%, #A6AEBF 100%)',
     items: [
       { title: "Hospital Construction", amount: "$500,000", code: "4.1(a)" },
-      { title: "Housing Projects", amount: "$3,000,000", code: "4.1" },
+       { title: "Any other Small Scale Infrastructure Projects", amount: "$5,000,000", code: "4.1(b)" },
+      { title: "Housing Projects", amount: "$3,000,000", code: "✱" },
       { title: "Large Scale Infrastructure", amount: "$12,500,000", code: "4.2" }
     ]
   }
@@ -113,21 +121,41 @@ const boiFees = [
   {
     category: "Application Processing",
     items: [
-      { service: "Investment Application Fee", fee: "$400" },
-      { service: "Normal Section 17 Agreement", fee: "$2,500" },
-      { service: "Strategic Development Project", fee: "$4,500" },
-      { service: "Supplementary Agreement (Normal)", fee: "$700" },
-      { service: "Supplementary Agreement (SDP)", fee: "$4,000" }
-    ]
+  { "service": "Investment Application Processing Fee (Section 17)", "fee": "$400" },
+  { "service": "Agreement Processing Fee - Normal Sec. 17 Projects", "fee": "$2,500" },
+  { "service": "Agreement Processing Fee - Strategic Development Projects", "fee": "$4,500" },
+  { "service": "Supplementary Agreements - Normal Sec. 17 Projects", "fee": "$700" },
+  { "service": "Supplementary Agreements - Strategic Development Projects", "fee": "$4,000" },
+  { "service": "Extension of Project Implementation Period - More than/for One Year (Per Month)", "fee": "$75" },
+  { "service": "Extension of Project Implementation Period - Less than One Year (Per Month)", "fee": "$100" },
+  { "service": "Investment Application Processing Fee (Section 16)", "fee": "$400" },
+  { "service": "Processing Fee for Perusal of Articles of Association of Companies", "fee": "$200" },
+  { "service": "Agreement Processing Fees (Section 16)", "fee": "$100" },
+  { "service": "Agreement Processing Fee - Industrial (Non BOI Companies)", "fee": "$700" },
+  { "service": "Agreement Processing Fee - Non Industrial (Non BOI Companies)", "fee": "$65" },
+  { "service": "Planning Approvals - Original", "fee": "$200" },
+  { "service": "Planning Approvals - Revision", "fee": "$100" }
+]
   },
   {
     category: "Annual Fees (Outside EPZs)",
-    items: [
-      { service: "During Implementation (< $3M)", fee: "$3,100" },
-      { service: "During Implementation ($3M-$10M)", fee: "$8,000" },
-      { service: "During Implementation (> $10M)", fee: "$10,700" },
-      { service: "After Tax Holiday (Manufacturing)", fee: "$20,000" }
-    ]
+    items:
+[
+  { "service": "Normal Projects", "fee": "$3,450" },
+  { "service": "Agriculture Projects", "fee": "$1,250" },
+  { "service": "Coir based Industries and Handcraft Projects", "fee": "$1,550" },
+  { "service": " During Project Implementation Period - Projects less than US$ 3 Mn.", "fee": "$4,750" },
+  { "service": " During Project Implementation Period - Projects between US$ 3 Mn. and US$ 10 Mn.", "fee": "$8,800" },
+  { "service": "During Project Implementation Period - Projects more than US$ 10 Mn.", "fee": "$11,800" },
+  { "service": " During Project Implementation Period - Strategic Development Projects", "fee": "$22,000" },
+  { "service": " After Implementation, during Tax Holidays & Concessionary Tax Period - Projects less than US$ 3 Mn.", "fee": "$3,100" },
+  { "service": " After Implementation, during Tax Holidays & Concessionary Tax Period - Projects between US$ 3 Mn. and US$ 10 Mn.", "fee": "$7,400" },
+  { "service": " After Implementation, during Tax Holidays & Concessionary Tax Period - Projects more than US$ 10 Mn.", "fee": "$10,400" },
+  { "service": " After Implementation, during Tax Holidays & Concessionary Tax Period - Strategic Development Projects", "fee": "$14,800" },
+  { "service": " After Tax holidays & Concessionary Tax Period", "fee": "$1,500" },
+  { "service": " During Project Implementation Period, Tax Holiday & Concessionary Tax Period", "fee": "$22,000" },
+  { "service": "Annual License Fee (Under Section 16)", "fee": "$550" }
+]
   }
 ];
 
@@ -222,7 +250,7 @@ const Guidelines = () => {
             }} alt="Register IFC QR" className="w-24 h-24 mx-auto" />
                   </div>
                 </div>
-                <p className="qr-code-label">Scan to Contact IFC</p>
+                <p className="qr-code-label">𝘚𝘤𝘢𝘯 𝘵𝘰 𝘕𝘦𝘸 𝘐𝘯𝘷𝘦𝘴𝘵𝘰𝘳 𝘏𝘰𝘮𝘦</p>
               </div>
             </div>
             <button 
@@ -233,6 +261,9 @@ const Guidelines = () => {
             </button>
           </motion.div>
         );
+
+        // QR Codes
+
       case 'download':
         return (
           <motion.div
@@ -250,7 +281,7 @@ const Guidelines = () => {
               width: '140px',
               height: '140px',
               marginBottom: '0px',
-              animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
+              animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite', 
               borderRadius: '5%',
               boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
               border: '3px solid #667eea'
@@ -276,13 +307,13 @@ const Guidelines = () => {
               className="cta-button primary"
               onClick={() => setActiveQR('contact')}
             >
-              Contact IFC
+              ✦ 𝙉𝙚𝙬 𝙄𝙣𝙫𝙚𝙨𝙩𝙤𝙧 
             </button>
             <button 
               className="cta-button secondary"
               onClick={() => setActiveQR('download')}
             >
-              Download Guide
+              ✦ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙂𝙪𝙞𝙙𝙚
             </button>
           </>
         );
@@ -330,7 +361,7 @@ const Guidelines = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="guidelines-title">Investment Guidelines</h1>
+        <h1 className="guidelines-title">✪ Investment Guidelines</h1>
         <p className="guidelines-subtitle">
           Comprehensive guide to investing in Sri Lanka through the Board of Investment. 
           Navigate the investment process with clarity and confidence.

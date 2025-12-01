@@ -1,4 +1,12 @@
 import React from 'react';
+import food001 from '../../../assets/sectors/FoodProcessing/food001.svg';
+import food002 from '../../../assets/sectors/FoodProcessing/food002.png';
+import food003 from '../../../assets/sectors/FoodProcessing/food003.svg';
+import food004 from '../../../assets/sectors/FoodProcessing/food004.png';
+import food005 from '../../../assets/sectors/FoodProcessing/food005.png';
+import food006 from '../../../assets/sectors/FoodProcessing/food006.png';
+import food007 from '../../../assets/sectors/FoodProcessing/food007.png';
+import food008 from '../../../assets/sectors/FoodProcessing/food008.png';
 
 const FoodProcessing = () => {
   // Smooth scroll function
@@ -84,43 +92,40 @@ const FoodProcessing = () => {
       <div className="food-processing-overview">
         <h2>Industry Overview</h2>
         <p>
-          Sri Lanka's Food Processing sector represents a dynamic and rapidly growing industry with 
-          <strong> annual exports exceeding $1.2 billion</strong>. Leveraging the island's rich agricultural heritage 
-          and diverse tropical climate, the sector has evolved from traditional food preservation to sophisticated 
-          value-added processing for global markets.
+          From lush tropical farms to global dining tables, Sri Lanka’s food and agriculture sector is ripening with opportunity. Blending rich natural resources, organic heritage, and rising demand for value-added products, this is your gateway to invest in a fresh, future-ready industry at the heart of South Asia. Sri Lanka presents a competitive, eco-friendly, and high-potential landscape for agribusiness and food processing ventures.
         </p>
         <p>
-          With over <strong>300 registered food processing companies</strong> and state-of-the-art manufacturing facilities, 
+          With over <strong>150+ registered food processing companies</strong> and state-of-the-art manufacturing facilities, 
           Sri Lanka has established itself as a reliable source of high-quality, safe, and innovative food products 
           that meet international standards and consumer preferences worldwide.
         </p>
         <p>
-          The industry employs <strong>over 50,000 skilled professionals</strong> across the value chain, from farm to fork, 
+          The industry employs <strong>over 10,000 skilled professionals</strong> across the value chain, from farm to fork, 
           supported by robust research institutions, quality certification bodies, and modern logistics infrastructure.
         </p>
         
         <div className="food-processing-stat-cards">
           <div className="food-processing-stat-card">
             <div className="food-processing-stat-icon">💰</div>
-            <div className="food-processing-stat-number">$1.2B+</div>
-            <div className="food-processing-stat-label">Annual Export Revenue</div>
+            <div className="food-processing-stat-number">19%</div>
+            <div className="food-processing-stat-label">Export Growth Performance in 2024 </div>
             <div className="stat-growth">↑ 12% YoY Growth</div>
           </div>
           <div className="food-processing-stat-card">
             <div className="food-processing-stat-icon">👥</div>
-            <div className="food-processing-stat-number">50K+</div>
+            <div className="food-processing-stat-number">10K+</div>
             <div className="food-processing-stat-label">Skilled Professionals</div>
             <div className="stat-growth">Trained Workforce</div>
           </div>
           <div className="food-processing-stat-card">
             <div className="food-processing-stat-icon">🏭</div>
-            <div className="food-processing-stat-number">300+</div>
-            <div className="food-processing-stat-label">Processing Facilities</div>
+            <div className="food-processing-stat-number">45%</div>
+            <div className="food-processing-stat-label">Land Used for Agriculture</div>
             <div className="stat-growth">Certified Plants</div>
           </div>
           <div className="food-processing-stat-card">
             <div className="food-processing-stat-icon">🌍</div>
-            <div className="food-processing-stat-number">80+</div>
+            <div className="food-processing-stat-number">150+</div>
             <div className="food-processing-stat-label">Global Markets</div>
             <div className="stat-growth">Worldwide Reach</div>
           </div>
@@ -136,21 +141,21 @@ const FoodProcessing = () => {
         </div>
         <div className="growth-chart-container">
           <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '60%'}}>
-              <span className="bar-value">$0.8B</span>
-              <span className="bar-label">2020</span>
-            </div>
-            <div className="chart-bar" data-year="2021" style={{height: '75%'}}>
-              <span className="bar-value">$0.9B</span>
+            <div className="chart-bar" data-year="2021" style={{height: '80%'}}>
+              <span className="bar-value">$301M</span>
               <span className="bar-label">2021</span>
             </div>
-            <div className="chart-bar" data-year="2022" style={{height: '90%'}}>
-              <span className="bar-value">$1.1B</span>
+            <div className="chart-bar" data-year="2022" style={{height: '65%'}}>
+              <span className="bar-value">$275M</span>
               <span className="bar-label">2022</span>
             </div>
-            <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$1.2B</span>
+            <div className="chart-bar" data-year="2023" style={{height: '70%'}}>
+              <span className="bar-value">$293M</span>
               <span className="bar-label">2023</span>
+            </div>
+            <div className="chart-bar" data-year="2024" style={{height: '100%'}}>
+              <span className="bar-value">$348M</span>
+              <span className="bar-label">2024</span>
             </div>
           </div>
           <p className="chart-note">📈 Steady growth in food processing exports with premium positioning</p>
@@ -310,7 +315,7 @@ const FoodProcessing = () => {
           
           <div className="food-processing-advantage-item">
             <div className="advantage-number">02</div>
-            <div className="food-processing-advantage-icon">
+            <div className="food-processing-advantage-icon">   
               <i className="fas fa-certificate"></i>
             </div>
             <h3>International Quality Standards</h3>
@@ -490,35 +495,35 @@ const FoodProcessing = () => {
         
         <div className="food-processing-company-logos">
           <div className="food-processing-company-logo">
-            <img src="https://cdn.worldvectorlogo.com/logos/nestle-9.svg" alt="Nestlé" />
+            <img src={food001} alt="Nestlé" />
             <span>Nestlé</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://1000logos.net/wp-content/uploads/2017/06/Unilever-logo.jpg" alt="Unilever" />
+            <img src={food002} alt="Unilever" />
             <span>Unilever</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://www.logo.wine/a/logo/Mars%2C_Incorporated/Mars%2C_Incorporated-Logo.wine.svg" alt="Mars" />
+            <img src={food003} alt="Mars" />
             <span>Mars</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://brandemia.org/contenido/subidas/2023/01/logo-coca-cola-2003-2020-1536x864.png" alt="Coca-Cola" />
+            <img src={food004} alt="Coca-Cola" />
             <span>Coca-Cola</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Kellogg_s_Logo_Design_History_Evolution_0_1024x1024.jpg?v=1692865122" alt="Kellogg's" />
+            <img src={food005} alt="Kellogg's" />
             <span>Kellogg's</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://www.care.org/wp-content/uploads/2020/05/GeneralMills-Logo.webp" alt="General Mills" />
+            <img src={food006} alt="General Mills" />
             <span>General Mills</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://www.nwahomepage.com/wp-content/uploads/sites/90/2024/02/New-Tyson-Foods-Logo.png?resize=512,288" alt="Tyson Foods" />
+            <img src={food007} alt="Tyson Foods" />
             <span>Tyson Foods</span>
           </div>
           <div className="food-processing-company-logo">
-            <img src="https://cdn.brandfetch.io/idGlz87Cpv/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1758835023015" alt="Thai Union" />
+            <img src={food008} alt="Thai Union" />
             <span>Thai Union</span>
           </div>
         </div>

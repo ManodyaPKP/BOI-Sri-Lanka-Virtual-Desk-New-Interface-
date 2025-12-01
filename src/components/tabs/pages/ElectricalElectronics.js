@@ -1,4 +1,16 @@
 import React from 'react';
+import Ele001 from '../../../assets/sectors/ElectricalElectronics/Ele001.png';
+import Ele002 from '../../../assets/sectors/ElectricalElectronics/Ele002.png';
+import Ele003 from '../../../assets/sectors/ElectricalElectronics/Ele003.png';
+import Ele004 from '../../../assets/sectors/ElectricalElectronics/Ele004.png';
+import Ele005 from '../../../assets/sectors/ElectricalElectronics/Ele005.png';
+import Ele006 from '../../../assets/sectors/ElectricalElectronics/Ele006.png';
+import Ele007 from '../../../assets/sectors/ElectricalElectronics/Ele007.png';
+import Ele008 from '../../../assets/sectors/ElectricalElectronics/Ele008.png';
+import Ele009 from '../../../assets/sectors/ElectricalElectronics/Ele009.png';
+import Ele0010 from '../../../assets/sectors/ElectricalElectronics/Ele0010.png';
+import Ele0011 from '../../../assets/sectors/ElectricalElectronics/Ele0011.png';
+import Ele0012 from '../../../assets/sectors/ElectricalElectronics/Ele0012.svg';
 
 const ElectricalElectronics = () => {
   // Smooth scroll function
@@ -95,7 +107,7 @@ const ElectricalElectronics = () => {
           training and strategic air and shipping connectivity.
         </p>
         <p>
-          The industry employs <strong>over 75,000 skilled professionals</strong> across 200+ state-of-the-art 
+          The industry employs <strong>over 37,000 skilled professionals</strong> across 200+ state-of-the-art 
           manufacturing facilities, serving global markets with innovative solutions in consumer electronics, 
           industrial automation, telecommunications, and emerging technologies.
         </p>
@@ -103,26 +115,26 @@ const ElectricalElectronics = () => {
         <div className="electrical-electronics-stat-cards">
           <div className="electrical-electronics-stat-card">
             <div className="electrical-electronics-stat-icon">💰</div>
-            <div className="electrical-electronics-stat-number">$1.5B+</div>
-            <div className="electrical-electronics-stat-label">Annual Export Revenue</div>
+            <div className="electrical-electronics-stat-number">$421.99M</div>
+            <div className="electrical-electronics-stat-label">Export Revenue in 2024</div>
             <div className="stat-growth">↑ 15% YoY Growth</div>
           </div>
           <div className="electrical-electronics-stat-card">
             <div className="electrical-electronics-stat-icon">👥</div>
-            <div className="electrical-electronics-stat-number">75K+</div>
-            <div className="electrical-electronics-stat-label">Skilled Professionals</div>
+            <div className="electrical-electronics-stat-number">2000+</div>
+            <div className="electrical-electronics-stat-label"> Engineering Graduates Annually</div>
             <div className="stat-growth">Highly Trained Workforce</div>
           </div>
           <div className="electrical-electronics-stat-card">
             <div className="electrical-electronics-stat-icon">🏭</div>
-            <div className="electrical-electronics-stat-number">200+</div>
-            <div className="electrical-electronics-stat-label">Manufacturing Facilities</div>
+            <div className="electrical-electronics-stat-number">37000</div>
+            <div className="electrical-electronics-stat-label">people employed </div>
             <div className="stat-growth">ISO Certified Plants</div>
           </div>
           <div className="electrical-electronics-stat-card">
             <div className="electrical-electronics-stat-icon">🌍</div>
-            <div className="electrical-electronics-stat-number">60+</div>
-            <div className="electrical-electronics-stat-label">Global Markets Served</div>
+            <div className="electrical-electronics-stat-number">3.51% </div>
+            <div className="electrical-electronics-stat-label">2024 national export revenue</div>
             <div className="stat-growth">Worldwide Presence</div>
           </div>
         </div>
@@ -136,21 +148,21 @@ const ElectricalElectronics = () => {
         </div>
         <div className="growth-chart-container">
           <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '55%'}}>
-              <span className="bar-value">$0.9B</span>
-              <span className="bar-label">2020</span>
-            </div>
-            <div className="chart-bar" data-year="2021" style={{height: '70%'}}>
-              <span className="bar-value">$1.1B</span>
+            <div className="chart-bar" data-year="2021" style={{height: '88%'}}>
+              <span className="bar-value">$422M</span>
               <span className="bar-label">2021</span>
             </div>
-            <div className="chart-bar" data-year="2022" style={{height: '85%'}}>
-              <span className="bar-value">$1.3B</span>
+            <div className="chart-bar" data-year="2022" style={{height: '95%'}}>
+              <span className="bar-value">$483M</span>
               <span className="bar-label">2022</span>
             </div>
             <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$1.5B</span>
+              <span className="bar-value">$486M</span>
               <span className="bar-label">2023</span>
+            </div>
+            <div className="chart-bar" data-year="2024" style={{height: '85%'}}>
+              <span className="bar-value">$422M</span>
+              <span className="bar-label">2024</span>
             </div>
           </div>
           <p className="chart-note">📈 Consistent double-digit growth in electrical and electronics exports</p>
@@ -490,51 +502,51 @@ const ElectricalElectronics = () => {
   
   <div className="electrical-electronics-company-logos">
     <div className="electrical-electronics-company-logo">
-      <img src="https://imgs.search.brave.com/rHfsLTQ7PpMBkUrQABO1aoOnhDHaknxuHuObiOgA3S4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzQyL2Vl/LzI4LzQyZWUyODAz/OGI5NjhkOWQzYWQy/NzI3MjQ3NzA4Yjhh/LmpwZw" alt="Samsung" />
+      <img src={Ele001} alt="Samsung" />
       <span>Samsung</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://1000logos.net/wp-content/uploads/2021/05/Sony-logo-768x432.png" alt="Sony" />
+      <img src={Ele002} alt="Sony" />
       <span>Sony</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://1000logos.net/wp-content/uploads/2022/12/Panasonic-logo-768x432.png" alt="Panasonic" />
+      <img src={Ele003} alt="Panasonic" />
       <span>Panasonic</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/8/1/lg-electronics-logo-png_seeklogo-83711.png" alt="LG Electronics" />
+      <img src={Ele004} alt="LG Electronics" />
       <span>LG Electronics</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://imgs.search.brave.com/V3D6DgqhEv2dqx5wWOXGFjAeGk0EmAf54VGrpWqLdEg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzRkLzIw/L2NmLzRkMjBjZjU2/Njk4MWY2NmFmMzUz/Mjc0ZDkwNDQ4ZDc0/LmpwZw" alt="Toshiba" />
+      <img src={Ele005} alt="Toshiba" />
       <span>Toshiba</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://logosdown.com/wp-content/uploads/2023/08/philips-logo-0-2048x2048-1.png" alt="Philips" />
+      <img src={Ele006} alt="Philips" />
       <span>Philips</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://i.redd.it/rarcgqu6pgef1.png" alt="Huawei" />
+      <img src={Ele007} alt="Huawei" />
       <span>Huawei</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Lenovo-640x400.png" alt="Lenovo" />
+      <img src={Ele008} alt="Lenovo" />
       <span>Lenovo</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://imgs.search.brave.com/sp5tbXpxWZ4FkeT-ledYzIigWk9nq8nKUIZjlO2RDNU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGVsZWFkaGVzaXZv/LmNvbS9lcy9pbWcv/YXNmczE2OTVfMS1q/cGcvZm9sZGVyL3By/b2R1Y3RzLWRldGFs/bGUtbXVlc3RyYXMt/Z3JhbmRlcy9wZWdh/dGluYXMtY29jaGVz/LW1vdG9zLWJvc2No/LWxvZ28uanBn" alt="Bosch" />
+      <img src={Ele009} alt="Bosch" />
       <span>Bosch</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://imgs.search.brave.com/ERqGzA8sGONmedwzXbtEd_nSPfiVAqk2LzWJ9LyduGg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTU5/Mzk0OTcvcGhvdG8v/dGhlLXNpZW1lbnMt/YWctbG9nby1pcy1z/ZWVuLWluLWVybGFu/Z2VuLWdlcm1hbnkt/b24tdGh1cnNkYXkt/amFuLTIxLTIwMTAt/c2llbWVucy1hZy1p/cy1ldXJvcGVzLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz0x/Q2tXZjhIUjFRUU45/Zklnc2tmZXktUTZM/TkRDdEdwOFBPUk1I/aG5Udld3PQ" alt="Siemens" />
+      <img src={Ele0010} alt="Siemens" />
       <span>Siemens</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/0/1/abb-logo-png_seeklogo-1844.png" alt="ABB" />
+      <img src={Ele0011} alt="ABB" />
       <span>ABB</span>
     </div>
     <div className="electrical-electronics-company-logo">
-      <img src="https://www.logo.wine/a/logo/Schneider_Electric/Schneider_Electric-Logo.wine.svg" alt="Schneider Electric" />
+      <img src={Ele0012} alt="Schneider Electric" />
       <span>Schneider Electric</span>
     </div>
   </div>

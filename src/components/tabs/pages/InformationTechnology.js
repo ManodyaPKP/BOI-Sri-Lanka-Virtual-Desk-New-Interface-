@@ -1,4 +1,13 @@
 import React from 'react';
+import Info001 from '../../../assets/sectors/InformationTechnology/Info001.png';
+import Info002 from '../../../assets/sectors/InformationTechnology/Info002.png';
+import Info003 from '../../../assets/sectors/InformationTechnology/Info003.png';
+import Info004 from '../../../assets/sectors/InformationTechnology/Info004.png';
+import Info005 from '../../../assets/sectors/InformationTechnology/Info005.png';
+import Info006 from '../../../assets/sectors/InformationTechnology/Info006.svg';
+import Info007 from '../../../assets/sectors/InformationTechnology/Info007.png';
+import Info008 from '../../../assets/sectors/InformationTechnology/Info008.png';
+
 
 const InformationTechnology = () => {
   // Smooth scroll function
@@ -83,46 +92,33 @@ const InformationTechnology = () => {
       <div className="information-technology-overview">
         <h2>Industry Overview</h2>
         <p>
-          Sri Lanka's Information Technology sector has emerged as a <strong>dynamic growth engine</strong>, 
-          contributing <strong>over $1.8 billion annually</strong> to the economy. With a strong foundation 
-          in software development and IT services, the country is rapidly transforming into a 
-          <strong> premier destination for digital innovation</strong> and technology solutions.
+         <strong> Sri Lanka’s Information Technology (IT) </strong> sector is one of the country’s fastest-growing industries, generating over <strong> USD 1.5 billion in export revenue </strong> and supported by a highly skilled, English-proficient <strong> workforce of more than 175,000 professionals</strong>. With over <strong>4,000 registered software firms</strong>, strong government backing through DIGIECON-2030, and competitive costs for IT and business process outsourcing (BPO), the sector is well-positioned for global investors. Rapid growth in enterprise software, fintech, healthtech, and edtech offers high-value opportunities, making Sri Lanka an ideal hub for technology innovation and digital service exports.
         </p>
-        <p>
-          The sector has demonstrated <strong>remarkable resilience and growth</strong>, with exports 
-          increasing by an average of 20% annually. Sri Lanka's IT industry is recognized for 
-          delivering <strong>world-class solutions</strong> to global clients while fostering a vibrant 
-          startup ecosystem and digital entrepreneurship culture.
-        </p>
-        <p>
-          The industry employs <strong>over 120,000 IT professionals</strong> across 400+ companies, 
-          supported by robust educational institutions producing <strong>5,000+ IT graduates annually</strong> 
-          and a growing ecosystem of innovation hubs and technology parks.
-        </p>
+       
         
         <div className="information-technology-stat-cards">
           <div className="information-technology-stat-card">
             <div className="information-technology-stat-icon">💻</div>
-            <div className="information-technology-stat-number">$1.8B+</div>
-            <div className="information-technology-stat-label">Sector Revenue</div>
+            <div className="information-technology-stat-number">$5B+</div>
+            <div className="information-technology-stat-label">Exports by 2030</div>
             <div className="stat-growth">↑ 20% YoY Growth</div>
           </div>
           <div className="information-technology-stat-card">
             <div className="information-technology-stat-icon">👥</div>
-            <div className="information-technology-stat-number">120K+</div>
+            <div className="information-technology-stat-number">1.75M</div>
             <div className="information-technology-stat-label">IT Professionals</div>
             <div className="stat-growth">Skilled Workforce</div>
           </div>
           <div className="information-technology-stat-card">
             <div className="information-technology-stat-icon">🏢</div>
-            <div className="information-technology-stat-number">400+</div>
+            <div className="information-technology-stat-number">500+</div>
             <div className="information-technology-stat-label">IT Companies</div>
             <div className="stat-growth">Global & Local</div>
           </div>
           <div className="information-technology-stat-card">
             <div className="information-technology-stat-icon">🌍</div>
-            <div className="information-technology-stat-number">50+</div>
-            <div className="information-technology-stat-label">Countries Served</div>
+            <div className="information-technology-stat-number">$1B</div>
+            <div className="information-technology-stat-label">Export contribution 2023</div>
             <div className="stat-growth">Global Delivery</div>
           </div>
         </div>
@@ -494,35 +490,35 @@ const InformationTechnology = () => {
   
   <div className="information-technology-company-logos">
     <div className="information-technology-company-logo">
-      <img src="https://www.freepnglogos.com/uploads/microsoft-windows-logo-images-19.png" alt="Microsoft" />
+      <img src={Info001} alt="Microsoft" />
       <span>Microsoft</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2025/05/Google-2015-G-logo.webp?strip=info&w=480&ssl=1" alt="Google" />
+      <img src={Info002} alt="Google" />
       <span>Google</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://www.logomagicians.com/wp-content/uploads/2024/01/The-Smile-and-Arrow-Logo-from-2000-till-Present.webp" alt="Amazon" />
+      <img src={Info003} alt="Amazon" />
       <span>Amazon</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://www.freepnglogos.com/uploads/ibm-logo-png/ibm-logo-png-transparent-svg-vector-bie-supply-3.png" alt="IBM" />
+      <img src={Info004} alt="IBM" />
       <span>IBM</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/61/1/oracle-logo-png_seeklogo-614399.png" alt="Oracle" />
+      <img src={Info005} alt="Oracle" />
       <span>Oracle</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://logotyp.us/file/sap.svg" alt="SAP" />
+      <img src={Info006} alt="SAP" />
       <span>SAP</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://imgs.search.brave.com/y64wHmPVTQxuDj2x3knRZ5hYL71gQQpYG8hV9KRskvo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzgxLzQ1/LzQ5LzgxNDU0OWMz/OTk0ZmFkNjUxYjE2/NDM2NDc1YjVkNDBm/LmpwZw" alt="Salesforce" />
+      <img src={Info007} alt="Salesforce" />
       <span>Salesforce</span>
     </div>
     <div className="information-technology-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/25/1/virtusa-logo-png_seeklogo-257481.png" alt="Virtusa" />
+      <img src={Info008} alt="Virtusa" />
       <span>Virtusa</span>
     </div>
   </div>

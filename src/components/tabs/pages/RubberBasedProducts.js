@@ -1,4 +1,13 @@
 import React from 'react';
+import Rub001 from '../../../assets/sectors/RubberBasedProducts/Rub001.png';
+import Rub002 from '../../../assets/sectors/RubberBasedProducts/Rub002.png';
+import Rub003 from '../../../assets/sectors/RubberBasedProducts/Rub003.png';
+import Rub004 from '../../../assets/sectors/RubberBasedProducts/Rub004.png';
+import Rub005 from '../../../assets/sectors/RubberBasedProducts/Rub005.png';
+import Rub006 from '../../../assets/sectors/RubberBasedProducts/Rub006.png';
+import Rub007 from '../../../assets/sectors/RubberBasedProducts/Rub007.png';
+import Rub008 from '../../../assets/sectors/RubberBasedProducts/Rub008.png';
+
 
 const RubberBasedProducts = () => {
   // Smooth scroll function
@@ -137,21 +146,21 @@ const RubberBasedProducts = () => {
         </div>
         <div className="growth-chart-container">
           <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '60%'}}>
-              <span className="bar-value">$0.7B</span>
-              <span className="bar-label">2020</span>
-            </div>
-            <div className="chart-bar" data-year="2021" style={{height: '75%'}}>
-              <span className="bar-value">$0.8B</span>
+            <div className="chart-bar" data-year="2021" style={{height: '100%'}}>
+              <span className="bar-value">$1092M</span>
               <span className="bar-label">2021</span>
             </div>
-            <div className="chart-bar" data-year="2022" style={{height: '90%'}}>
-              <span className="bar-value">$0.9B</span>
+            <div className="chart-bar" data-year="2022" style={{height: '95%'}}>
+              <span className="bar-value">$1018M</span>
               <span className="bar-label">2022</span>
             </div>
-            <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$1.0B</span>
+            <div className="chart-bar" data-year="2023" style={{height: '80%'}}>
+              <span className="bar-value">$930M</span>
               <span className="bar-label">2023</span>
+            </div>
+            <div className="chart-bar" data-year="2024" style={{height: '90%'}}>
+              <span className="bar-value">$1001M</span>
+              <span className="bar-label">2024</span>
             </div>
           </div>
           <p className="chart-note">📈 Steady growth in rubber product exports and value addition</p>
@@ -495,35 +504,35 @@ const RubberBasedProducts = () => {
   
   <div className="rubber-based-products-company-logos">
     <div className="rubber-based-products-company-logo">
-      <img src="https://logolook.net/wp-content/uploads/2023/12/MRF-Logo.png" alt="MRF" />
+      <img src={Rub001} alt="MRF" />
       <span>MRF</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://www.freelogovectors.net/wp-content/uploads/2019/10/ceat-logo.png" alt="CEAT" />
+      <img src={Rub002} alt="CEAT" />
       <span>CEAT</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://brandlogos.net/wp-content/uploads/2020/09/Michelin-logo-1-768x340.png" alt="Michelin" />
+      <img src={Rub003} alt="Michelin" />
       <span>Michelin</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://logowik.com/content/uploads/images/270_bridgestone.jpg" alt="Bridgestone" />
+      <img src={Rub004} alt="Bridgestone" />
       <span>Bridgestone</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://www.carlogos.org/tire-logos/goodyear-logo-3000x900-show.png" alt="Goodyear" />
+      <img src={Rub005} alt="Goodyear" />
       <span>Goodyear</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://logowik.com/content/uploads/images/541_dunlop.jpg" alt="Dunlop" />
+      <img src={Rub006} alt="Dunlop" />
       <span>Dunlop</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://media.licdn.com/dms/image/v2/C560BAQGjpqW_LttXaw/company-logo_200_200/company-logo_200_200/0/1636349514434/lalan_group_logo?e=1762992000&v=beta&t=v0IRYgp6-vqTiIO-tOBirgnJJybDrJvkraq5gHBEZJM" alt="Lalan" />
+      <img src={Rub007} alt="Lalan" />
       <span>Lalan Rubber</span>
     </div>
     <div className="rubber-based-products-company-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/en/6/64/Dipped_Products_logo.png" alt="Dipped" />
+      <img src={Rub008} alt="Dipped" />
       <span>Dipped Products</span>
     </div>
   </div>

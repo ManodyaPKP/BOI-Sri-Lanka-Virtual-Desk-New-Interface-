@@ -13,8 +13,8 @@ function App() {
   // Use the scroll to top hook - it will trigger when activeTab changes
   useScrollToTop({ dependencies: [activeTab] });
   
-  useRestrictUserActions(); // Disables right-click, zoom, and other user actions
-  useAutoRefresh(5); // Auto-refresh after 5 minutes of inactivity 
+ useRestrictUserActions(); // Disables right-click, zoom, and other user actions
+  useAutoRefresh(3); // Auto-refresh after 3 minutes of inactivity
 
   return (
     <div className="container">
