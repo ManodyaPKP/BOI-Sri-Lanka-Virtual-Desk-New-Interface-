@@ -2,7 +2,7 @@
  /* ===== NAVIGATION ITEM STYLES ===== */
  /*Navigation Item Styles - Basic nav item styling and hover/active effects*/
 .nav-item {
-  padding: 1rem 1.8rem;
+  padding: 2rem 1.8rem;
   margin: 0.25rem 0.8rem;
   display: flex;
   align-items: center;
