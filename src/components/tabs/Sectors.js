@@ -47,7 +47,7 @@ const Sectors = () => {
   }
 
   if (selectedSector === 'textileapparel') {
-    return renderSectorDetail(TextileApparel);
+    return renderSectorDetail(TextileApparel);  
   }
 
   if (selectedSector === 'autocomponents') {

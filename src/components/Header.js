@@ -1,4 +1,5 @@
 import React from 'react';
+import image03 from "../../src/assets/BOILOGO-2.png";
 
 const Header = () => {
   return (
@@ -6,7 +7,7 @@ const Header = () => {
       <div className="header-content">
         <div className="logo-section">
           <img 
-            src="https://investsrilanka.com/wp-content/uploads/2023/08/BOILOGO-2.png" 
+            src={image03} 
             alt="BOI Logo" 
             className="logo-image"
           />

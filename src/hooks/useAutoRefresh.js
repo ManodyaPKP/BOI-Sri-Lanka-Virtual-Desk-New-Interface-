@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const useAutoRefresh = (timeoutMinutes = 5) => {
+const useAutoRefresh = (timeoutMinutes = 3) => {
   const inactivityTimer = useRef(null);
 
   useEffect(() => {

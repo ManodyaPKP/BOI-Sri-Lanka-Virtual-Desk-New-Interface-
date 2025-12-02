@@ -1,4 +1,16 @@
 import React from 'react';
+import T001 from '../../../assets/sectors/TextileApparelimg/T001.png';
+import T002 from '../../../assets/sectors/TextileApparelimg/T002.png';
+import T003 from '../../../assets/sectors/TextileApparelimg/T003.png';
+import T004 from '../../../assets/sectors/TextileApparelimg/T004.png';
+import T005 from '../../../assets/sectors/TextileApparelimg/T005.png';
+import T006 from '../../../assets/sectors/TextileApparelimg/T006.png';
+import T007 from '../../../assets/sectors/TextileApparelimg/T007.png';
+import T008 from '../../../assets/sectors/TextileApparelimg/T008.png';
+import T009 from '../../../assets/sectors/TextileApparelimg/T009.png';
+import T0010 from '../../../assets/sectors/TextileApparelimg/T0010.png';
+import T0011 from '../../../assets/sectors/TextileApparelimg/T0011.png';
+import T0012 from '../../../assets/sectors/TextileApparelimg/T0012.png';
 
 const TextileApparel = () => {
   // Smooth scroll function
@@ -24,7 +36,7 @@ const TextileApparel = () => {
       return (-c / 2) * (t * (t - 2) - 1) + b;
     };
 
-    animateScroll();
+    animateScroll(); 
   };
 
   // Scroll to top function
@@ -83,10 +95,7 @@ const TextileApparel = () => {
       <div className="textile-apparel-overview">
         <h2>Industry Overview</h2>
         <p>
-          Sri Lanka's Textile and Apparel industry stands as the <strong>largest export sector</strong> of the country, 
-          contributing <strong>over $5.5 billion annually</strong> to the national economy. With a rich heritage spanning 
-          over four decades, the sector has transformed from basic cut-make-trim operations to a <strong>sophisticated, 
-          value-added manufacturing hub</strong> serving the world's most prestigious fashion brands.
+         Sri Lanka’s apparel industry is a cornerstone of the national economy, <strong>contributing over 42% </strong>of total export earnings and <strong>employing more than 300,000 people, predominantly women</strong>. Renowned for ethical manufacturing and <strong>high-quality production</strong>, the sector serves major global brands across <strong> Europe, the U.S., and Asia. Strategic location </strong>, preferential trade agreements, and a skilled workforce make Sri Lanka an attractive destination for foreign direct investment. Growing focus on <strong>sustainability, innovation, and value-added products</strong> further strengthens the sector’s competitive edge, offering investors significant opportunities in manufacturing, design, and export-oriented ventures.
         </p>
         <p>
           Renowned for its <strong>ethical manufacturing practices, innovation, and design capabilities</strong>, 
@@ -97,13 +106,13 @@ const TextileApparel = () => {
         <div className="textile-apparel-stat-cards">
           <div className="textile-apparel-stat-card">
             <div className="textile-apparel-stat-icon">💰</div>
-            <div className="textile-apparel-stat-number">$5.5B+</div>
+            <div className="textile-apparel-stat-number">$5B+</div>
             <div className="textile-apparel-stat-label">Annual Export Revenue</div>
             <div className="stat-growth">↑ 12% YoY Growth</div>
           </div>
           <div className="textile-apparel-stat-card">
             <div className="textile-apparel-stat-icon">👥</div>
-            <div className="textile-apparel-stat-number">350,000+</div>
+            <div className="textile-apparel-stat-number">300,000+</div>
             <div className="textile-apparel-stat-label">Skilled Workforce</div>
             <div className="stat-growth">Largest Employment Sector</div>
           </div>
@@ -131,21 +140,21 @@ const TextileApparel = () => {
         </div>
         <div className="growth-chart-container">
           <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '70%'}}>
-              <span className="bar-value">$4.0B</span>
-              <span className="bar-label">2020</span>
-            </div>
-            <div className="chart-bar" data-year="2021" style={{height: '80%'}}>
-              <span className="bar-value">$4.6B</span>
+            <div className="chart-bar" data-year="2021" style={{height: '90%'}}>
+              <span className="bar-value">$5.41M</span>
               <span className="bar-label">2021</span>
             </div>
-            <div className="chart-bar" data-year="2022" style={{height: '90%'}}>
-              <span className="bar-value">$5.1B</span>
+            <div className="chart-bar" data-year="2022" style={{height: '100%'}}>
+              <span className="bar-value">$5.93M</span>
               <span className="bar-label">2022</span>
             </div>
-            <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$5.5B</span>
+            <div className="chart-bar" data-year="2023" style={{height: '70%'}}>
+              <span className="bar-value">$4.86M</span>
               <span className="bar-label">2023</span>
+            </div>
+            <div className="chart-bar" data-year="2024" style={{height: '80%'}}>
+              <span className="bar-value">$5.05M</span>
+              <span className="bar-label">2024</span>
             </div>
           </div>
           <p className="chart-note">📈 Consistent growth in textile and apparel exports despite global challenges</p>
@@ -487,51 +496,51 @@ const TextileApparel = () => {
   
   <div className="textile-apparel-company-logos">
     <div className="textile-apparel-company-logo">
-      <img src="https://imgs.search.brave.com/J1mYhQGUjzbbWXUAi2mbVM8pBwjY4b3GhJu_UdXzGpw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzM5L2Qw/L2EzLzM5ZDBhMzM3/ZmEwODkzYmFkYzRm/MGUwNjNjMWI0YmZm/LmpwZw" alt="Victoria's Secret" />
+      <img src={T001} alt="Victoria's Secret" />
       <span>Victoria's Secret</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://imgs.search.brave.com/4Lznq9QAGZTqrbeEuFuwODCtwjPod-u56cxmuQmLPds/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzRmL2M1/L2JhLzRmYzViYTY0/YzY0MTYyYmFjOGJj/ZDgxMzUwZmM5NzFk/LmpwZw" alt="Calvin Klein" />
+      <img src={T002} alt="Calvin Klein" />
       <span>Calvin Klein</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://imgs.search.brave.com/kGTcA82jk_NdMT83DtXqek99swMLgVRiXw84yb7kqlo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzLzY4OV9t/YXJrc2FuZHNwZW5j/ZXIuanBn" alt="Marks & Spencer" />
+      <img src={T003} alt="Marks & Spencer" />
       <span>Marks & Spencer</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://logowik.com/content/uploads/images/375_tommy_hilfiger.jpg" alt="Tommy Hilfiger" />
+      <img src={T004} alt="Tommy Hilfiger" />
       <span>Tommy Hilfiger</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://imgs.search.brave.com/_rG4CUjJyajBuMh8S2BbeKYK3-iU3MJvuUVdq1d6fT4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaXNj/b3ZlcnRlbXBsYXRl/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyNC8wNC9QVkgt/Q29ycC5qcGc" alt="PVH Corp" />
+      <img src={T005} alt="PVH Corp" />
       <span>PVH Corp</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://www.theindustry.fashion/wp-content/uploads/2022/03/next2020logo1.jpg" alt="NEXT" />
+      <img src={T006} alt="NEXT" />
       <span>NEXT</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://imgs.search.brave.com/qJJp6sZJdTWBIQyacYrJAyxcBXoOQ_6ncm0nRkqyZE8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI0MTMx/NTYuanBn" alt="Ralph Lauren" />
+      <img src={T007} alt="Ralph Lauren" />
       <span>Ralph Lauren</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://logowik.com/content/uploads/images/intimissimi8182.logowik.com.webp" alt="Intimissimi" />
+      <img src={T008} alt="Intimissimi" />
       <span>Intimissimi</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://media.licdn.com/dms/image/v2/C4E0BAQHD8okj9rA0EQ/company-logo_200_200/company-logo_200_200/0/1630583085162/limited_brands_logo?e=1762387200&v=beta&t=z4n1F5cISXZ5-EWA306knx5ZeU4cxaiAxeMijlXKqpk" alt="L Brand" />
+      <img src={T009} alt="L Brand" />
       <span>L Brand</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Rewrite_Burberry_Logo_Design_History_Evolution_2_1024x1024.jpg?v=1694696366" alt="Burberry" />
+      <img src={T0010} alt="Burberry" />
       <span>Burberry</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://images.seeklogo.com/logo-png/39/1/michael-kors-logo-png_seeklogo-391539.png" alt="Michael Kors" />
+      <img src={T0011} alt="Michael Kors" />
       <span>Michael Kors</span>
     </div>
     <div className="textile-apparel-company-logo">
-      <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/Rewrite_Under_Armour_Logo_Design_History_Evolution_4_1024x1024.jpg?v=1695903250" alt="Under Armour" />
+      <img src={T0012} alt="Under Armour" />
       <span>Under Armour</span>
     </div>
   </div>

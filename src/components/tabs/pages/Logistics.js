@@ -1,4 +1,12 @@
 import React from 'react';
+import Lo001 from '../../../assets/sectors/Logistics/Lo001.png';
+import Lo002 from '../../../assets/sectors/Logistics/Lo002.png';
+import Lo003 from '../../../assets/sectors/Logistics/Lo003.png';
+import Lo004 from '../../../assets/sectors/Logistics/Lo004.png';
+import Lo005 from '../../../assets/sectors/Logistics/Lo005.png';
+import Lo006 from '../../../assets/sectors/Logistics/Lo006.svg';
+import Lo007 from '../../../assets/sectors/Logistics/Lo007.svg';
+import Lo008 from '../../../assets/sectors/Logistics/Lo008.svg';
 
 const Logistics = () => {
   // Smooth scroll function
@@ -83,46 +91,36 @@ const Logistics = () => {
       <div className="logistics-overview">
         <h2>Industry Overview</h2>
         <p>
-          Sri Lanka has emerged as a <strong>strategic logistics hub</strong> in the Indian Ocean, leveraging its 
-          prime location at the crossroads of major international shipping lanes. The logistics sector contributes 
-          <strong> over $3 billion annually</strong> to the economy and serves as a critical enabler for trade 
-          and investment across South Asia.
+         Sri Lanka’s logistics sector is rapidly expanding, fueled by strategic location, modernizing infrastructure, and growing demand for efficient supply chain solutions. Key developments in port, airport, road, and rail facilities are enhancing the country’s connectivity, making it a vital transshipment hub in the Indian Ocean region.
         </p>
         <p>
-          With world-class port facilities, modern airports, and integrated logistics infrastructure, 
-          Sri Lanka offers <strong>seamless connectivity</strong> to global markets while serving as the 
-          <strong> natural gateway to India and beyond</strong>.
-        </p>
-        <p>
-          The sector employs <strong>over 200,000 professionals</strong> and operates through a network of 
-          <strong> 500+ logistics companies</strong>, including global leaders in shipping, freight forwarding, 
-          and supply chain management.
+          The rise of e-commerce and global trade is driving demand for warehousing, distribution, and last-mile delivery services. Ongoing digitalization and technology adoption in logistics operations are improving efficiency and productivity, while government incentives and a skilled workforce make Sri Lanka an attractive destination for investment in the logistics sector.
         </p>
         
         <div className="logistics-stat-cards">   
           <div className="logistics-stat-card">
             <div className="logistics-stat-icon">🚢</div>
-            <div className="logistics-stat-number">$3B+</div>
-            <div className="logistics-stat-label">Sector Revenue</div>
-            <div className="stat-growth">↑ 18% YoY Growth</div>
+            <div className="logistics-stat-number"> 2.5%</div>
+            <div className="logistics-stat-label"> services contribute</div>
+            <div className="stat-growth">↑ Approximately</div>
           </div>
           <div className="logistics-stat-card">
             <div className="logistics-stat-icon">👥</div>
-            <div className="logistics-stat-number">200K+</div>
-            <div className="logistics-stat-label">Professionals</div>
+            <div className="logistics-stat-number">40,000+</div>
+            <div className="logistics-stat-label">Employing</div>
             <div className="stat-growth">Skilled Workforce</div>
           </div>
           <div className="logistics-stat-card">
             <div className="logistics-stat-icon">🏢</div>
-            <div className="logistics-stat-number">500+</div>
-            <div className="logistics-stat-label">Logistics Firms</div>
-            <div className="stat-growth">Global & Local</div>
+            <div className="logistics-stat-number">$7.78B</div>
+            <div className="logistics-stat-label"> Market is valued </div>
+            <div className="stat-growth">in 2025</div>
           </div>
           <div className="logistics-stat-card">
             <div className="logistics-stat-icon">🌐</div>
-            <div className="logistics-stat-number">100+</div>
-            <div className="logistics-stat-label">Countries Served</div>
-            <div className="stat-growth">Global Network</div>
+            <div className="logistics-stat-number">$9.63B </div>
+            <div className="logistics-stat-label">Projections to reach</div>
+            <div className="stat-growth"> By 2030</div>
           </div>
         </div>
       </div>
@@ -135,20 +133,20 @@ const Logistics = () => {
         </div>
         <div className="growth-chart-container">
           <div className="chart-wrapper">
-            <div className="chart-bar" data-year="2020" style={{height: '50%'}}>
-              <span className="bar-value">$1.8B</span>
+            <div className="chart-bar" data-year="2020" style={{height: '80%'}}>
+              <span className="bar-value">$5.6M</span>
               <span className="bar-label">2020</span>
             </div>
-            <div className="chart-bar" data-year="2021" style={{height: '65%'}}>
-              <span className="bar-value">$2.1B</span>
+            <div className="chart-bar" data-year="2021" style={{height: '100%'}}>
+              <span className="bar-value">$5.9M</span>
               <span className="bar-label">2021</span>
             </div>
             <div className="chart-bar" data-year="2022" style={{height: '80%'}}>
-              <span className="bar-value">$2.5B</span>
+              <span className="bar-value">$5.6M</span>
               <span className="bar-label">2022</span>
             </div>
-            <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$3.0B</span>
+            <div className="chart-bar" data-year="2023" style={{height: '95%'}}>
+              <span className="bar-value">$5.8M</span>
               <span className="bar-label">2023</span>
             </div>
           </div>
@@ -488,35 +486,35 @@ const Logistics = () => {
   
   <div className="logistics-company-logos">
     <div className="logistics-company-logo">
-      <img src="https://discovertemplate.com/wp-content/uploads/2024/03/Maersk.jpg" alt="Maersk" />
+      <img src={Lo001} alt="Maersk" />
       <span>Maersk</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://logonoid.com/images/cma-cgm-logo.png" alt="CMA CGM" />
+      <img src={Lo002} alt="CMA CGM" />
       <span>CMA CGM</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://logodix.com/logo/670511.jpg" alt="MSC" />
+      <img src={Lo003} alt="MSC" />
       <span>MSC</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://vectorseek.com/wp-content/uploads/2023/04/COSCO-Shipping-Logo-Vector.jpg" alt="COSCO" />
+      <img src={Lo004} alt="COSCO" />
       <span>COSCO</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://1000logos.net/wp-content/uploads/2018/08/DHL-Logo-768x432.png" alt="DHL" />
+      <img src={Lo005} alt="DHL" />
       <span>DHL</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://logotyp.us/file/fedex-express.svg" alt="FedEx" />
+      <img src={Lo006} alt="FedEx" />
       <span>FedEx</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://www.logo.wine/a/logo/United_Parcel_Service/United_Parcel_Service-Logo.wine.svg" alt="UPS" />
+      <img src={Lo007} alt="UPS" />
       <span>UPS</span>
     </div>
     <div className="logistics-company-logo">
-      <img src="https://logotyp.us/file/db-schenker.svg" alt="DB Schenker" />
+      <img src={Lo008} alt="DB Schenker" />
       <span>DB Schenker</span>
     </div>
   </div>

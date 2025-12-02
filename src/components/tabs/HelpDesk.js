@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import qrcodeimage from "../../assets/WebQR.png";
-import qrcode21 from "../../assets/DepartmentQR.png"; 
-import qrcode31 from "../../assets/WebQR.png"; 
-
+import WebQRBOI001 from "../../assets/WebQRBOI001.png";
+import Department001QR from "../../assets/Department001QR.png"; 
+import BOIGateway001 from "../../assets/BOIGatewayQR001.png"; 
+import img001 from "../../assets/helpdeskimg/img001.gif";
+import img002 from "../../assets/helpdeskimg/img002.gif";
+import img003 from "../../assets/helpdeskimg/img003.gif";
+import img004 from "../../assets/helpdeskimg/img004.gif";
+import img005 from "../../assets/helpdeskimg/img005.gif";
+import img006 from "../../assets/helpdeskimg/img006.gif";
+import img007 from "../../assets/helpdeskimg/img007.gif";
+import img008 from "../../assets/helpdeskimg/img008.gif";
 const HelpDesk = () => {       
   
     useEffect(() => {
@@ -25,14 +32,14 @@ const HelpDesk = () => {
   }, []); 
   
   const backgroundImages = [
-    "https://i.pinimg.com/originals/86/fa/f3/86faf30598360ff6e1c5e747689286ca.gif",
-    "https://i.pinimg.com/originals/84/d4/a7/84d4a78bc3db24b6fdcfb61491479944.gif",
-    "https://i.pinimg.com/originals/84/f1/79/84f1794839d6e06e07ba81b966cdc6c2.gif",
-    "https://i.pinimg.com/originals/ab/0c/85/ab0c85f4f625a6b565440f40f092edff.gif",
-    "https://i.pinimg.com/originals/c8/d4/0e/c8d40e9ec4ffd4f3af527eb40ba80462.gif",
-    "https://i.pinimg.com/originals/92/16/d3/9216d3b4baf45f25c2b3e073c4f054d4.gif",
-    "https://i.pinimg.com/originals/aa/1b/74/aa1b7479fbd5f7b936adb4e39d977a6c.gif",
-    "https://i.pinimg.com/originals/75/90/f8/7590f891af94580b4e7b76e6fdffbd01.gif"
+    img001,
+    img002,
+    img003,
+    img004,
+    img005,
+    img006,
+    img007,
+    img008
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -48,7 +55,7 @@ const HelpDesk = () => {
   const qrCodes = [
     { 
       id: 1, 
-      image: qrcodeimage, 
+      image: WebQRBOI001,
       title: "Connect with BOI Web", 
       description: "Scan to access our digital resources and investment information",
       icon: "✽",
@@ -56,7 +63,7 @@ const HelpDesk = () => {
     },
     { 
       id: 2, 
-      image: qrcode21, 
+      image: Department001QR, 
       title: "Office Layout Map", 
       description: "Scan to download our Interactive Office Layout Map",
       icon: "➥",
@@ -64,8 +71,8 @@ const HelpDesk = () => {
     },
     {  
       id: 3, 
-      image: qrcode31, 
-      title: "Chat With Us", 
+      image: BOIGateway001, 
+      title: "BOI Gateway", 
       description: "Scan to get immediate support",
       icon: "✧",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
