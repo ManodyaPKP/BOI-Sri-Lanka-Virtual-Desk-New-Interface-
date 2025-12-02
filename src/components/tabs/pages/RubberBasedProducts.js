@@ -111,10 +111,10 @@ const RubberBasedProducts = () => {
         
         <div className="rubber-based-products-stat-cards">
           <div className="rubber-based-products-stat-card">
-            <div className="rubber-based-products-stat-icon">🌿</div>
-            <div className="rubber-based-products-stat-number">130K+</div>
-            <div className="rubber-based-products-stat-label">Hectares Planted</div>
-            <div className="stat-growth">Sustainable Cultivation</div>
+            <div className="rubber-based-products-stat-icon">🏢</div>
+            <div className="rubber-based-products-stat-number">50+</div>
+            <div className="rubber-based-products-stat-label">Over 50 Companies</div>
+            <div className="stat-growth">Vast industry</div>
           </div>
           <div className="rubber-based-products-stat-card">
             <div className="rubber-based-products-stat-icon">🏭</div>

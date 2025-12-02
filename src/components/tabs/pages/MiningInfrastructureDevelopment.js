@@ -117,8 +117,8 @@ const MiningInfrastructureDevelopment = () => {
           </div>
           <div className="mining-infrastructure-stat-card">
             <div className="mining-infrastructure-stat-icon">🏗️</div>
-            <div className="mining-infrastructure-stat-number">PMI Hits 52.9</div>
-            <div className="mining-infrastructure-stat-label">Construction</div>
+            <div className="mining-infrastructure-stat-number"> 52.9</div>
+            <div className="mining-infrastructure-stat-label">PMI Hits in Construction</div>
             <div className="stat-growth">in Jan 2025</div>
           </div>
           <div className="mining-infrastructure-stat-card">
@@ -129,9 +129,9 @@ const MiningInfrastructureDevelopment = () => {
           </div>
           <div className="mining-infrastructure-stat-card">
             <div className="mining-infrastructure-stat-icon">🌍</div>
-            <div className="mining-infrastructure-stat-number">25+</div>
-            <div className="mining-infrastructure-stat-label">Mineral Types</div>
-            <div className="stat-growth">Commercially Viable</div>
+            <div className="mining-infrastructure-stat-number">70%</div>
+            <div className="mining-infrastructure-stat-label">Target of generating Power Via</div>
+            <div className="stat-growth">Renewable by 2023</div>
           </div>
         </div>
       </div>

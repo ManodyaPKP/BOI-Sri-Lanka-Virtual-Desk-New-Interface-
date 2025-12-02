@@ -133,19 +133,19 @@ const InformationTechnology = () => {
         <div className="growth-chart-container">
           <div className="chart-wrapper">
             <div className="chart-bar" data-year="2020" style={{height: '50%'}}>
-              <span className="bar-value">$1.0B</span>
+              <span className="bar-value">$1011M</span>
               <span className="bar-label">2020</span>
             </div>
-            <div className="chart-bar" data-year="2021" style={{height: '65%'}}>
-              <span className="bar-value">$1.2B</span>
+            <div className="chart-bar" data-year="2021" style={{height: '90%'}}>
+              <span className="bar-value">$1217M</span>
               <span className="bar-label">2021</span>
             </div>
-            <div className="chart-bar" data-year="2022" style={{height: '80%'}}>
-              <span className="bar-value">$1.5B</span>
+            <div className="chart-bar" data-year="2022" style={{height: '70%'}}>
+              <span className="bar-value">$1112M</span>
               <span className="bar-label">2022</span>
             </div>
             <div className="chart-bar" data-year="2023" style={{height: '100%'}}>
-              <span className="bar-value">$1.8B</span>
+              <span className="bar-value">$1227M</span>
               <span className="bar-label">2023</span>
             </div>
           </div>

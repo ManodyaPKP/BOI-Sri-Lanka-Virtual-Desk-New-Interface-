@@ -94,11 +94,11 @@ const TourismLeisure = () => {
          Blessed with natural and cultural endowments throughout the island, Sri Lanka is home to a rich and diverse Tourism & Leisure industry which is the economy’s third largest foreign exchange earner. Accordingly, the government has positioned tourism as a central pillar of the economy which is poised for resurgence in the wake of increasing tourist arrivals with a focus on investments that provide world-class visitor experiences in established sub-sectors and new offerings.
         </p>
         <p>
-         <h2> Key Facts </h2>
+         <h2> Priority Areas (Investment Opportunities) </h2>
          <strong>
 <ol> ❖ Tourist Accommodation & Services (Hotels, Transit Hotels, Resorts, Villas, Higher-end restaurants, Convention Centres, MICE Tourism, Wellness Tourism) </ol>
 <ol>❖ Leisure & Recreational (Golf Course, Entertainment Complexes, Theme Parks, Tourist
-Shopping Complexes, Eco-Lodges, Camping, Whale & Dolphin Watching, Water Sports)</ol>
+       Shopping Complexes, Eco-Lodges, Camping, Whale & Dolphin Watching, Water Sports)</ol>
 <ol>❖ Adventure & Eco Tourism (Adventure parks)</ol>
 <ol>❖ Transportation (Yacht Marina, Coastal Ferry Services, Cruise Lines)</ol>
 <ol>❖ Skill Development: Hotel / Hospitality Training Institutes</ol>
