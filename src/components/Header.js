@@ -70,6 +70,8 @@ const Header = () => {
           align-items: center;
           gap: 15px;
           animation: slideInLeft 1s ease-out;
+          transform: translateX(-110px);
+
         }
         
         .logo-image {
@@ -110,6 +112,8 @@ const Header = () => {
           align-items: center;
           gap: 20px;
           margin-left: 300px;
+           transform: translateX(260px);
+          
         }
         
         .thanks-message {
