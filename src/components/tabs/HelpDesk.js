@@ -168,8 +168,6 @@ const HelpDesk = () => {
         position: 'relative',
         overflowX: 'hidden',
         overflowY: 'hidden',
-        marginLeft: '-38px',
-        marginRight: '-20px',
      }}> 
 
       <div 
@@ -178,7 +176,6 @@ const HelpDesk = () => {
           position: 'relative',
           height: '80vh',
           display: 'flex',  
-          marginLeft: '',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
