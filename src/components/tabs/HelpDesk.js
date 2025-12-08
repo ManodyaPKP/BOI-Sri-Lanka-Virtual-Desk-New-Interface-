@@ -166,7 +166,7 @@ const HelpDesk = () => {
   style={{
     padding: 0,
     position: 'relative',
-    width: "1450px",
+    width: "2000px",
     height: "100%",
     overflow: "hidden",
     display: "flex",
