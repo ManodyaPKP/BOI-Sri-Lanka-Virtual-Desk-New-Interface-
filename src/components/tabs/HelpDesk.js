@@ -166,11 +166,12 @@ const HelpDesk = () => {
   style={{
     padding: 0,
     position: 'relative',
-    width: "100%",
+    width: "1450px",
     height: "100%",
     overflow: "hidden",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    marginLeft: "-20px",
   }}>
 
 
