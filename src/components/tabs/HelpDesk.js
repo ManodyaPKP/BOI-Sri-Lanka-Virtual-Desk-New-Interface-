@@ -161,19 +161,14 @@ const HelpDesk = () => {
   };
 
   return (
-<div
-  className="tab-content active"
-  style={{
-    padding: 0,
-    position: 'relative',
-    width: "2000px",
-    height: "100%",
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
-  
-  }}>
-
+    <div
+     className="tab-content active"
+     style={{
+        padding: '0px',
+        position: 'relative',
+        overflowX: 'hidden',
+        overflowY: 'hidden',
+     }}> 
 
       <div 
         className="welcome-section"
