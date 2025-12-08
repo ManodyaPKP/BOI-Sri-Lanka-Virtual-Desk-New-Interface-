@@ -182,7 +182,7 @@ const HelpDesk = () => {
           color: 'white',
           textAlign: 'center',
           padding: '40px 20px',
-          borderRadius: '10px',
+          borderRadius: '5px',
           overflow: 'hidden'
           
         }}
