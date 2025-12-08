@@ -168,6 +168,8 @@ const HelpDesk = () => {
         position: 'relative',
         overflowX: 'hidden',
         overflowY: 'hidden',
+        marginLeft: '-38px',
+        marginRight: '-38px',
      }}> 
 
       <div 
