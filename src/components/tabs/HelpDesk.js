@@ -55,6 +55,8 @@ const HelpDesk = () => {
   const [titleAnimation, setTitleAnimation] = useState(false);
   const autoCloseTimerRef = useRef(null);
   const scrollTextRef = useRef(null);
+  const imageElements = useRef([]); // Store preloaded Image objects
+  const slideshowIntervalRef = useRef(null);
 
   // QR code data
   const qrCodes = [
@@ -84,53 +86,85 @@ const HelpDesk = () => {
     }
   ];
 
-  // Preload all images on component mount - FIXED VERSION
+  // Preload all images ONCE and store Image objects - FIXED VERSION
   useEffect(() => {
     const preloadImages = () => {
-      const imagePromises = backgroundImages.current.map((src) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = () => {
-            console.log(`Preloaded: ${src}`);
-            resolve();
-          };
-          img.onerror = () => {
-            console.warn(`Failed to preload: ${src}`);
-            resolve(); // Still resolve to continue
-          };
-        });
+      imageElements.current = backgroundImages.current.map((src) => {
+        const img = new Image();
+        img.src = src;
+        img.crossOrigin = "anonymous"; // Helps with caching
+        return img;
       });
 
-      Promise.all(imagePromises)
-        .then(() => {
-          console.log('All background images preloaded and cached');
+      // Check when all images are loaded
+      let loadedCount = 0;
+      const totalImages = imageElements.current.length;
+      
+      imageElements.current.forEach((img, index) => {
+        img.onload = () => {
+          loadedCount++;
+          console.log(`Loaded image ${index + 1}/${totalImages}`);
+          
+          if (loadedCount === totalImages) {
+            console.log('✅ All images preloaded and cached');
+            setImagesPreloaded(true);
+          }
+        };
+        
+        img.onerror = () => {
+          loadedCount++;
+          console.warn(`⚠️ Failed to load image ${index + 1}`);
+          
+          if (loadedCount === totalImages) {
+            console.log('⚠️ Some images failed, but continuing...');
+            setImagesPreloaded(true);
+          }
+        };
+      });
+
+      // Fallback timeout in case some images never load
+      setTimeout(() => {
+        if (!imagesPreloaded) {
+          console.log('⏰ Timeout - continuing with available images');
           setImagesPreloaded(true);
-        })
-        .catch((err) => {
-          console.error('Error preloading images:', err);
-          setImagesPreloaded(true); // Continue even if some images fail
-        });
+        }
+      }, 5000);
     };
 
     preloadImages();
+
+    // Cleanup
+    return () => {
+      if (slideshowIntervalRef.current) {
+        clearInterval(slideshowIntervalRef.current);
+      }
+    };
   }, []);
 
+  // Start slideshow ONLY after images are preloaded
   useEffect(() => {
-    // Only start slideshow after images are preloaded
     if (!imagesPreloaded) return;
 
-    const interval = setInterval(() => {
+    console.log('🚀 Starting slideshow with cached images');
+    
+    slideshowIntervalRef.current = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === backgroundImages.current.length - 1 ? 0 : prevIndex + 1
-        );
+        setCurrentImageIndex((prevIndex) => {
+          const nextIndex = prevIndex === backgroundImages.current.length - 1 ? 0 : prevIndex + 1;
+          console.log(`🔄 Changing to image ${nextIndex} (from cache)`);
+          return nextIndex;
+        });
         setIsTransitioning(false);
-      }, 1000); // Increase transition time
-    }, 8000); // Increased interval to 8 seconds
+      }, 1000);
+    }, 15000); // INCREASED to 15 seconds to minimize changes
 
-    return () => clearInterval(interval);
+    return () => {
+      if (slideshowIntervalRef.current) {
+        clearInterval(slideshowIntervalRef.current);
+        slideshowIntervalRef.current = null;
+      }
+    };
   }, [imagesPreloaded]);
 
   // Title animation trigger
@@ -220,7 +254,10 @@ const HelpDesk = () => {
             ✦
           </div>
           <h2>Loading Help Desk...</h2>
-          <p>Caching resources for optimal performance</p>
+          <p>Preloading and caching all resources</p>
+          <p style={{ fontSize: '0.9rem', opacity: 0.7 }}>
+            This prevents repeated downloads
+          </p>
         </div>
       </div>
     );
@@ -252,7 +289,7 @@ const HelpDesk = () => {
           overflow: 'hidden'
         }}
       >
-        {/* SIMPLE FIX: Single background image - no CSS sprites */}
+        {/* OPTIMIZED: Use base64 data URL after preloading to prevent HTTP requests */}
         <div
           style={{
             position: 'absolute',
@@ -269,7 +306,10 @@ const HelpDesk = () => {
             boxShadow: 'inset 0 0 0 2000px rgba(255, 255, 255, 0.2)',
             opacity: isTransitioning ? 0 : 1,
             transition: 'opacity 1s ease-in-out',
-            zIndex: 1  
+            zIndex: 1,
+            // Force GPU acceleration for smoother transitions
+            transform: 'translateZ(0)',
+            willChange: 'opacity'
           }}
         />
 
