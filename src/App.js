@@ -9,8 +9,12 @@ import useScrollToTop from './hooks/useScrollToTop'; // Import the new hook
 
 function App() {
   const [activeTab, setActiveTab] = useState('helpdesk');
-  // Register service worker
-
+  
+  // Use the scroll to top hook - it will trigger when activeTab changes
+  useScrollToTop({ dependencies: [activeTab] });
+  
+  useRestrictUserActions(); // Disables right-click, zoom, and other user actions
+  useAutoRefresh(3); // Auto-refresh after 3 minutes of inactivity
 
   return (
     <div className="container">
