@@ -34,7 +34,6 @@ import {
 
 const Contact = () => {
   const [expandedCard, setExpandedCard] = useState(null);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // Memoize contact sections array to prevent recreation
   const contactSections = useMemo(() => [
