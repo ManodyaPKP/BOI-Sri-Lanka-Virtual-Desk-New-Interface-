@@ -1,7 +1,7 @@
 /* WhoWeAre.css - Modern & Professional Styles with Advanced Animations */
 
 .whoweare-container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;  
   padding: 4rem 2rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -783,6 +783,7 @@
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: -0.5px;
+  line-height: 1.1;
   transition: all 0.3s ease;
   background-size: 200% auto;
   animation: whoweare-text-shimmer 4s ease-in-out infinite;
@@ -839,6 +840,12 @@
 
 .whoweare-leader-profile:hover .whoweare-leader-bio-text::before {
   width: 100%;
+}
+
+.whoweare-leader-image-container2 {
+  position: relative;
+  width: 80%;
+  height: auto;
 }
 
 .whoweare-leader-bio-text p {

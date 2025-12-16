@@ -181,7 +181,7 @@ const WhoWeAre = () => {
           </div>
           
           <div className="whoweare-leader-profile">
-            <div className="whoweare-leader-image-container">
+            <div className="whoweare-leader-image-container1">
               <div className="whoweare-leader-image-frame">
                 <img 
                   src={chairman}
@@ -208,7 +208,7 @@ const WhoWeAre = () => {
           </div>
 
           <div className="whoweare-leader-profile whoweare-leader-profile-reverse">
-            <div className="whoweare-leader-image-container">
+            <div className="whoweare-leader-image-container2">
               <div className="whoweare-leader-image-frame">
                 <img 
                   src={directorGeneral} 
