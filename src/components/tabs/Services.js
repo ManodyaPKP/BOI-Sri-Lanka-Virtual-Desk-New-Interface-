@@ -46,7 +46,7 @@ import {
 
 const Services = () => {
   const [expandedCards, setExpandedCards] = useState([]);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false); 
 
   // Memoize services array to prevent recreation on every render
   const services = useMemo(() => [
