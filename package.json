@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://ManodyaPKP.github.io/BOI-Sri-Lanka-Virtual-Desk-New-Interface-",
   "name": "boi-sri-lanka-virtual-help-desk",
   "version": "1.0.0",
   "description": "Virtual Help Desk for the Board of Investment of Sri Lanka",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
