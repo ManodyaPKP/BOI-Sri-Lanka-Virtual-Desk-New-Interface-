@@ -6,12 +6,13 @@
   overflow-y: auto;
   overflow: hidden;
   background-color: var(--light);
-  margin-left: 280px;
+  margin-left: 270px;
+  margin-right: -10px ;
 }
 
 .tab-content {
   padding: 3rem;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: var(--border-radius);

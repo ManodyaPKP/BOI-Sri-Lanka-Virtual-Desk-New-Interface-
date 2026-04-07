@@ -14,7 +14,7 @@ function App() {
   useScrollToTop({ dependencies: [activeTab] });
   
   useRestrictUserActions(); // Disables right-click, zoom, and other user actions
-  useAutoRefresh(3); // Auto-refresh after 3 minutes of inactivity
+  //useAutoRefresh(3); // Auto-refresh after 3 minutes of inactivity
 
   return (
     <div className="container">
