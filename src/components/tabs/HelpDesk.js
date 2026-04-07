@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import WebQRBOI001 from "../../assets/WebQRBOI001.png";
 import Department001QR from "../../assets/Department001QR.png"; 
 import BOIGateway001 from "../../assets/BOIGatewayQR001.png"; 
@@ -10,49 +10,17 @@ import img005 from "../../assets/helpdeskimg/img005.gif";
 import img006 from "../../assets/helpdeskimg/img006.gif";
 import img007 from "../../assets/helpdeskimg/img007.gif";
 import img008 from "../../assets/helpdeskimg/img008.gif";
+
 const HelpDesk = () => {       
   
-    useEffect(() => {
-    const scrollPosition = window.scrollY;
-    
-    // Prevent scrolling  
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
+  // Memoize background images array - prevents recreation
+  const backgroundImages = useMemo(() => [
+    img001, img002, img003, img004,
+    img005, img006, img007, img008
+  ], []);
 
-    // Cleanup - restore scrolling when component unmounts
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      window.scrollTo(0, scrollPosition); 
-    };
-  }, []); 
-  
-  const backgroundImages = [
-    img001,
-    img002,
-    img003,
-    img004,
-    img005,
-    img006,
-    img007,
-    img008
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [activeModal, setActiveModal] = useState(null);
-  const [modalClosing, setModalClosing] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
-  const [titleAnimation, setTitleAnimation] = useState(false);
-  const autoCloseTimerRef = useRef(null);
-  const scrollTextRef = useRef(null);
-
-  // QR code data
-  const qrCodes = [
+  // Memoize QR codes data
+  const qrCodes = useMemo(() => [
     { 
       id: 1, 
       image: WebQRBOI001,
@@ -77,10 +45,87 @@ const HelpDesk = () => {
       icon: "✧",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
     }
-  ];
+  ], []);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
+  const [modalClosing, setModalClosing] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(30);
+  const [titleAnimation, setTitleAnimation] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  
+  const autoCloseTimerRef = useRef(null);
+  const scrollTextRef = useRef(null);
+  const imageTransitionTimerRef = useRef(null);
+  const preloadedImagesRef = useRef([]);
+  const backgroundContainerRef = useRef(null);
+
+  // CRITICAL: Preload and cache ALL images in memory on mount
+  useEffect(() => {
+    const preloadAndCacheImages = async () => {
+      try {
+        // Preload background images
+        const bgPromises = backgroundImages.map((src, index) => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => {
+              preloadedImagesRef.current[index] = img;
+              resolve(img);
+            };
+            img.onerror = reject;
+            img.src = src;
+          });
+        });
+
+        // Preload QR images
+        const qrPromises = qrCodes.map(qr => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = qr.image;
+          });
+        });
+
+        await Promise.all([...bgPromises, ...qrPromises]);
+        setImagesLoaded(true);
+        console.log('✅ All images cached in memory - no more network requests!');
+      } catch (error) {
+        console.error('Error preloading images:', error);
+        setImagesLoaded(true);
+      }
+    };
+
+    preloadAndCacheImages();
+
+    return () => {
+      preloadedImagesRef.current = [];
+    };
+  }, [backgroundImages, qrCodes]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const scrollPosition = window.scrollY;
+    
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPosition); 
+    };
+  }, []); 
+
+  // Background image rotation - now uses cached images
+  useEffect(() => {
+    if (!imagesLoaded) return;
+
+    imageTransitionTimerRef.current = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) =>
@@ -90,8 +135,12 @@ const HelpDesk = () => {
       }, 500);
     }, 5000);
 
-    return () => clearInterval(interval);
-  }, [backgroundImages.length]);
+    return () => {
+      if (imageTransitionTimerRef.current) {
+        clearInterval(imageTransitionTimerRef.current);
+      }
+    };
+  }, [backgroundImages.length, imagesLoaded]);
 
   // Title animation trigger
   useEffect(() => {
@@ -160,6 +209,9 @@ const HelpDesk = () => {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
+  // Get current cached image - NO NETWORK REQUEST
+  const currentBackgroundImage = backgroundImages[currentImageIndex];
+
   return (
     <div
      className="tab-content active"
@@ -184,29 +236,33 @@ const HelpDesk = () => {
           padding: '40px 20px',
           borderRadius: '5px',
           overflow: 'hidden'
-          
         }}
       >
-        {/* Background Image Layer 1 */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundImage: `linear-gradient(rgb(236, 249, 255), rgba(178, 250, 255, 0.7)), url(${backgroundImages[currentImageIndex]})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.9)',
-            backgroundBlendMode: 'darken',
-            boxShadow: 'inset 0 0 0 2000px rgba(255, 255, 255, 0.2)',
-            opacity: isTransitioning ? 0 : 1,
-            transition: 'opacity 2s cubic-bezier(0.4, 0, 0.2, 1)',
-            zIndex: 1  
-          }}
-        />
+        {/* ALL 8 Background layers pre-rendered - browser caches them */}
+        {backgroundImages.map((bgImg, index) => (
+          <div
+            key={index}
+            ref={index === 0 ? backgroundContainerRef : null}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundImage: `linear-gradient(rgb(236, 249, 255), rgba(178, 250, 255, 0.7)), url(${bgImg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              filter: 'brightness(0.9)',
+              backgroundBlendMode: 'darken',
+              boxShadow: 'inset 0 0 0 2000px rgba(255, 255, 255, 0.2)',
+              opacity: currentImageIndex === index ? (isTransitioning ? 0 : 1) : 0,
+              transition: 'opacity 2s cubic-bezier(0.4, 0, 0.2, 1)',
+              zIndex: currentImageIndex === index ? 1 : 0,
+              pointerEvents: 'none'
+            }}
+          />
+        ))}
 
         {/* Content Layer */}
         <div style={{ 
@@ -216,10 +272,9 @@ const HelpDesk = () => {
           display: 'flex', 
           flexDirection: 'column', 
           alignItems: 'center', 
-          
         }}>
           
-          {/* Enhanced Title with Modern Animations - Moved Up */}
+          {/* Enhanced Title with Modern Animations */}
           <div style={{
             position: 'relative',
             marginBottom: '398px',
@@ -289,7 +344,7 @@ const HelpDesk = () => {
             </div>
           </div>
 
-          {/* QR Code Selection Buttons - Centered */}
+          {/* QR Code Selection Buttons */}
           <div style={{
             display: 'flex',
             justifyContent: 'center',
@@ -297,7 +352,7 @@ const HelpDesk = () => {
             marginBottom: '30px',
             flexWrap: 'wrap'
           }}>
-            {qrCodes.map((qr) => (
+            {qrCodes.map((qr, index) => (
               <button
                 key={qr.id}
                 onClick={() => openModal(qr.id)}
@@ -321,7 +376,7 @@ const HelpDesk = () => {
                   animation: 'float 3s ease-in-out infinite',
                   opacity: titleAnimation ? 1 : 0,
                   transform: titleAnimation ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `all 0.6s ease-in-out ${0.6 + qr.id * 0.1}s`
+                  transition: `all 0.6s ease-in-out ${0.6 + index * 0.1}s`
                 }}
                 className="qr-button"
                 onMouseOver={(e) => {
@@ -342,25 +397,12 @@ const HelpDesk = () => {
                   {qr.icon}
                 </span>
                 {qr.title}
-                <div style={{
-                  position: 'absolute',
-                  top: 0,  
-                  left: '-100%',
-                  width: '100%',
-                  height: '100%',
-                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
-                  transition: 'left 0.6s'
-                }} 
-                onMouseOver={(e) => {
-                  e.target.style.left = '100%';
-                }}
-                />
               </button>
             ))}
           </div>
         </div>
 
-        {/* Description as Moving Bar at Bottom - Independent Continuous Scroll */}
+        {/* Description as Moving Bar at Bottom */}
         <div style={{
           position: 'fixed',
           bottom: '0',
@@ -704,35 +746,6 @@ const HelpDesk = () => {
           @keyframes pulseLine {
             0%, 100% { opacity: 1; transform: translateX(-50%) scaleX(1); }
             50% { opacity: 0.7; transform: translateX(-50%) scaleX(1.1); }
-          }
-
-          @keyframes subtleFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-5px) scale(1.02); }
-          }
-
-          @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-          }
-
-          @keyframes floatParticle {
-            0%, 100% { 
-              transform: translateY(0) translateX(0);
-              opacity: 0.6;
-            }
-            25% { 
-              transform: translateY(-10px) translateX(5px);
-              opacity: 0.8;
-            }
-            50% { 
-              transform: translateY(-5px) translateX(10px);
-              opacity: 0.4;
-            }
-            75% { 
-              transform: translateY(-15px) translateX(5px);
-              opacity: 0.7;
-            }
           }
 
           @keyframes scrollText {

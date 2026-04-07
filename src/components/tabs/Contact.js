@@ -1,5 +1,5 @@
 // src/components/tabs/Contact.js
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Hotline001 from "../../assets/Hotline001.png";
 import BOIGatewayQR001 from "../../assets/BOIGatewayQR001.png";
 import SeniorMcontact001 from "../../assets/SeniorMcontact001.png";
@@ -32,207 +32,235 @@ import {
   ExternalLink
 } from "lucide-react";
 
-const contactSections = [
-  {
-    id: "general-inquiries",
-    title: "General Inquiries",
-    desc: "Main contact point for all investment-related inquiries and general information about BOI services.",
-    icon: Phone,
-    img: GeneralInquiries02,
-    details: {
-      address: "Level 24, West Tower, World Trade Centre, Colombo 01",
-      hotline: "+94-77-1211213",
-      telephone: "+94-11-2434403 / +94-11-2346131/3",
-      fax: "+94-11-2448105",
-      email: "info@boi.lk",
-      website: "www.investsrilanka.com"
-    }
-  },
-  {
-    id: "office-chairman",
-    title: "Office of the Chairman",
-    desc: "Direct access to the Chairman's office for high-level inquiries and strategic investment discussions.",
-    icon: User,
-    img: OfficeoftheChairman02,
-    details: {
-      position: "Secretary to the Chairman",
-      Chairman: "Mr. Arjuna Herath",
-      telephone: "+94-11-2427001",
-      fax: "+94-11-2447995",
-      description: "For high-level strategic discussions and chairman-level communications."
-    }
-  },
-  {
-    id: "office-director-general",
-    title: "Office of the Director General",
-    desc: "Administrative and operational inquiries related to BOI's executive management and policy implementation.",
-    icon: Building,
-    img: officedirectorgeneral02,
-    details: {
-      position: "Secretary to the Director General",
-      DirectorGeneral: "Mrs.Renuka Weerakone",
-      telephone: "+94-11-2427102", 
-      fax: "+94-11-2448105",
-      description: "For operational inquiries and administrative matters.",
-      Biography: "She has over 30 years of experience associated with BOI.",
-      Representations: "reported to be a life member of the Bar Association of Sri Lanka and of the Association of Corporate Lawyers Sri Lanka.",
-    }
-  },
-  {
-    id: "right-to-information",
-    title: "Right To Information (RTI)",
-    desc: "Access to public information and transparency-related requests under Sri Lanka's Right to Information Act.",
-    icon: FileText,
-    img: RightToInformation02,
-    details: {
-      service: "RTI Information Officer", 
-      Name: "Mrs D A S Amarakoon",
-      email: "sajeewanid@boi.lk",
-      Designation: "Director",
-      name: "Mrs M I A Gunaratne", 
-      designation: "Senior Deputy Director",
-      Email: "irushag@boi.lk",
-    }
-  },
-  {
-    id: "department-contacts",
-    title: "Department Contacts",
-    desc: "Specialized contact points for different BOI departments including Legal, Engineering, and Environmental divisions.",
-    icon: Users,
-    img: DepartmentContacts02,
-    details: {
-      InvestmentPromotionDepartment: "Tel: +9411 - 2427070 / +9411 -2427055",     
-      InvestmentAppraisalDepartment: "Tel: +9411-2339826 / +9411 - 2427074",
-      ResearchPolicyAdvocacyDepartment: "Tel: +9411-2427378",
-      InvestorServiceDepartment: "Tel: +9411 - 2427433",
-      ProjectMonitoringDepartment: "Tel: +9411 -2427244",
-      ProjectImplementationDepartment: "Tel: +9411- 2427340 / +9411-2432226",
-      LegalDepartment: "Tel: +9411- 2427013",
-      EnvironmentManagementDepartment: "Tel: +9411-2427264",
-      EngineeringApprovalsSpecialProjectsDepartment: "Tel: +9411 -2427106 / +9411 - 2427118",
-      FinanceDepartment: "Tel: +9411-2427204",
-      MediaPublicityDepartment: "Tel: +9411-2427044",
-      HumanResourceDepartment: "Tel: +9411-2427186",
-      AdministrationDepartment: "Tel: +9411-2427336",
-      InformationTechnologyDepartment: "Tel: +9411-2427294",
-      InternalAuditsDepartment: "Tel: +9411-2427326"
-    }
-  },
-  {
-    id: "zones-contacts",
-    title: "Zones Contacts",
-    desc: "Direct contact with Export Processing Zones and Industrial Parks for location-specific investment opportunities.",
-    icon: Factory,
-    img: ZonesContacts02,
-    details: {  
-      KatunayakeEPZ: "Mr. A S K T Ranjan Sibera, Director, Tel: +94 11 2208100, Mobile: +94 773703044, Email: ranjans@boi.lk",
-      KoggalaEPZ: "Mr H K M N P Ranatunga, Director, Mobile: +94 718565047, Email: ranatungap@boi.lk",
-      BiyagamaEPZ: "Director, Tel: +94 11-2465212",
-      SeethawakaEPZ: "Ms. Champa Wijeshinghe, SDD, Mobile: +94 777286751, Email: champaw@boi.lk",
-      NorthWesternRegionalOffice: "Mr. B M W P Bandara, Senior Deputy Director, Tel: +94 81-2420019, Mobile: +94 777809102, Email: bandaraw@boi.lk",
-      KandyIndustrialParkCRO: "Mr. T M P Tennakoon, Senior Deputy Director, Tel: +94 81-2420019, Mobile: +94 71-8058479, Email: prasannat@boi.lk",
-      WathupitiwelaEPZ: "Mr H G B P U Silva, Senior Deputy Director, Mobile: +94 773422933, Email: prasads@boi.lk",
-      HoranaEPZ: "Mr. D K Walpita, Senior Deputy Director, Mobile: +94 760387820, Email: darshanak@boi.lk",
-      MalwattaEPZ: "Mrs R P S Pushpakumari, Senior Deputy Director, Mobile: +94 716031039, Email: samanthip@boi.lk",
-      MirigamaEPZ: "Mr. A S Subasinghe, Senior Deputy Director, Tel: +94 33 - 2274657, Mobile: +94 741541785, Email: subasinghes@boi.lk",
-      MawathagamaEPZ: "Mrs D P C Nilmini, Senior Deputy Director, Mobile: +94 718058488, Email: chandrikan@boi.lk",
-      JaffnaRegionalOffice: "Mr. A R Jeyamanon, Senior Deputy Director, Tel: +94 21-2221336, Mobile: +94 777776606, Email: jeyamanonr@boi.lk",
-      MirijjavilaEPZ: "Mr. S S M Abeysekara, Senior Deputy Director, Tel: +94 47 2258800, Mobile: +94 764803197, Email: senakaa@boi.lk",
-      PolgahawelaEPZ: "Mr. A S Prasanna Kumara, Senior Deputy Director, Tel: +94 37-2241526, Mobile: +94 777986584, Email: prasannak@boi.lk",
-      TrincomaleeZoneOffice: "Mr. S Sathkunalinkam, Deputy Director, Tel: +94 26-2233003, Mobile: +94 777955819, Email: satkunam@boi.lk",
-      BingiriyaZoneOffice: "Mr A P P D Adikari, Officer-in-charge, Tel: +94 32 2241376, Email: dhananjayaa@boi.lk",
-      TextileManufacturingZoneEravurPattu: "Mr. R Suhanthan, Officer-in-charge, Mobile: +94 773694111 / +94 782792713, Email: suhanthanr@boi.lk",
-      PharmaceuticalManufacturingZoneHambantota: "Mr S S M Abeysekara, Senior Deputy Director, Mobile: +9476-4803197, Email: senakaa@boi.lk"
-    }
-  },
-  {
-    id: "country-desk",
-    title: "Country Desk",
-    desc: "Dedicated support for investors from specific countries and regions, providing tailored assistance and cultural liaison.",
-    icon: Flag,
-    img: CountryDesk02,
-    details: {
-      "China/HongKong/MiddleEast/Australia/NZ": "(Mr.) M.H. Casseer Deputy Director Tel: +94 11 2427122 Email: manojc@boi.lk",
-      "India/Thailand/Bangladesh/Nepal/Indonesia/Israel/Denmark/Norway/Sweden": "(Mr.) Sudath J. Jayasekara Deputy Director Tel: +94 112339976 Ext: +94 112427108 Email: sudathj@boi.lk",
-      "EU/UK/Malaysia/Belgium/Netherlands/Luxembourg": "(Ms.) Madushani Seneviratne Assistant Director Tel: +94 112427065 Email: madushanis@boi.lk",
-      "Singapore/Russia/Pakistan/Korea/Korea": "Ms. Pankaja Samarajeewa Assistant Director Tel: +94 11 2427417 Email: pankajas@boi.lk",
-      "Japan/France": "(Ms.) Arunya De Silva Assistant Director Tel: +94 112427414 Email: arunyas@boi.lk",
-      "Canada / USA": "Ms. Thanuja Kumari Senior Deputy Director Tel: +94 11 2427027 Email: thanujak@boi.lk",
-      "Germany/Brazil": "(Ms.) Sugandhi Gunaratne Assistant Director Tel: +94 11 2427415 Email: sugandhikag@boi.lk"
-    }
-  },
-  {
-    id: "sector-contacts",
-    title: "Sector Contacts",
-    desc: "Specialized support for investments in key sectors including IT, manufacturing, tourism, and emerging industries.",
-    icon: Briefcase,
-    img: SectorContacts02,
-    details: {
-  Manufacturing: "Mr. Upul Jayasinghe, Senior Deputy Director – Rubber, Auto Components, Boat Manufacturing, Tel: 011-2427377, Email: upulj@boi.lk",
-
-  Tourism: "Ms. Thanuja Kumari Bandara, Senior Deputy Director – Information Technology, Tourism, Tel: 011-2427233, Email: thanujak@boi.lk",
-
-  Agriculture: "Mr. Sudath Jayasekera, Deputy Director – Food Processing & Agriculture, Tel: 011-2427108, Email: sudathj@boi.lk",
-
-  KnowledgeServices: "Ms. Thanuja Kumari Bandara, Senior Deputy Director – Information Technology, Tourism, Tel: 011-2427233, Email: thanujak@boi.lk",
-
-  Infrastructure: "Ms. Amali Rathnayake, Senior Deputy Director – Infrastructure, Tel: 011-2427380, Email: amalir@boi.lk",
-
-  Utilities: "Mr. M. H. Casseer, Deputy Director – Utilities, Tel: 011-2427122, Email: manojc@boi.lk",
-
-  Apparel: "Ms. Pankaja Amali Samarajeewa, Assistant Director – Apparel, Tel: 011-2427417, Email: pankajas@boi.lk",
-
-  Pharmaceutical: [
-    "Ms. Ganga Palaketiya, Director – Pharmaceutical, Tel: 011-2427391, Email: gangap@boi.lk",
-    "Ms. Madushani Seneviratne, Assistant Director – Pharmaceutical, Tel: 011-2427065, Email: madushanis@boi.lk"
-  ],
-
-  ElectricalElectronic: "Ms. Arunya De Silva, Assistant Director – Electrical & Electronic, Tel: 011-2427414, Email: arunyas@boi.lk",
-
-  MineralMining: "Ms. Arunya De Silva, Assistant Director – Mineral & Mining, Tel: 011-2427414, Email: arunyas@boi.lk",
-
-  Chemical: "Ms. Madushani Seneviratne, Assistant Director – Chemical, Tel: 011-2427065, Email: madushanis@boi.lk",
-
-  PortAirportRoadHighwayHospital: "Ms. Sugandhika Gunaratne, Assistant Director – Port, Airport, Road, Highway, Hospital, Tel: 011-2427415, Email: sugandhikag@boi.lk",
-
-  LogisticServices: "Ms. Shamalie Wijesinghe, Assistant Director – Logistic Services, Tel: 011-2427141, Email: shamaliew@boi.lk",
-
-  OtherManufacturing: "Ms. Veenavi Nakandala, Research Officer – Other Manufacturing, Tel: 011-2427420, Email: veenavis@boi.lk"
-}
-
-  },
-  {
-    id: "investor-services",
-    title: "Investor Services",
-    desc: "Comprehensive support for existing investors including aftercare services, compliance assistance, and operational support.",
-    icon: MessageSquare,
-    img: InvestorServices02,
-    details: {
-      aftercare: "Investor Aftercare - aftercare@boi.lk",
-      compliance: "Compliance Support - compliance@boi.lk",
-      facilitation: "Investment Facilitation - facilitation@boi.lk",
-      helpdesk: "24/7 Investor Helpdesk - +94-77-1211213",
-      emergency: "Emergency Support Available"
-    }
-  },
-  {
-    id: "office-hours-support",
-    title: "Office Hours & Support",
-    desc: "Operating hours, emergency contacts, and additional support services for international investors.",
-    icon: Clock,
-    img: OfficeHoursSupport02,
-    details: {
-      hours: "Monday - Friday: 8:30 AM - 4:15 PM",
-      timezone: "Sri Lanka Standard Time (GMT +5:30)",
-      emergency: "Emergency Hotline: +94-77-1211213",
-      weekend: "Weekend Support: Limited (Emergency Only)",
-      holidays: "Public Holidays: Closed (Emergency Support Available)"
-    }
-  }
-];
-
 const Contact = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Memoize contact sections array to prevent recreation
+  const contactSections = useMemo(() => [
+    {
+      id: "general-inquiries",
+      title: "General Inquiries",
+      desc: "Main contact point for all investment-related inquiries and general information about BOI services.",
+      icon: Phone,
+      img: GeneralInquiries02,
+      details: {
+        address: "Level 24, West Tower, World Trade Centre, Colombo 01",
+        hotline: "+94-77-1211213",
+        telephone: "+94-11-2434403 / +94-11-2346131/3",
+        fax: "+94-11-2448105",
+        email: "info@boi.lk",
+        website: "www.investsrilanka.com"
+      }
+    },
+    {
+      id: "office-chairman",
+      title: "Office of the Chairman",
+      desc: "Direct access to the Chairman's office for high-level inquiries and strategic investment discussions.",
+      icon: User,
+      img: OfficeoftheChairman02,
+      details: {
+        position: "Secretary to the Chairman",
+        Chairman: "Mr. Arjuna Herath",
+        telephone: "+94-11-2427001",
+        fax: "+94-11-2447995",
+        description: "For high-level strategic discussions and chairman-level communications."
+      }
+    },
+    {
+      id: "office-director-general",
+      title: "Office of the Director General",
+      desc: "Administrative and operational inquiries related to BOI's executive management and policy implementation.",
+      icon: Building,
+      img: officedirectorgeneral02,
+      details: {
+        position: "Secretary to the Director General",
+        DirectorGeneral: "Mrs.Renuka Weerakone",
+        telephone: "+94-11-2427102", 
+        fax: "+94-11-2448105",
+        description: "For operational inquiries and administrative matters.",
+        Biography: "She has over 30 years of experience associated with BOI.",
+        Representations: "reported to be a life member of the Bar Association of Sri Lanka and of the Association of Corporate Lawyers Sri Lanka.",
+      }
+    },
+    {
+      id: "right-to-information",
+      title: "Right To Information (RTI)",
+      desc: "Access to public information and transparency-related requests under Sri Lanka's Right to Information Act.",
+      icon: FileText,
+      img: RightToInformation02,
+      details: {
+        service: "RTI Information Officer", 
+        Name: "Mrs D A S Amarakoon",
+        email: "sajeewanid@boi.lk",
+        Designation: "Director",
+        name: "Mrs M I A Gunaratne", 
+        designation: "Senior Deputy Director",
+        Email: "irushag@boi.lk",
+      }
+    },
+    {
+      id: "department-contacts",
+      title: "Department Contacts",
+      desc: "Specialized contact points for different BOI departments including Legal, Engineering, and Environmental divisions.",
+      icon: Users,
+      img: DepartmentContacts02,
+      details: {
+        InvestmentPromotionDepartment: "Tel: +9411 - 2427070 / +9411 -2427055",     
+        InvestmentAppraisalDepartment: "Tel: +9411-2339826 / +9411 - 2427074",
+        ResearchPolicyAdvocacyDepartment: "Tel: +9411-2427378",
+        InvestorServiceDepartment: "Tel: +9411 - 2427433",
+        ProjectMonitoringDepartment: "Tel: +9411 -2427244",
+        ProjectImplementationDepartment: "Tel: +9411- 2427340 / +9411-2432226",
+        LegalDepartment: "Tel: +9411- 2427013",
+        EnvironmentManagementDepartment: "Tel: +9411-2427264",
+        EngineeringApprovalsSpecialProjectsDepartment: "Tel: +9411 -2427106 / +9411 - 2427118",
+        FinanceDepartment: "Tel: +9411-2427204",
+        MediaPublicityDepartment: "Tel: +9411-2427044",
+        HumanResourceDepartment: "Tel: +9411-2427186",
+        AdministrationDepartment: "Tel: +9411-2427336",
+        InformationTechnologyDepartment: "Tel: +9411-2427294",
+        InternalAuditsDepartment: "Tel: +9411-2427326"
+      }
+    },
+    {
+      id: "zones-contacts",
+      title: "Zones Contacts",
+      desc: "Direct contact with Export Processing Zones and Industrial Parks for location-specific investment opportunities.",
+      icon: Factory,
+      img: ZonesContacts02,
+      details: {  
+        KatunayakeEPZ: "Mr. A S K T Ranjan Sibera, Director, Tel: +94 11 2208100, Mobile: +94 773703044, Email: ranjans@boi.lk",
+        KoggalaEPZ: "Mr H K M N P Ranatunga, Director, Mobile: +94 718565047, Email: ranatungap@boi.lk",
+        BiyagamaEPZ: "Director, Tel: +94 11-2465212",
+        SeethawakaEPZ: "Ms. Champa Wijeshinghe, SDD, Mobile: +94 777286751, Email: champaw@boi.lk",
+        NorthWesternRegionalOffice: "Mr. B M W P Bandara, Senior Deputy Director, Tel: +94 81-2420019, Mobile: +94 777809102, Email: bandaraw@boi.lk",
+        KandyIndustrialParkCRO: "Mr. T M P Tennakoon, Senior Deputy Director, Tel: +94 81-2420019, Mobile: +94 71-8058479, Email: prasannat@boi.lk",
+        WathupitiwelaEPZ: "Mr H G B P U Silva, Senior Deputy Director, Mobile: +94 773422933, Email: prasads@boi.lk",
+        HoranaEPZ: "Mr. D K Walpita, Senior Deputy Director, Mobile: +94 760387820, Email: darshanak@boi.lk",
+        MalwattaEPZ: "Mrs R P S Pushpakumari, Senior Deputy Director, Mobile: +94 716031039, Email: samanthip@boi.lk",
+        MirigamaEPZ: "Mr. A S Subasinghe, Senior Deputy Director, Tel: +94 33 - 2274657, Mobile: +94 741541785, Email: subasinghes@boi.lk",
+        MawathagamaEPZ: "Mrs D P C Nilmini, Senior Deputy Director, Mobile: +94 718058488, Email: chandrikan@boi.lk",
+        JaffnaRegionalOffice: "Mr. A R Jeyamanon, Senior Deputy Director, Tel: +94 21-2221336, Mobile: +94 777776606, Email: jeyamanonr@boi.lk",
+        MirijjavilaEPZ: "Mr. S S M Abeysekara, Senior Deputy Director, Tel: +94 47 2258800, Mobile: +94 764803197, Email: senakaa@boi.lk",
+        PolgahawelaEPZ: "Mr. A S Prasanna Kumara, Senior Deputy Director, Tel: +94 37-2241526, Mobile: +94 777986584, Email: prasannak@boi.lk",
+        TrincomaleeZoneOffice: "Mr. S Sathkunalinkam, Deputy Director, Tel: +94 26-2233003, Mobile: +94 777955819, Email: satkunam@boi.lk",
+        BingiriyaZoneOffice: "Mr A P P D Adikari, Officer-in-charge, Tel: +94 32 2241376, Email: dhananjayaa@boi.lk",
+        TextileManufacturingZoneEravurPattu: "Mr. R Suhanthan, Officer-in-charge, Mobile: +94 773694111 / +94 782792713, Email: suhanthanr@boi.lk",
+        PharmaceuticalManufacturingZoneHambantota: "Mr S S M Abeysekara, Senior Deputy Director, Mobile: +9476-4803197, Email: senakaa@boi.lk"
+      }
+    },
+    {
+      id: "country-desk",
+      title: "Country Desk",
+      desc: "Dedicated support for investors from specific countries and regions, providing tailored assistance and cultural liaison.",
+      icon: Flag,
+      img: CountryDesk02,
+      details: {
+        "China/HongKong/MiddleEast/Australia/NZ": "(Mr.) M.H. Casseer Deputy Director Tel: +94 11 2427122 Email: manojc@boi.lk",
+        "India/Thailand/Bangladesh/Nepal/Indonesia/Israel/Denmark/Norway/Sweden": "(Mr.) Sudath J. Jayasekara Deputy Director Tel: +94 112339976 Ext: +94 112427108 Email: sudathj@boi.lk",
+        "EU/UK/Malaysia/Belgium/Netherlands/Luxembourg": "(Ms.) Madushani Seneviratne Assistant Director Tel: +94 112427065 Email: madushanis@boi.lk",
+        "Singapore/Russia/Pakistan/Korea/Korea": "Ms. Pankaja Samarajeewa Assistant Director Tel: +94 11 2427417 Email: pankajas@boi.lk",
+        "Japan/France": "(Ms.) Arunya De Silva Assistant Director Tel: +94 112427414 Email: arunyas@boi.lk",
+        "Canada / USA": "Ms. Thanuja Kumari Senior Deputy Director Tel: +94 11 2427027 Email: thanujak@boi.lk",
+        "Germany/Brazil": "(Ms.) Sugandhi Gunaratne Assistant Director Tel: +94 11 2427415 Email: sugandhikag@boi.lk"
+      }
+    },
+    {
+      id: "sector-contacts",
+      title: "Sector Contacts",
+      desc: "Specialized support for investments in key sectors including IT, manufacturing, tourism, and emerging industries.",
+      icon: Briefcase,
+      img: SectorContacts02,
+      details: {
+        Manufacturing: "Mr. Upul Jayasinghe, Senior Deputy Director — Rubber, Auto Components, Boat Manufacturing, Tel: 011-2427377, Email: upulj@boi.lk",
+        Tourism: "Ms. Thanuja Kumari Bandara, Senior Deputy Director — Information Technology, Tourism, Tel: 011-2427233, Email: thanujak@boi.lk",
+        Agriculture: "Mr. Sudath Jayasekera, Deputy Director — Food Processing & Agriculture, Tel: 011-2427108, Email: sudathj@boi.lk",
+        KnowledgeServices: "Ms. Thanuja Kumari Bandara, Senior Deputy Director — Information Technology, Tourism, Tel: 011-2427233, Email: thanujak@boi.lk",
+        Infrastructure: "Ms. Amali Rathnayake, Senior Deputy Director — Infrastructure, Tel: 011-2427380, Email: amalir@boi.lk",
+        Utilities: "Mr. M. H. Casseer, Deputy Director — Utilities, Tel: 011-2427122, Email: manojc@boi.lk",
+        Apparel: "Ms. Pankaja Amali Samarajeewa, Assistant Director — Apparel, Tel: 011-2427417, Email: pankajas@boi.lk",
+        Pharmaceutical: "Ms. Ganga Palaketiya, Director — Pharmaceutical, Tel: 011-2427391, Email: gangap@boi.lk | Ms. Madushani Seneviratne, Assistant Director — Pharmaceutical, Tel: 011-2427065, Email: madushanis@boi.lk",
+        ElectricalElectronic: "Ms. Arunya De Silva, Assistant Director — Electrical & Electronic, Tel: 011-2427414, Email: arunyas@boi.lk",
+        MineralMining: "Ms. Arunya De Silva, Assistant Director — Mineral & Mining, Tel: 011-2427414, Email: arunyas@boi.lk",
+        Chemical: "Ms. Madushani Seneviratne, Assistant Director — Chemical, Tel: 011-2427065, Email: madushanis@boi.lk",
+        PortAirportRoadHighwayHospital: "Ms. Sugandhika Gunaratne, Assistant Director — Port, Airport, Road, Highway, Hospital, Tel: 011-2427415, Email: sugandhikag@boi.lk",
+        LogisticServices: "Ms. Shamalie Wijesinghe, Assistant Director — Logistic Services, Tel: 011-2427141, Email: shamaliew@boi.lk",
+        OtherManufacturing: "Ms. Veenavi Nakandala, Research Officer — Other Manufacturing, Tel: 011-2427420, Email: veenavis@boi.lk"
+      }
+    },
+    {
+      id: "investor-services",
+      title: "Investor Services",
+      desc: "Comprehensive support for existing investors including aftercare services, compliance assistance, and operational support.",
+      icon: MessageSquare,
+      img: InvestorServices02,
+      details: {
+        aftercare: "Investor Aftercare - aftercare@boi.lk",
+        compliance: "Compliance Support - compliance@boi.lk",
+        facilitation: "Investment Facilitation - facilitation@boi.lk",
+        helpdesk: "24/7 Investor Helpdesk - +94-77-1211213",
+        emergency: "Emergency Support Available"
+      }
+    },
+    {
+      id: "office-hours-support",
+      title: "Office Hours & Support",
+      desc: "Operating hours, emergency contacts, and additional support services for international investors.",
+      icon: Clock,
+      img: OfficeHoursSupport02,
+      details: {
+        hours: "Monday - Friday: 8:30 AM - 4:15 PM",
+        timezone: "Sri Lanka Standard Time (GMT +5:30)",
+        emergency: "Emergency Hotline: +94-77-1211213",
+        weekend: "Weekend Support: Limited (Emergency Only)",
+        holidays: "Public Holidays: Closed (Emergency Support Available)"
+      }
+    }
+  ], []);
+
+  // Memoize QR code images array
+  const qrImages = useMemo(() => [
+    Hotline001, 
+    BOIGatewayQR001, 
+    SeniorMcontact001
+  ], []);
+
+  // Preload all contact images and QR codes on component mount
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        // Preload contact section images
+        const contactImagePromises = contactSections.map(section => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(section.img);
+            img.onerror = reject;
+            img.src = section.img;
+          });
+        });
+
+        // Preload QR code images
+        const qrImagePromises = qrImages.map(qrImg => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(qrImg);
+            img.onerror = reject;
+            img.src = qrImg;
+          });
+        });
+
+        await Promise.all([...contactImagePromises, ...qrImagePromises]);
+        setImagesLoaded(true);
+        console.log('✅ Contact images cached - no more network requests!');
+      } catch (error) {
+        console.error('Error preloading Contact images:', error);
+        setImagesLoaded(true); // Continue anyway
+      }
+    };
+
+    preloadImages();
+  }, [contactSections, qrImages]);
 
   // Smooth scroll function
   const smoothScrollTo = (element, to, duration) => {
@@ -262,7 +290,7 @@ const Contact = () => {
 
   // Scroll to top function
   const scrollToTop = () => {
-    smoothScrollTo(document.documentElement, 0, 600); // scroll to top in 600ms
+    smoothScrollTo(document.documentElement, 0, 600);
   };
 
   const toggleCard = (index) => {
@@ -434,6 +462,11 @@ const Contact = () => {
                 id="card-image"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
+                loading="lazy"
+                style={{
+                  willChange: 'transform',
+                  backfaceVisibility: 'hidden'
+                }}
               />
               
               <motion.div
@@ -495,7 +528,7 @@ const Contact = () => {
           <h3>Need Immediate Assistance?</h3>
           <p>Scan any of the QR codes below for quick access</p>
           <div id="emergency-contacts">
-            {[Hotline001, BOIGatewayQR001, SeniorMcontact001,].map((qr, index) => (
+            {qrImages.map((qr, index) => (
               <motion.div
                 key={index}
                 id="qr-contact"
@@ -513,11 +546,14 @@ const Contact = () => {
                 <img 
                   src={qr}
                   alt={`QR Code ${index + 1}`}
+                  loading="lazy"
                   style={{
                     width: '150px',
                     height: '150px',
                     borderRadius: '5%',
                     animation: 'fadeIn 1s ease-in-out, pulse 2s ease-in-out infinite',
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden'
                   }}
                 />
               </motion.div>
