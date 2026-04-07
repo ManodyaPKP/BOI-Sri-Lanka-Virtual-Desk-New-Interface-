@@ -180,7 +180,7 @@ const WhoWeAre = () => {
             <div className="whoweare-section-subtitle">Meet Our Visionary Leaders</div>
           </div>
           
-          <div className="whoweare-leader-profile">
+          {/* <div className="whoweare-leader-profile">
             <div className="whoweare-leader-image-container">
               <div className="whoweare-leader-image-frame">
                 <img 
@@ -205,7 +205,7 @@ const WhoWeAre = () => {
                 <p>The inaugural Chairman of the Data Protection Authority of Sri Lanka, Mr. Herath is a Fellow Member of the Institute of Chartered Accountants of Sri Lanka (ICASL) and The Chartered Institute of Management Accountants (CIMA).</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="whoweare-leader-profile whoweare-leader-profile-reverse">
             <div className="whoweare-leader-image-container">

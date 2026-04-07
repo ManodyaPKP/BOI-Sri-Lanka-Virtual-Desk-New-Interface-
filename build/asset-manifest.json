@@ -1,7 +1,12 @@
 {
   "files": {
+<<<<<<< HEAD
+    "main.css": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/css/main.daab8360.css",
+    "main.js": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/js/main.c064d0a3.js",
+=======
     "main.css": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/css/main.cdda924e.css",
     "main.js": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/js/main.d4e3542c.js",
+>>>>>>> e5f864e815ccf4d845ab40e8a3aee721a653d1ca
     "static/media/img003.gif": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/media/img003.d95117a3509284977404.gif",
     "static/media/whyimg003.gif": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/media/whyimg003.8d26ef1cb5f0e42361dd.gif",
     "static/media/InvestmentProtection01.gif": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/media/InvestmentProtection01.ccc3b803b9d5767594ed.gif",
@@ -126,11 +131,20 @@
     "static/media/Info006.svg": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/media/Info006.da4309dbf66abf39957f0a673b752db7.svg",
     "static/media/food003.svg": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/media/food003.c318fd32b10b395fdda59e1741226277.svg",
     "index.html": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/index.html",
+<<<<<<< HEAD
+    "main.daab8360.css.map": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/css/main.daab8360.css.map",
+    "main.c064d0a3.js.map": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/js/main.c064d0a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.daab8360.css",
+    "static/js/main.c064d0a3.js"
+=======
     "main.cdda924e.css.map": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/css/main.cdda924e.css.map",
     "main.d4e3542c.js.map": "/BOI-Sri-Lanka-Virtual-Desk-New-Interface-/static/js/main.d4e3542c.js.map"
   },
   "entrypoints": [
     "static/css/main.cdda924e.css",
     "static/js/main.d4e3542c.js"
+>>>>>>> e5f864e815ccf4d845ab40e8a3aee721a653d1ca
   ]
 }
